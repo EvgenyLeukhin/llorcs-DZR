@@ -1,0 +1,49 @@
+@import 'bootsrap-reboot.css';
+
+html, body {
+  /* full-size screen */
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+
+header, footer {
+  height: 15%;
+  background: lightgreen;
+}
+
+.scroll-container {
+  border: 1px solid red;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 70%;
+}
+
+.strip {
+  position: relative;
+  width: 9000px;
+  height: 100%;
+  background-image: url(../images/panorama.jpg);
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.strip .slide {
+  float: left;
+  width: 3000px;
+}
+
+.strip .locomotive {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  margin-left: -100px;
+  margin-top: -25px;
+  background: maroon;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+}
