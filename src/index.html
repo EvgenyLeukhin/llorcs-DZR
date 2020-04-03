@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>RZD Prototype</title>
     <meta name="description" content="" />
+    <style>
+      .scroll-container {
+
+      }
+
+      .cadr {
+        text-align: center;
+        font-size: 22px;
+        padding-top: 15px;
+      }
+      .cadr-1-0 { background: pink; }
+      .cadr-1-1 { background: deeppink; }
+      .cadr-2-0 { background: orange; }
+      .cadr-2-1 { background: orangered; }
+      .cadr-3-0 { background: lightgreen; }
+      .cadr-3-1 { background: greenyellow; }
+      .cadr-4-0 { background: lightblue; }
+      .cadr-4-1 { background: lightskyblue; }
+      .cadr-5-0 { background: violet; }
+    </style>
 </head>
 <body>
 
@@ -16,15 +36,17 @@
   <div id="train" class="train"></div>
 
   <!--  Triggers  -->
-  <div style="height: 1000px"></div>
-  <div id="train-start-trigger" style="height: 1000px"></div>
-  <div style="height: 1000px"></div>
-  <div id="train-station-1-trigger" style="height: 2000px"></div>
-  <div style="height: 3000px"></div>
-  <div id="train-station-2-trigger" style="height: 2000px"></div>
-  <div style="height: 3000px"></div>
-  <div id="train-end-trigger" style="height: 1000px"></div>
-  <div style="height: 1000px"></div>
+  <div class="scroll-container">
+    <div class="cadr cadr-1-0" style="height: 1000px">cadr-1-0 - Initial cadr (No train)</div>
+    <div class="cadr cadr-1-1" id="train-start-trigger" style="height: 1000px">cadr-1-1 - Train start</div>
+    <div class="cadr cadr-2-0" style="height: 1000px">cadr-2-0 - Train move (centered)</div>
+    <div class="cadr cadr-2-1  station-1" id="train-station-1-trigger" style="height: 2000px">cadr-2-1 - Train stop (Station 1)</div>
+    <div class="cadr cadr-3-0" style="height: 3000px">cadr-3-0 - Train move (centered)</div>
+    <div class="cadr cadr-3-1  station-2" id="train-station-2-trigger" style="height: 2000px">cadr-3-1 - Train stop (Station 2)</div>
+    <div class="cadr cadr-4-0" style="height: 3000px">cadr-4-0 - Train move (centered)</div>
+    <div class="cadr cadr-4-1" id="train-end-trigger" style="height: 1000px">cadr-4-1 - Train leave</div>
+    <div class="cadr cadr-5-0" style="height: 1000px">cadк-5-0 - Final cadr (No train)</div>
+  </div>
 
 </body>
 </html>
