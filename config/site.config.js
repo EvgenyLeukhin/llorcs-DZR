@@ -15,7 +15,7 @@ const config = {
   site_description: 'RZD Prototype',
 
   // Your website's URL, used for sitemap
-  site_url: '',
+  site_url: 'http://test.ru',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
