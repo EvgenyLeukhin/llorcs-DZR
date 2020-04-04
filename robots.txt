@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://test.ru/sitemap.xml
+Host: test.ru
