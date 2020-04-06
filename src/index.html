@@ -1,39 +1,65 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RZD - Promo</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <title>RZD Prototype</title>
+    <meta name="description" content="" />
 </head>
 <body>
-  <header class="top">Static header</header>
-  <div class="scroll-container">
 
+  <div class="background">
+    <div class="background-layout background-layout-sky" id="background-layout-sky"></div>
+    <div class="background-layout background-layout-grass" id="background-layout-grass"></div>
+    <div class="background-layout background-layout-road" id="background-layout-road"></div>
+  </div>
 
-    <div class="strip">
-      <div class="locomotive">Fixed locomotive</div>
+  <ul class="menu" id="menu">
+    <li class="menu-item" id="menu-station-1">
+      <a href="#train-station-1-trigger">
+        Station 1
+      </a>
+    </li>
+    <li class="menu-item" id="menu-station-2">
+      <a href="#train-station-2-trigger">
+        Station 2
+      </a>
+    </li>
+  </ul>
 
-      <div class="slide  slide-1">
-        <h2>Slide 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, minima. Architecto porro quo voluptates quae itaque doloremque impedit saepe pariatur iure ad, quos nisi perspiciatis. Fugit aut nisi eum aperiam asperiores ipsum suscipit laborum aliquam sit, necessitatibus debitis, nobis pariatur animi quidem voluptas nulla ex maiores ea, molestias dolores optio similique. Perferendis voluptatum temporibus quos quo tenetur cumque aperiam laborum. Neque aperiam id veritatis vero non illum eius vitae amet nam, in magni quis, voluptatibus incidunt odio reiciendis ea tempora. Amet similique itaque corrupti hic at dolore consequatur autem consectetur adipisci magnam! Quo sit laudantium tenetur sed excepturi natus enim!</p>
-      </div>
-
-      <div class="slide slide-2">
-        <h2>Slide 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, minima. Architecto porro quo voluptates quae itaque doloremque impedit saepe pariatur iure ad, quos nisi perspiciatis. Fugit aut nisi eum aperiam asperiores ipsum suscipit laborum aliquam sit, necessitatibus debitis, nobis pariatur animi quidem voluptas nulla ex maiores ea, molestias dolores optio similique. Perferendis voluptatum temporibus quos quo tenetur cumque aperiam laborum. Neque aperiam id veritatis vero non illum eius vitae amet nam, in magni quis, voluptatibus incidunt odio reiciendis ea tempora. Amet similique itaque corrupti hic at dolore consequatur autem consectetur adipisci magnam! Quo sit laudantium tenetur sed excepturi natus enim!</p>
-      </div>
-
-      <div class="slide slide-3">
-        <h2>Slide 3</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, minima. Architecto porro quo voluptates quae itaque doloremque impedit saepe pariatur iure ad, quos nisi perspiciatis. Fugit aut nisi eum aperiam asperiores ipsum suscipit laborum aliquam sit, necessitatibus debitis, nobis pariatur animi quidem voluptas nulla ex maiores ea, molestias dolores optio similique. Perferendis voluptatum temporibus quos quo tenetur cumque aperiam laborum. Neque aperiam id veritatis vero non illum eius vitae amet nam, in magni quis, voluptatibus incidunt odio reiciendis ea tempora. Amet similique itaque corrupti hic at dolore consequatur autem consectetur adipisci magnam! Quo sit laudantium tenetur sed excepturi natus enim!</p>
-      </div>
+  <!--  Dynamic elements  -->
+  <div id="station" class="station"></div>
+  <div id="train" class="train"></div>
+  <div id="bridge" class="bridge"></div>
+  <div id="start-scene" class="start-scene">
+    <div class="start-scene-panel">
+      <h4>Start scene</h4>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </div>
+  <div id="station-scene" class="station-scene">
+    <div class="station-scene-panel">
+      <h4>Station scene</h4>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </div>
+  <div id="end-scene" class="end-scene">
+    <div class="end-scene-panel">
+      <h4>End scene</h4>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
   </div>
 
-  <footer class="footer">Static footer</footer>
-  <script>
+  <!--  Triggers  -->
+  <div style="height: 1000px;"></div>
+  <div id="start-scene-trigger" style="height: 1000px;"></div>
+  <div id="train-start-trigger" style="height: 1000px;"></div>
+  <div id="road-trigger-1" style="height: 1000px;"></div>
+  <div id="train-station-1-trigger" style="height: 2000px;"></div>
+  <div id="road-trigger-2" style="height: 3000px;"></div>
+  <div id="train-station-2-trigger" style="height: 2000px;"></div>
+  <div id="road-trigger-3" style="height: 3000px;"></div>
+  <div id="train-end-trigger" style="height: 1000px;"></div>
+  <div id="end-scene-trigger" style="height: 1000px;"></div>
 
-  </script>
 </body>
 </html>

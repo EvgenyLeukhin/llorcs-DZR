@@ -1,0 +1,25 @@
+.bridge {
+  position: fixed;
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+
+  transform: translate(150%, 0%) matrix(1, 0, 0, 1, 0, 0);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 512px;
+    height: 206px;
+
+    margin-top: -85px;
+    margin-left: -256px;
+
+    background: url('../images/bridge.png') 0 0 no-repeat;
+  }
+}
