@@ -1,47 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>RZD Prototype</title>
-    <meta name="description" content="" />
+  <meta charset="utf-8">
+  <title>RZD Prototype</title>
+  <meta name="description" content="" />
 </head>
 <body>
 
   <div class="background">
-    <div class="background-layout background-layout-sky" id="background-layout-sky"></div>
+    <div class="background-layout background-layout-sky"   id="background-layout-sky"></div>
     <div class="background-layout background-layout-grass" id="background-layout-grass"></div>
-    <div class="background-layout background-layout-road" id="background-layout-road"></div>
+    <div class="background-layout background-layout-road"  id="background-layout-road"></div>
   </div>
 
   <ul class="menu" id="menu">
     <li class="menu-item" id="menu-station-1">
-      <a href="#train-station-1-trigger">
-        Station 1
-      </a>
+      <a href="#train-station-1-trigger">Station 1</a>
     </li>
     <li class="menu-item" id="menu-station-2">
-      <a href="#train-station-2-trigger">
-        Station 2
-      </a>
+      <a href="#train-station-2-trigger">Station 2</a>
     </li>
   </ul>
 
   <!--  Dynamic elements  -->
   <div id="station" class="station"></div>
-  <div id="train" class="train"></div>
-  <div id="bridge" class="bridge"></div>
+  <div id="train"   class="train"></div>
+  <div id="bridge"  class="bridge"></div>
+
   <div id="start-scene" class="start-scene">
     <div class="start-scene-panel">
       <h4>Start scene</h4>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
   </div>
+
   <div id="station-scene" class="station-scene">
     <div class="station-scene-panel">
       <h4>Station scene</h4>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
   </div>
+
   <div id="end-scene" class="end-scene">
     <div class="end-scene-panel">
       <h4>End scene</h4>
@@ -50,16 +49,17 @@
   </div>
 
   <!--  Triggers  -->
-  <div style="height: 1000px;"></div>
-  <div id="start-scene-trigger" style="height: 1000px;"></div>
-  <div id="train-start-trigger" style="height: 1000px;"></div>
-  <div id="road-trigger-1" style="height: 1000px;"></div>
+  <!-- height is a scroll length -->
+  <div                              style="height: 1000px;"></div>
+  <div id="start-scene-trigger"     style="height: 1000px;"></div>
+  <div id="train-start-trigger"     style="height: 1000px;"></div>
+  <div id="road-trigger-1"          style="height: 1000px;"></div>
   <div id="train-station-1-trigger" style="height: 2000px;"></div>
-  <div id="road-trigger-2" style="height: 3000px;"></div>
+  <div id="road-trigger-2"          style="height: 3000px;"></div>
   <div id="train-station-2-trigger" style="height: 2000px;"></div>
-  <div id="road-trigger-3" style="height: 3000px;"></div>
-  <div id="train-end-trigger" style="height: 1000px;"></div>
-  <div id="end-scene-trigger" style="height: 1000px;"></div>
+  <div id="road-trigger-3"          style="height: 3000px;"></div>
+  <div id="train-end-trigger"       style="height: 1000px;"></div>
+  <div id="end-scene-trigger"       style="height: 1000px;"></div>
 
 </body>
 </html>
