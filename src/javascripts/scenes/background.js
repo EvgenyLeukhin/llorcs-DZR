@@ -5,6 +5,7 @@ const makeBackgroundScene = (triggerNumber) => {
   const backgroundTimeline = new TimelineLite()
     .duration(1)
     .add([
+      // selector of the el, duration, { parametrs }
       TweenLite.fromTo('#background-layout-sky', 1, {
         backgroundPosition: '0 0',
       }, {
@@ -29,7 +30,7 @@ const makeBackgroundScene = (triggerNumber) => {
     triggerElement: `#road-trigger-${triggerNumber}`,
     duration: '100%',
   })
-    .setTween(backgroundTimeline);
+    .setTween(backgroundTimeline); // add animation to scroll
 };
 
 export default (container) => {
