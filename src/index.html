@@ -7,24 +7,28 @@
 </head>
 <body>
 
+  <!-- backgrounds -->
   <div class="background">
-    <div class="background-layout background-layout-sky"   id="background-layout-sky"></div>
-    <div class="background-layout background-layout-grass" id="background-layout-grass"></div>
-    <div class="background-layout background-layout-road"  id="background-layout-road"></div>
+    <div class="background-sky"    id="background-layout-sky"></div>
+    <div class="background-tree-1" id="background-layout-tree-1"></div>
+    <div class="background-tree-2" id="background-layout-tree-2"></div>
+    <div class="background-road"   id="background-layout-road"></div>
+    <div class="background-map"    id="background-layout-map"></div>
   </div>
 
+  <!-- menu -->
   <ul class="menu" id="menu">
     <li class="menu-item" id="menu-station-1">
-      <a href="#train-station-1-trigger">Station 1</a>
+      <a href="#train-station-1-trigger">1</a>
     </li>
     <li class="menu-item" id="menu-station-2">
-      <a href="#train-station-2-trigger">Station 2</a>
+      <a href="#train-station-2-trigger">2</a>
     </li>
   </ul>
 
   <!--  Dynamic elements  -->
-  <div id="station" class="station"></div>
   <div id="train"   class="train"></div>
+  <div id="station" class="station"></div>
   <div id="bridge"  class="bridge"></div>
 
   <div id="start-scene" class="start-scene">
@@ -60,6 +64,16 @@
   <div id="road-trigger-3"          style="height: 3000px;"></div>
   <div id="train-end-trigger"       style="height: 1000px;"></div>
   <div id="end-scene-trigger"       style="height: 1000px;"></div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <a href="#" class="life-logo">
+      <img src="images/life-logo.svg" alt="life-logo.svg">
+    </a>
+    <a href="#" class="rzd-logo">
+      <img src="images/rzd-logo.svg" alt="rzd-logo.svg">
+    </a>
+  </footer>
 
 </body>
 </html>

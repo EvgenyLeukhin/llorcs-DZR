@@ -12,7 +12,7 @@ const makeStationScene = (stationNumber) => {
         ease: Linear.easeNone,
       }),
       TweenLite.fromTo('#station', 1000, {
-        x: '100%',
+        x: '200%',
       }, {
         x: '0%',
         ease: Linear.easeNone,
@@ -25,7 +25,7 @@ const makeStationScene = (stationNumber) => {
         ease: Linear.easeNone,
       }),
       TweenLite.to('#station', 1000, {
-        x: '-100%',
+        x: '-200%',
         delay: 2000,
         ease: Linear.easeNone,
       }),

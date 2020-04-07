@@ -7,12 +7,18 @@ const makeBackgroundScene = (triggerNumber) => {
     .add([
       // selector of the el, duration, { parametrs }
       TweenLite.fromTo('#background-layout-sky', 1, {
+        backgroundPosition: '0 96%',
+      }, {
+        backgroundPosition: '-100% 96%',
+        ease: Linear.easeNone,
+      }),
+      TweenLite.fromTo('#background-layout-tree-1', 1, {
         backgroundPosition: '0 0',
       }, {
         backgroundPosition: '-100% 0',
         ease: Linear.easeNone,
       }),
-      TweenLite.fromTo('#background-layout-grass', 1, {
+      TweenLite.fromTo('#background-layout-tree-2', 1, {
         backgroundPosition: '0 0',
       }, {
         backgroundPosition: '-100% 0',
