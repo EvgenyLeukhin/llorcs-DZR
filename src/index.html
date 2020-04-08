@@ -7,30 +7,37 @@
 </head>
 <body>
 
-  <!-- backgrounds -->
+  <!-- backgrounds full screen | z-index: 1; | -->
   <div class="background">
-    <div class="background-sky"    id="background-layout-sky"></div>
-    <div class="background-tree-1" id="background-layout-tree-1"></div>
-    <div class="background-tree-2" id="background-layout-tree-2"></div>
-    <div class="background-road"   id="background-layout-road"></div>
-    <div class="background-map"    id="background-layout-map"></div>
+    <div class="background-sky"    id="background-layout-sky"></div>      <!-- z-index: 1;-->
+    <div class="background-map"    id="background-layout-map"></div>      <!-- z-index: 2;-->
+    <div class="background-tree-1" id="background-layout-tree-1"></div>   <!-- z-index: 2;-->
+    <div class="background-tree-2" id="background-layout-tree-2"></div>   <!-- z-index: 2;-->
+    <div class="background-road"   id="background-layout-road"></div>     <!-- z-index: 3;-->
   </div>
 
-  <!-- menu -->
+  <!-- menu | z-index: 10; | -->
   <ul class="menu" id="menu">
+    <li class="menu-item" id="menu-station-0">
+      <a href="#start-scene-trigger">S</a>
+    </li>
     <li class="menu-item" id="menu-station-1">
       <a href="#train-station-1-trigger">1</a>
     </li>
     <li class="menu-item" id="menu-station-2">
       <a href="#train-station-2-trigger">2</a>
     </li>
+    <li class="menu-item" id="menu-station-10">
+      <a href="#end-scene-trigger">E</a>
+    </li>
   </ul>
 
   <!--  Dynamic elements  -->
-  <div id="train"   class="train"></div>
-  <div id="station" class="station"></div>
-  <div id="bridge"  class="bridge"></div>
+  <div id="station" class="station"></div>  <!-- z-index: 2;-->
+  <div id="train"   class="train"></div>    <!-- z-index: 3;-->
+  <div id="bridge"  class="bridge"></div>   <!-- z-index: 4;-->
 
+  <!-- z-index: 5;-->
   <div id="start-scene" class="start-scene">
     <div class="start-scene-panel">
       <h4>Start scene</h4>
@@ -38,6 +45,7 @@
     </div>
   </div>
 
+  <!-- z-index: 6;-->
   <div id="station-scene" class="station-scene">
     <div class="station-scene-panel">
       <h4>Station scene</h4>
@@ -45,6 +53,7 @@
     </div>
   </div>
 
+  <!-- z-index: 7;-->
   <div id="end-scene" class="end-scene">
     <div class="end-scene-panel">
       <h4>End scene</h4>
@@ -54,7 +63,7 @@
 
   <!--  Triggers  -->
   <!-- height is a scroll length -->
-  <div                              style="height: 1000px;"></div>
+  <!-- <div                              style="height: 1000px;"></div> -->
   <div id="start-scene-trigger"     style="height: 1000px;"></div>
   <div id="train-start-trigger"     style="height: 1000px;"></div>
   <div id="road-trigger-1"          style="height: 1000px;"></div>
