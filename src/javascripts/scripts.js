@@ -11,6 +11,9 @@ import addStartScenes from './scenes/start-scene';
 import addStationScenes from './scenes/station-scene';
 import addEndScenes from './scenes/end-scene';
 
+// scroll to top when refresh page
+window.onbeforeunload = () => window.scrollTo(0, 0);
+
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
 
