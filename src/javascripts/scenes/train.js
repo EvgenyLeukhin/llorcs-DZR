@@ -20,7 +20,7 @@ const makeTrainStationScene = (stationNumber) => {
   const trainStationTimeline = new TimelineLite()
     .add([
       TweenLite.to('#train', 1000, {
-        x: '0%',
+        x: '-50%',
       }),
     ])
     .add([
@@ -32,7 +32,7 @@ const makeTrainStationScene = (stationNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#train-station-${stationNumber}-trigger`,
-    duration: '100%',
+    duration: '250%',
   })
     .setClassToggle(`#menu-station-${stationNumber}`, 'menu-item-active')
     .setTween(trainStationTimeline);

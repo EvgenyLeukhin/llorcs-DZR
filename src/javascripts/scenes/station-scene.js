@@ -33,7 +33,7 @@ const makeStationScene = (stationNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#train-station-${stationNumber}-trigger`,
-    duration: '200%',
+    duration: '400%',
     offset: -300,
   })
     .setTween(stationSceneTimeline);

@@ -1,26 +1,106 @@
 .start-scene {
   position: fixed;
-  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
-  &-panel {
+  .photo {
     position: absolute;
-    top: 10%;
     left: 50%;
-    width: 300px;
-    margin-left: -150px;
-    padding: 20px;
-    border: 3px solid #222;
-    border-radius: 10px;
-    background-color: #fff;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 57px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 27px;
+    outline: 1px solid #888;
+    box-shadow: 0 0 10px 2px #888;
 
-    h4 {
-      margin-bottom: 20px;
-      font-size: 24px;
+    h2 {
+      font-weight: normal;
+      text-transform: capitalize;
+      font-size: 20px;
+      margin-bottom: 34px;
       text-align: center;
+      color: #da4216;
     }
+
+    p {
+      font-size: 11px;
+      line-height: 16px;
+      text-align: justify;
+    }
+  }
+
+  &-photo-1 {
+    z-index: 10;
+    width: 400px;
+    height: 310px;
+    margin-left: -200px;
+    margin-top: -174px;
+    background-image: url('../images/card1.png');
+  }
+
+  &-photo-2 {
+    z-index: 9;
+    width: 345px;
+    height: 195px;
+    margin-left: -180px;
+    margin-top: -320px;
+    background: #fff;
+    // background-image: url('../images/card2.png');
+  }
+
+  &-photo-3 {
+    z-index: 8;
+    width: 378px;
+    height: 305px;
+    margin-left: 130px;
+    margin-top: -310px;
+    background: #fff;
+    // background-image: url('../images/card2.png');
+  }
+
+  &-photo-4 {
+    z-index: 8;
+    width: 240px;
+    height: 300px;
+    margin-left: 190px;
+    margin-top: -60px;
+    background: #fff;
+    // background-image: url('../images/card3.png');
+  }
+
+  &-photo-5 {
+    z-index: 6;
+    width: 300px;
+    height: 265px;
+    margin-left: -480px;
+    margin-top: -270px;
+    background: #fff;
+    // background-image: url('../images/card2.png');
+  }
+
+  &-photo-6 {
+    z-index: 5;
+    width: 350px;
+    height: 210px;
+    margin-left: -510px;
+    margin-top: -5px;
+    background: #fff;
+    // background-image: url('../images/card4.png');
+  }
+
+  &-photo-7 {
+    z-index: 4;
+    width: 450px;
+    height: 240px;
+    margin-left: -250px;
+    margin-top: 80px;
+    background: #fff;
+    // outline: 1px solid red !important;
+    // background-image: url('../images/card3.png');
   }
 }

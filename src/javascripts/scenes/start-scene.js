@@ -5,15 +5,24 @@ const makeStartScene = () => {
   const startSceneTimeline = new TimelineLite()
     .add([
       TweenLite.fromTo('#start-scene', 500, {
-        opacity: 0,
+        css: {
+          opacity: 0,
+          zIndex: 5,
+        },
       }, {
-        opacity: 1,
         ease: Linear.easeNone,
+        css: {
+          opacity: 1,
+          zIndex: 10,
+        },
       }),
     ])
     .add([
       TweenLite.to('#start-scene', 500, {
-        opacity: 0,
+        css: {
+          opacity: 0,
+          zIndex: 5,
+        },
         delay: 1000,
         ease: Linear.easeNone,
       }),
