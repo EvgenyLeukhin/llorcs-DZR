@@ -23,6 +23,7 @@ const makeEndScene = () => {
     triggerElement: '#end-scene-trigger',
     duration: '100%',
   })
+    .setClassToggle('#menu-station-end', 'menu-item-active')
     .setTween(endSceneTimeline);
 };
 

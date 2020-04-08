@@ -23,6 +23,7 @@ const makeStartScene = () => {
     triggerElement: '#start-scene-trigger',
     duration: '100%',
   })
+    .setClassToggle('#menu-station-start', 'menu-item-active')
     .setTween(startSceneTimeline);
 };
 
