@@ -4,9 +4,14 @@
 @import "train";
 
 // scenes
-@import "01-start-scene/start-scene";
-@import "10-end-scene/end-scene";
-@import "03-station-1/station-1.scss";
+@import "start-scene";
+@import "end-scene";
+@import "roads/road-1.scss";
+@import "roads/road-2.scss";
+@import "stations/station-1.scss";
+@import "stations/station-1-scene.scss";
+@import "stations/station-2.scss";
+@import "stations/station-2-scene.scss";
 
 * {
   box-sizing: border-box;

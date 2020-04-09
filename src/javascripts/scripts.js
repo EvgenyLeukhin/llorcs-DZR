@@ -7,7 +7,10 @@ import 'gsap/ScrollToPlugin';
 import backgroundScenes from './scenes/background';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
-import station1 from './scenes/station-1';
+import road1 from './scenes/roads/road-1';
+import road2 from './scenes/roads/road-2';
+import station1 from './scenes/stations/station-1';
+import station2 from './scenes/stations/station-2';
 import endScene from './scenes/end-scene';
 
 // scroll to top when refresh page
@@ -30,8 +33,11 @@ controller.scrollTo((y) => {
 // adding scenes
 backgroundScenes(controller);
 trainScenes(controller);
+road1(controller);
+road2(controller);
 startScene(controller);
 station1(controller);
+station2(controller);
 endScene(controller);
 
 // Init anchors

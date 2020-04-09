@@ -18,7 +18,7 @@ const makeBackgroundsScene = (triggerNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#road-trigger-${triggerNumber}`,
-    duration: '200%', // можно контролировать время с высотой триггера
+    duration: '450%', // можно контролировать время с высотой триггера
   })
     .setTween(backgroundTimeline); // add animation to scroll
 };
