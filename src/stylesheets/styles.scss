@@ -6,12 +6,14 @@
 // scenes
 @import "01-start-scene/start-scene";
 @import "10-end-scene/end-scene";
+@import "03-station-1/station-1.scss";
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  background-color: #adbdb1;
   font-family: Verdana, sans-serif;
 }
 

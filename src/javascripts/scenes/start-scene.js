@@ -14,7 +14,7 @@ const makeStartScene = () => {
         ease: Linear.easeNone,
         css: {
           opacity: 1,
-          zIndex: 10,
+          zIndex: 15,
         },
       }),
     ])
@@ -24,7 +24,7 @@ const makeStartScene = () => {
         css: {
           display: 'none',
           opacity: 0,
-          zIndex: 1,
+          zIndex: 15,
         },
         // delay: 1000,
         ease: Linear.easeNone,

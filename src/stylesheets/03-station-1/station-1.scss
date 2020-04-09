@@ -1,0 +1,96 @@
+.station-1 {
+  .crowd {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 20px;
+    width: 1135px;
+    height: 80px;
+    background-repeat: repeat-x, repeat-x;
+    background-image: url('../images/crowd1.svg'), url('../images/crowd2.svg');
+    background-size: auto 100%, auto 50%;
+    background-position: 0 bottom, 150px bottom;
+  }
+
+  .build {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1190px;
+    height: 440px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 50%;
+      height: 100%;
+      background-position-y: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 0;
+    }
+
+    &::before {
+      right: 0;
+      background-image: url('../images/belorusskiy.png');
+      background-position-x: right;
+    }
+
+    &::after {
+      left: 0;
+      background-image: url('../images/belorusskiy.png');
+      transform: scaleX(-1);
+      background-position-x: left;
+    }
+  }
+
+  .left {
+    position: absolute;
+    z-index: 2;
+    left: -594px;
+    bottom: 0;
+    width: 1480px;
+    height: 330px;
+    background-image:
+      url('../images/tree1.svg'),
+      url('../images/moscow1.svg');
+    background-position: 30% bottom, 63% bottom;
+    background-repeat: no-repeat;
+    background-size: 130px auto, contain;
+  }
+
+  .right {
+    position: absolute;
+    z-index: 2;
+    right: -740px;
+    bottom: 0;
+    width: 1430px;
+    height: 330px;
+    background-image:
+      url('../images/tree2.svg'),
+      url('../images/tree1.svg'),
+      url('../images/tree1.svg'),
+      url('../images/crowd1-light.svg'),
+      url('../images/crowd2-light.svg'),
+      url('../images/moscow1.svg');
+    background-position:
+      63% bottom,
+      46% bottom,
+      75% bottom,
+      56% 99.6%,
+      47% 99.6%,
+      -80px bottom;
+    background-repeat: no-repeat;
+    background-size:
+      230px auto,
+      120px auto,
+      120px auto,
+      90px auto,
+      90px auto,
+      contain;
+  }
+}

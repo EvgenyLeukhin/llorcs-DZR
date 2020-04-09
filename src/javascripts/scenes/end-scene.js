@@ -7,11 +7,10 @@ const makeEndScene = () => {
       TweenLite.fromTo('#end-scene', 500, {
         display: 'none',
         opacity: 0,
-        zIndex: 1,
+        zIndex: 15,
       }, {
         display: 'block',
         opacity: 1,
-        zIndex: 10,
         ease: Linear.easeNone,
       }),
     ]);

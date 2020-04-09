@@ -7,10 +7,11 @@ import 'gsap/ScrollToPlugin';
 import backgroundScenes from './scenes/background';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
+import station1 from './scenes/station-1';
 import endScene from './scenes/end-scene';
 
 // scroll to top when refresh page
-window.onbeforeunload = () => window.scrollTo(0, 0);
+// window.onbeforeunload = () => window.scrollTo(0, 0);
 
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
@@ -30,6 +31,7 @@ controller.scrollTo((y) => {
 backgroundScenes(controller);
 trainScenes(controller);
 startScene(controller);
+station1(controller);
 endScene(controller);
 
 // Init anchors
