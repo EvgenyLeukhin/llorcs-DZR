@@ -2,7 +2,8 @@
   .crowd {
     position: absolute;
     z-index: 3;
-    left: 0;
+    left: 50%;
+    margin-left: -565px;
     bottom: 20px;
     width: 1135px;
     height: 80px;
@@ -15,11 +16,12 @@
   .build {
     position: absolute;
     z-index: 3;
-    left: 0;
+    left: 50%;
     right: 0;
     bottom: 0;
     width: 1190px;
     height: 440px;
+    margin-left: -595px;
 
     &::before,
     &::after {
