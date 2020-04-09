@@ -3,11 +3,13 @@ import { TimelineLite, TweenLite } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import 'gsap/ScrollToPlugin';
 
-// scenes
-import backgroundScenes from './scenes/background';
-import trainScenes from './scenes/train';
-import startScene from './scenes/start-scene';
-import endScene from './scenes/end-scene';
+// Scenes
+import addBackgroundScenes from './scenes/background';
+import addTrainScenes from './scenes/train';
+import addBridgeScenes from './scenes/bridge';
+import addStartScenes from './scenes/start-scene';
+import addStationScenes from './scenes/station-scene';
+import addEndScenes from './scenes/end-scene';
 
 // scroll to top when refresh page
 window.onbeforeunload = () => window.scrollTo(0, 0);
@@ -26,11 +28,13 @@ controller.scrollTo((y) => {
   });
 });
 
-// adding scenes
-backgroundScenes(controller);
-trainScenes(controller);
-startScene(controller);
-endScene(controller);
+// Adding scenes
+addBackgroundScenes(controller);
+addTrainScenes(controller);
+addBridgeScenes(controller);
+addStartScenes(controller);
+addStationScenes(controller);
+addEndScenes(controller);
 
 // Init anchors
 document.getElementById('menu')

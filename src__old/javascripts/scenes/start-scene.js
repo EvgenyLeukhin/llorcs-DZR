@@ -3,12 +3,11 @@ import { Linear, TimelineLite, TweenLite } from 'gsap';
 
 const makeStartScene = () => {
   const startSceneTimeline = new TimelineLite()
-    // анимация от и до продолжительностью 500
     .add([
       TweenLite.fromTo('#start-scene', 500, {
         css: {
           opacity: 0,
-          zIndex: 1,
+          zIndex: 5,
         },
       }, {
         ease: Linear.easeNone,
@@ -18,15 +17,13 @@ const makeStartScene = () => {
         },
       }),
     ])
-    // анимация точечная продолжительностью 500, задержкой 1000
     .add([
       TweenLite.to('#start-scene', 500, {
         css: {
-          display: 'none',
           opacity: 0,
-          zIndex: 1,
+          zIndex: 5,
         },
-        // delay: 1000,
+        delay: 1000,
         ease: Linear.easeNone,
       }),
     ]);

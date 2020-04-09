@@ -1,5 +1,11 @@
 @import "~reset-css/reset.css";
-@import "layouts/index";
+@import "map";
+@import "background";
+@import "train";
+
+// scenes
+@import "01-start-scene/start-scene";
+@import "10-end-scene/end-scene";
 
 * {
   box-sizing: border-box;
@@ -9,26 +15,20 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-.footer {
+.action {
   position: fixed;
-  z-index: 2;
-  height: 50px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 34%;
+}
+
+.scene {
+  position: absolute;
+  overflow: visible;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  .life-logo {
-    width: 50px;
-    height: auto;
-  }
-
-  .rzd-logo {
-    width: 50px;
-    height: auto;
-  }
 }

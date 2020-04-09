@@ -1,0 +1,100 @@
+.start-scene, .end-scene {
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 57px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 27px;
+    outline: 1px solid #888;
+    box-shadow: 0 0 10px 2px #888;
+
+    h2 {
+      font-weight: normal;
+      text-transform: capitalize;
+      font-size: 20px;
+      margin-bottom: 34px;
+      text-align: center;
+      color: #da4216;
+    }
+
+    p {
+      font-size: 11px;
+      line-height: 16px;
+      text-align: justify;
+    }
+  }
+
+  &-photo-1 {
+    z-index: 10;
+    width: 400px;
+    height: 310px;
+    margin-left: -200px;
+    margin-top: -55px;
+    background-image: url('../images/card1.png');
+  }
+
+  &-photo-2 {
+    z-index: 9;
+    width: 345px;
+    height: 195px;
+    margin-left: -180px;
+    margin-top: -200px;
+    background: #fff;
+    // background-image: url('../images/card2.png');
+  }
+
+  &-photo-3 {
+    z-index: 8;
+    width: 378px;
+    height: 305px;
+    margin-left: 130px;
+    margin-top: -190px;
+    background: #fff;
+    // background-image: url('../images/card2.png');
+  }
+
+  &-photo-4 {
+    z-index: 8;
+    width: 240px;
+    height: 300px;
+    margin-left: 190px;
+    margin-top: 57px;
+    background: #fff;
+    // background-image: url('../images/card3.png');
+  }
+
+  &-photo-5 {
+    z-index: 6;
+    width: 300px;
+    height: 265px;
+    margin-left: -480px;
+    margin-top: -150px;
+    background: #fff;
+    // background-image: url('../images/card2.png');
+  }
+
+  &-photo-6 {
+    z-index: 5;
+    width: 350px;
+    height: 210px;
+    margin-left: -510px;
+    margin-top: 110px;
+    background: #fff;
+    // background-image: url('../images/card4.png');
+  }
+
+  &-photo-7 {
+    z-index: 4;
+    width: 450px;
+    height: 240px;
+    margin-left: -250px;
+    margin-top: 200px;
+    background: #fff;
+    // outline: 1px solid red !important;
+    // background-image: url('../images/card3.png');
+  }
+}

@@ -5,13 +5,16 @@ const makeEndScene = () => {
   const endSceneTimeline = new TimelineLite()
     .add([
       TweenLite.fromTo('#end-scene', 500, {
-        display: 'none',
         opacity: 0,
-        zIndex: 1,
       }, {
-        display: 'block',
         opacity: 1,
-        zIndex: 10,
+        ease: Linear.easeNone,
+      }),
+    ])
+    .add([
+      TweenLite.to('#end-scene', 500, {
+        opacity: 0,
+        delay: 1000,
         ease: Linear.easeNone,
       }),
     ]);
