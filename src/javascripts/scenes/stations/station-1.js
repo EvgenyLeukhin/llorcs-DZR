@@ -5,7 +5,7 @@ const makeStationOneScene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenLite.fromTo('#station-1', 1000, {
+      TweenLite.fromTo('#station-1', 3000, { // show station duration
         // styles before
         x: '200%',
         zIndex: 1,
@@ -42,7 +42,7 @@ const makeStationOneScene = () => {
       }),
 
       // hide station
-      TweenLite.to('#station-1', 1000, {
+      TweenLite.to('#station-1', 3000, {
         x: '-200%',
         zIndex: 1,
         display: 'none',

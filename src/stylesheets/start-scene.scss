@@ -6,9 +6,9 @@
     top: 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 57px;
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-top: 40px;
+    padding-left: 43px;
+    padding-right: 57px;
     padding-bottom: 27px;
     outline: 1px solid #888;
     box-shadow: 0 0 10px 2px #888;
@@ -23,7 +23,7 @@
     }
 
     p {
-      font-size: 11px;
+      font-size: 14px;
       line-height: 16px;
       text-align: justify;
     }
@@ -31,71 +31,111 @@
 
   &-photo-1 {
     z-index: 10;
-    width: 400px;
+    width: 430px;
     height: 310px;
-    margin-left: -200px;
-    margin-top: -55px;
-    background-image: url('../images/card1.png');
+    margin-left: -225px;
+    margin-top: -40px;
+    background: #fff;
+    // background-image: url('../images/card1.png');
   }
 
   &-photo-2 {
     z-index: 9;
-    width: 345px;
-    height: 195px;
-    margin-left: -180px;
-    margin-top: -200px;
+    width: 335px;
+    height: 215px;
+    margin-left: -150px;
+    margin-top: -240px;
     background: #fff;
+    transform: rotate(-8deg);
     // background-image: url('../images/card2.png');
   }
 
   &-photo-3 {
     z-index: 8;
-    width: 378px;
-    height: 305px;
+    width: 363px;
+    height: 265px;
     margin-left: 130px;
     margin-top: -190px;
     background: #fff;
+    transform: rotate(5deg);
     // background-image: url('../images/card2.png');
   }
 
   &-photo-4 {
     z-index: 8;
-    width: 240px;
-    height: 300px;
+    width: 260px;
+    height: 210px;
     margin-left: 190px;
-    margin-top: 57px;
+    margin-top: 19px;
     background: #fff;
+    transform: rotate(6deg);
     // background-image: url('../images/card3.png');
   }
 
   &-photo-5 {
     z-index: 6;
-    width: 300px;
-    height: 265px;
-    margin-left: -480px;
-    margin-top: -150px;
+    width: 363px;
+    height: 243px;
+    margin-left: -485px;
+    margin-top: -205px;
     background: #fff;
+    transform: rotate(18deg);
     // background-image: url('../images/card2.png');
   }
 
   &-photo-6 {
-    z-index: 5;
+    z-index: 6;
     width: 350px;
-    height: 210px;
-    margin-left: -510px;
-    margin-top: 110px;
+    height: 225px;
+    margin-left: -484px;
+    margin-top: -4px;
     background: #fff;
+    transform: rotate(-6deg);
     // background-image: url('../images/card4.png');
   }
 
   &-photo-7 {
-    z-index: 4;
-    width: 450px;
-    height: 240px;
-    margin-left: -250px;
+    z-index: 8;
+    width: 300px;
+    height: 200px;
+    margin-left: 123px;
     margin-top: 200px;
     background: #fff;
+    transform: rotate(22deg);
     // outline: 1px solid red !important;
     // background-image: url('../images/card3.png');
+  }
+
+  &-photo-8 {
+    z-index: 6;
+    width: 350px;
+    height: 225px;
+    margin-left: -480px;
+    margin-top: 163px;
+    background: #fff;
+    transform: rotate(-15deg);
+    // background-image: url('../images/card4.png');
+  }
+
+  &-photo-9 {
+    z-index: 7;
+    width: 350px;
+    height: 225px;
+    margin-left: -25px;
+    margin-top: 243px;
+    background: #fff;
+    transform: rotate(-12deg);
+    // background-image: url('../images/card4.png');
+  }
+
+  &-photo-10 {
+    z-index: 6;
+    width: 350px;
+    height: 245px;
+    margin-left: -275px;
+    margin-top: 246px;
+    background: #fff;
+    transform: rotate(15deg);
+    // background-image: url('../images/card4.png');
   }
 }
