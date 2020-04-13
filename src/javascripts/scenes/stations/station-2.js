@@ -5,7 +5,7 @@ const makeStationOneScene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenLite.fromTo('#station-2', 2000, {
+      TweenLite.fromTo('#station-2', 3000, {
         // styles before
         x: '200%',
         zIndex: 1,
@@ -19,13 +19,13 @@ const makeStationOneScene = () => {
       }),
 
       // show station scene
-      TweenLite.fromTo('#station-2-scene', 500, {
+      TweenLite.fromTo('#station-2-scene', 3000, {
         display: 'none',
-        opacity: 0,
+        x: '200%',
       }, {
-        opacity: 1,
+        x: '0%',
         display: 'block',
-        delay: 2000,
+        delay: 3500,
         zIndex: 100,
         ease: Linear.easeNone,
       }),
@@ -33,16 +33,15 @@ const makeStationOneScene = () => {
 
     // hide station scene
     .add([
-      TweenLite.to('#station-2-scene', 500, {
-        display: 'none',
+      TweenLite.to('#station-2-scene', 3000, {
+        display: 'block',
+        x: '-200%',
         zIndex: 1,
-        opacity: 0,
         delay: 500,
         ease: Linear.easeNone,
       }),
-
       // hide station
-      TweenLite.to('#station-2', 2000, {
+      TweenLite.to('#station-2', 3000, {
         x: '-200%',
         zIndex: 1,
         display: 'none',

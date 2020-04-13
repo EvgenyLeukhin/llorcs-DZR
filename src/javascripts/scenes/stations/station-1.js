@@ -25,7 +25,6 @@ const makeStationOneScene = () => {
         x: '200%',
       }, {
         x: '0%',
-        opacity: 1,
         display: 'block',
         delay: 3500,
         zIndex: 100,
@@ -36,11 +35,10 @@ const makeStationOneScene = () => {
     // hide station scene
     .add([
       TweenLite.to('#station-1-scene', 3000, {
-        display: 'none',
+        display: 'block',
         x: '-200%',
         zIndex: 1,
-        opacity: 0,
-        delay: 2000,
+        delay: 500,
         ease: Linear.easeNone,
       }),
 

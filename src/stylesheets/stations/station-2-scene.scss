@@ -1,11 +1,103 @@
 .station-2-scene {
   display: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  margin-left: -100px;
-  margin-top: -100px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 53px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &-photo-1 {
+    z-index: 10;
+    width: 335px;
+    height: 225px;
+    margin-left: -467px;
+    margin-top: -199px;
+    transform: rotate(-8deg);
+    background-image: url(../images/station-2-scene/02.png);
+  }
+
+  &-photo-2 {
+    z-index: 10;
+    width: 348px;
+    height: 230px;
+    margin-left: -109px;
+    margin-top: -12px;
+    transform: rotate(8deg);
+    background-image: url(../images/station-2-scene/03.png);
+  }
+
+  &-photo-3.photo {
+    z-index: 10;
+    width: 246px;
+    height: 160px;
+    margin-left: -4px;
+    margin-top: -167px;
+    background-image: url(../images/bg/card2.png);
+    padding-top: 36px;
+    padding-left: 28px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+  }
+
+  &-photo-4.photo {
+    z-index: 10;
+    width: 279px;
+    height: 184px;
+    margin-left: -439px;
+    margin-top: 12px;
+    background-image: url(../images/bg/card3.png);
+    padding-top: 30px;
+    padding-left: 49px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+  }
+
+  &-photo-5 {
+    z-index: 10;
+    width: 348px;
+    height: 230px;
+    margin-left: 284px;
+    margin-top: -177px;
+    transform: rotate(-6deg);
+    background-image: url(../images/station-2-scene/04.png);
+  }
+
+  &-photo-6.photo {
+    z-index: 10;
+    width: 268px;
+    height: 208px;
+    margin-left: 323px;
+    margin-top: 69px;
+    background-image: url(../images/bg/card1.png);
+    padding-top: 48px;
+    padding-left: 44px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+  }
+
+  &-photo-7 {
+    z-index: 10;
+    width: 298px;
+    height: 356px;
+    margin-left: 680px;
+    margin-top: -95px;
+    transform: rotate(4deg);
+    background-image: url(../images/station-2-scene/05.png);
+  }
 }
