@@ -18,15 +18,19 @@ const makeTrainStartScene = () => {
 
 const makeTrainStationScene = (stationNumber) => {
   const trainStationTimeline = new TimelineLite()
+    // train stop on station
     .add([
-      TweenLite.to('#train', 1000, {
+      TweenLite.to('#train', 100, {
         x: '-50%',
+        delay: 700,
       }),
     ])
+
+    // train leave a station
     .add([
       TweenLite.to('#train', 1000, {
         x: '50%',
-        delay: 2000,
+        delay: 1000,
       }),
     ]);
 

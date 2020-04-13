@@ -19,13 +19,15 @@ const makeStationOneScene = () => {
       }),
 
       // show station scene
-      TweenLite.fromTo('#station-1-scene', 500, {
+      TweenLite.fromTo('#station-1-scene', 3000, {
         display: 'none',
         opacity: 0,
+        x: '200%',
       }, {
+        x: '0%',
         opacity: 1,
         display: 'block',
-        delay: 2000,
+        delay: 3500,
         zIndex: 100,
         ease: Linear.easeNone,
       }),
@@ -33,11 +35,12 @@ const makeStationOneScene = () => {
 
     // hide station scene
     .add([
-      TweenLite.to('#station-1-scene', 500, {
+      TweenLite.to('#station-1-scene', 3000, {
         display: 'none',
+        x: '-200%',
         zIndex: 1,
         opacity: 0,
-        delay: 500,
+        delay: 2000,
         ease: Linear.easeNone,
       }),
 
