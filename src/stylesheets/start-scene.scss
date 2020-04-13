@@ -15,8 +15,6 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 27px;
-    outline: 1px solid #888;
-    box-shadow: 0 0 10px 2px #888;
 
     h2 {
       font-weight: normal;
@@ -55,9 +53,8 @@
     height: 470px;
     margin-left: -225px;
     margin-top: -120px;
-    background-color: #fff;
     background-size: cover;
-    background-image: url('../images/textbgr.jpg');
+    background-image: url('../images/start-screen/01.jpg');
   }
 
   &-photo-2 {
@@ -66,65 +63,58 @@
     height: 215px;
     margin-left: -150px;
     margin-top: -240px;
-    background: #fff;
     transform: rotate(-8deg);
-    // background-image: url('../images/card2.png');
+    background-image: url('../images/start-screen/02.png');
   }
 
   &-photo-3 {
     z-index: 8;
-    width: 363px;
-    height: 265px;
-    margin-left: 130px;
-    margin-top: -190px;
-    background: #fff;
+    width: 361px;
+    height: 275px;
+    margin-left: 137px;
+    margin-top: -188px;
     transform: rotate(5deg);
-    // background-image: url('../images/card2.png');
+    background-image: url('../images/start-screen/03.png');
   }
 
   &-photo-4 {
     z-index: 8;
-    width: 260px;
-    height: 210px;
-    margin-left: 190px;
-    margin-top: 19px;
-    background: #fff;
+    width: 340px;
+    height: 206px;
+    margin-left: 110px;
+    margin-top: 16px;
     transform: rotate(6deg);
-    // background-image: url('../images/card3.png');
+    background-image: url('../images/start-screen/04.png');
   }
 
   &-photo-5 {
     z-index: 6;
-    width: 363px;
+    width: 443px;
     height: 243px;
     margin-left: -485px;
-    margin-top: -205px;
-    background: #fff;
+    margin-top: -191px;
     transform: rotate(18deg);
-    // background-image: url('../images/card2.png');
+    background-image: url('../images/start-screen/05.png');
   }
 
   &-photo-6 {
-    z-index: 6;
+    z-index: 7;
     width: 350px;
     height: 225px;
     margin-left: -484px;
     margin-top: -4px;
-    background: #fff;
     transform: rotate(-6deg);
-    // background-image: url('../images/card4.png');
+    background-image: url('../images/start-screen/06.png');
   }
 
   &-photo-7 {
-    z-index: 8;
-    width: 300px;
-    height: 200px;
-    margin-left: 123px;
-    margin-top: 200px;
-    background: #fff;
+    z-index: 9;
+    width: 290px;
+    height: 220px;
+    margin-left: 133px;
+    margin-top: 190px;
     transform: rotate(22deg);
-    // outline: 1px solid red !important;
-    // background-image: url('../images/card3.png');
+    background-image: url('../images/start-screen/07.png');
   }
 
   &-photo-8 {
@@ -133,30 +123,27 @@
     height: 225px;
     margin-left: -480px;
     margin-top: 163px;
-    background: #fff;
-    transform: rotate(-15deg);
-    // background-image: url('../images/card4.png');
+    transform: rotate(-16deg);
+    background-image: url('../images/start-screen/08.png');
   }
 
   &-photo-9 {
-    z-index: 7;
-    width: 350px;
+    z-index: 8;
+    width: 330px;
     height: 225px;
-    margin-left: -25px;
-    margin-top: 243px;
-    background: #fff;
+    margin-left: -26px;
+    margin-top: 247px;
     transform: rotate(-12deg);
-    // background-image: url('../images/card4.png');
+    background-image: url('../images/start-screen/09.png');
   }
 
   &-photo-10 {
-    z-index: 6;
-    width: 350px;
-    height: 245px;
-    margin-left: -275px;
-    margin-top: 246px;
-    background: #fff;
+    z-index: 7;
+    width: 370px;
+    height: 255px;
+    margin-left: -282px;
+    margin-top: 245px;
     transform: rotate(15deg);
-    // background-image: url('../images/card4.png');
+    background-image: url('../images/start-screen/10.png');
   }
 }
