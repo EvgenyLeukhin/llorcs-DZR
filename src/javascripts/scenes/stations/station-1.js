@@ -21,7 +21,6 @@ const makeStationOneScene = () => {
       // show station scene
       TweenLite.fromTo('#station-1-scene', 3000, {
         display: 'none',
-        opacity: 0,
         x: '200%',
       }, {
         x: '0%',
