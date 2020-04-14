@@ -1,5 +1,6 @@
 ## Project
 dist/*
+src__old/*
 
 ## Node.js
 lib-cov
