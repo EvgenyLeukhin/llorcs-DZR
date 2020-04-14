@@ -5,6 +5,9 @@
 
 .start-scene,
 .end-scene {
+  display: none;
+  z-index: 15;
+
   .photo {
     position: absolute;
     left: 50%;
