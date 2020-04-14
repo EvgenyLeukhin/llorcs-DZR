@@ -8,7 +8,7 @@
     width: 1105px;
     height: 80px;
     background-repeat: no-repeat;
-    background-image: url(../images/station-1/crowd3.svg);
+    background-image: url(../images/03-station-1/crowd3.svg);
     background-size: cover;
     background-position: 0 0;
   }
@@ -38,13 +38,13 @@
 
     &::before {
       right: 0;
-      background-image: url('../images/belorusskiy.png');
+      background-image: url(../images/03-station-1/belorusskiy.png);
       background-position-x: right;
     }
 
     &::after {
       left: 0;
-      background-image: url('../images/belorusskiy.png');
+      background-image: url(../images/03-station-1/belorusskiy.png);
       transform: scaleX(-1);
       background-position-x: left;
     }
@@ -58,8 +58,8 @@
     width: 1480px;
     height: 330px;
     background-image:
-      url('../images/tree1.svg'),
-      url('../images/moscow1.svg');
+      url(../images/bg/basic/tree1.svg),
+      url(../images/03-station-1/moscow1.svg);
     background-position: 30% bottom, 63% bottom;
     background-repeat: no-repeat;
     background-size: 130px auto, contain;
@@ -73,12 +73,12 @@
     width: 1430px;
     height: 330px;
     background-image:
-      url('../images/tree2.svg'),
-      url('../images/tree1.svg'),
-      url('../images/tree1.svg'),
-      url('../images/crowd1-light.svg'),
-      url('../images/crowd2-light.svg'),
-      url('../images/moscow1.svg');
+      url(../images/bg/basic/tree2.svg),
+      url(../images/bg/basic/tree1.svg),
+      url(../images/bg/basic/tree1.svg),
+      url(../images/03-station-1/crowd1-light.svg),
+      url(../images/03-station-1/crowd2-light.svg),
+      url(../images/03-station-1/moscow1.svg);
     background-position:
       63% bottom,
       46% bottom,

@@ -1,21 +1,23 @@
 @import "~reset-css/reset.css";
+
+// backgrounds
 @import "map";
 @import "background";
 @import "train";
 
-// scenes
-@import "start-scene";
-@import "end-scene";
+// stations
+@import "stations/start-scene";
+@import "stations/station-1.scss";
+@import "stations/station-1-cards.scss";
+@import "stations/station-2.scss";
+@import "stations/station-2-cards.scss";
+@import "stations/end-scene";
+
+// roads
 @import "roads/road-1.scss";
 @import "roads/road-2.scss";
-@import "stations/station-1.scss";
-@import "stations/station-1-scene.scss";
-@import "stations/station-2.scss";
-@import "stations/station-2-scene.scss";
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   background-color: #adbdb1;
