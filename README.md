@@ -1,4 +1,4 @@
-# llorcs-DZR
+# RZD-Life-promo
 
 ## GH-hosting
 [https://evgenyleukhin.github.io/llorcs-DZR/](https://evgenyleukhin.github.io/llorcs-DZR/)
