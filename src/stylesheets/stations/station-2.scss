@@ -6,9 +6,10 @@
   }
 
   .sanitary-train {
-    left: -320px;
+    left: 50%;
     bottom: 8px;
     width: 2000px;
+    margin-left: -1000px;
     height: 250px;
     background-image:
       url(../images/05-station-2/Sani_cart.svg),
@@ -31,86 +32,85 @@
       130px auto,
       220px auto,
       100px auto;
-  }
 
-  .cariage1 {
-    width: 156px;
-    height: 107px;
-    left: -122px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/cariage1.png);
-    background-size: contain;
-  }
+    &__layer {
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-  .cariage2 {
-    width: 45px;
-    height: 100px;
-    left: 163px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/carriage2.png);
-    background-size: contain;
-  }
+    .woman3 {
+      width: 30px;
+      height: 50px;
+      margin-left: 108px;
+      bottom: 173px;
+      background-image: url(../images/05-station-2/woman3.png);
+    }
 
-  .man2 {
-    width: 30px;
-    height: 105px;
-    left: 930px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/man2.svg);
-    background-size: contain;
-  }
+    .cariage1 {
+      width: 156px;
+      height: 107px;
+      margin-left: -787px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/cariage1.png);
+    }
 
-  .man2-2 {
-    width: 30px;
-    height: 105px;
-    left: 930px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/man2.svg);
-    background-size: contain;
-  }
+    .cariage2 {
+      width: 40px;
+      height: 100px;
+      margin-left: -493px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/carriage2.png);
+    }
 
-  .man3 {
-    width: 26px;
-    height: 100px;
-    left: 450px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/man3.svg);
-    background-size: contain;
-  }
+    .man2 {
+      width: 30px;
+      height: 105px;
+      margin-left: 645px;
+      bottom: 0;
+      background-image: url(../images/05-station-2/man2.svg);
+    }
 
-  .man4 {
-    width: 45px;
-    height: 104px;
-    left: 1158px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/man4.svg);
-    background-size: contain;
-  }
+    .man2-2 {
+      width: 27px;
+      height: 105px;
+      margin-left: -235px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/man3.svg);
+    }
 
-  .woman2 {
-    width: 26px;
-    height: 100px;
-    left: 955px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/woman2.svg);
-    background-size: contain;
-  }
+    .man3 {
+      width: 27px;
+      height: 100px;
+      margin-left: 276px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/man3.svg);
+      transform: scaleX(-1);
+    }
 
-  .woman3 {
-    width: 30px;
-    height: 50px;
-    left: 773px;
-    bottom: 182px;
-    background-image: url(../images/05-station-2/woman3.png);
-    background-size: contain;
-  }
+    .man4 {
+      width: 45px;
+      height: 104px;
+      margin-left: 518px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/man4.svg);
+    }
 
-  .crowd {
-    width: 40px;
-    height: 100px;
-    left: 473px;
-    bottom: 0;
-    background-image: url(../images/05-station-2/crowd.svg);
-    background-size: contain;
+    .woman2 {
+      width: 26px;
+      height: 100px;
+      margin-left: 300px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/woman2.svg);
+    }
+
+    .crowd {
+      width: 40px;
+      height: 100px;
+      margin-left: -214px;
+      bottom: -8px;
+      background-image: url(../images/05-station-2/crowd.svg);
+    }
   }
 }
