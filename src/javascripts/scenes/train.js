@@ -24,14 +24,14 @@ const makeTrainStationScene = (stationNumber) => {
   const trainStationTimeline = new TimelineLite()
     // train stop on station
     .add([
-      TweenLite.to('#train', 100, {
+      TweenLite.to('#train', 1000, {
         x: '-50%',
-        delay: 700,
+        delay: 900,
       }),
       TweenLite.to('#train-smoke', 1, {
         x: 0,
         skewX: 0,
-        delay: 700,
+        delay: 900,
         ease: Linear.easeNone,
       }),
     ])
