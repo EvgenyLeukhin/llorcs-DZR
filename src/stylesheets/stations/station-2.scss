@@ -1,4 +1,6 @@
 .station-2 {
+  z-index: 10;
+
   & > div {
     position: absolute;
     z-index: 2;

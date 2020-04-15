@@ -11,6 +11,10 @@
     background-image: linear-gradient(to top, #d0c5ac, #adbdb1);
   }
 
+  &-cloud-1 {
+    height: 0;
+  }
+
   &-rail {
     position: absolute;
     z-index: 15;

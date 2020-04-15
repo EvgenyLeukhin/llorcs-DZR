@@ -22,55 +22,45 @@ const makeStationOneScene = () => {
       }),
 
       // show station scene
-      TweenLite.fromTo('.station-1-scene-photo-1', 4500,
-        { y: -1000, rotation: 0, ease: Linear.easeNone },
-        { y: 0, rotation: 25, ease: Linear.easeNone }),
+      TweenLite.fromTo('.station-1-scene-photo-1', 6000,
+        { y: -1000, ease: Linear.easeNone },
+        { y: 0, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-2', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-2', 6000,
         { y: 2000, ease: Linear.easeNone },
         { y: 0, rotation: 5, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-3', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-3', 6000,
         { y: -2000, ease: Linear.easeNone },
         { y: 0, rotation: 8, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-4', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-4', 6000,
         { y: -1000, ease: Linear.easeNone },
         { y: 0, rotation: -5, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-5', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-5', 6000,
         { y: 1000, ease: Linear.easeNone },
         { y: 0, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-6', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-6', 6000,
         { y: 2000, ease: Linear.easeNone },
         { y: 0, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-7', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-7', 6000,
         { y: -2000, ease: Linear.easeNone },
         { y: 0, rotation: -7, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-8', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-8', 6000,
         { y: 2000, ease: Linear.easeNone },
         { y: 0, rotation: -3, ease: Linear.easeNone }),
 
-      TweenLite.fromTo('.station-1-scene-photo-9', 4500,
+      TweenLite.fromTo('.station-1-scene-photo-9', 6000,
         { y: -1000, ease: Linear.easeNone },
         { y: 0, ease: Linear.easeNone }),
 
-      TweenLite.to('#station-1-scene', 4500, {
+      TweenLite.to('#station-1-scene', 6000, {
         ease: Linear.easeNone,
       }),
-
-
-      // TweenLite.fromTo('#station-1-scene', 3000, {
-      //   display: 'none',
-      // }, {
-      //   display: 'block',
-      //   delay: 3500,
-      //   ease: Linear.easeNone,
-      // }),
-
     ])
 
     // hide station scene
