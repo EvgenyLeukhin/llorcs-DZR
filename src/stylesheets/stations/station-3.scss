@@ -1,3 +1,11 @@
 .station-3 {
   z-index: 10;
+
+  .eshelons {
+    width: 1190px;
+    height: 440px;
+    left: 50%;
+    outline: 1px solid red;
+    margin-left: -567px;
+  }
 }

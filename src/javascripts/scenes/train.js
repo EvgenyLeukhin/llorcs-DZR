@@ -60,12 +60,16 @@ const makeTrainEndScene = () => {
 };
 
 export default (container) => {
-  makeTrainStartScene()
-    .addTo(container);
-  makeTrainStationScene(1)
-    .addTo(container);
-  makeTrainStationScene(2)
-    .addTo(container);
-  makeTrainEndScene()
-    .addTo(container);
+  makeTrainStartScene().addTo(container);
+  makeTrainStationScene(1).addTo(container);
+  makeTrainStationScene(2).addTo(container);
+  makeTrainStationScene(3).addTo(container);
+  makeTrainStationScene(4).addTo(container);
+  makeTrainStationScene(5).addTo(container);
+  makeTrainStationScene(6).addTo(container);
+  makeTrainStationScene(7).addTo(container);
+  makeTrainStationScene(8).addTo(container);
+  makeTrainStationScene(9).addTo(container);
+  makeTrainStationScene(10).addTo(container);
+  makeTrainEndScene().addTo(container);
 };

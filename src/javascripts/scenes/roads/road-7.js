@@ -1,8 +1,8 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TweenLite } from 'gsap';
 
-const makeRoad2Scene = () => {
-  const roadTwoTween = TweenLite.fromTo('#road-2', 1, {
+const makeRoad7Scene = () => {
+  const roadTwoTween = TweenLite.fromTo('#road-7', 1, {
     display: 'block',
     x: '150%',
     opacity: 1,
@@ -21,6 +21,6 @@ const makeRoad2Scene = () => {
 };
 
 export default (container) => {
-  makeRoad2Scene()
+  makeRoad7Scene()
     .addTo(container);
 };
