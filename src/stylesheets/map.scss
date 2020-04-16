@@ -33,10 +33,11 @@
   height: 15px;
   padding-left: 55px;
   padding-right: 55px;
-  // linear-gradient for black line in center
-  background-image: linear-gradient(to right, white 0, white 10%, black 10%, black 20%, white 20%, white 30%, black 30%, black 40%, white 40%, white 50%, black 50%, black 60%, white 60%, white 70%, black 70%, black 80%, white 80%, white 90%, black 90%, black 100%);
-  border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
+  // linear-gradient for #302a1e line in center
+  // background-image: linear-gradient(to right, white 0, white 10%, #302a1e 10%, #302a1e 20%, white 20%, white 30%, #302a1e 30%, #302a1e 40%, white 40%, white 50%, #302a1e 50%, #302a1e 60%, white 60%, white 70%, #302a1e 70%, #302a1e 80%, white 80%, white 90%, #302a1e 90%, #302a1e 100%);
+  border-top: 3px solid #302a1e;
+  border-bottom: 3px solid #302a1e;
+  background-color: #ece3d4;
   list-style: none;
   display: flex;
   // justify-content: center;
@@ -44,15 +45,23 @@
   &-item {
     position: relative;
 
+    &:nth-child(even) {
+      a:last-child {
+        &::before,
+        &::after { background-color: #302a1e; }
+      }
+    }
+
     a:first-child {
-      color: black;
+      color: #302a1e;
+      font-weight: bold;
       text-decoration: none;
       position: absolute;
       padding: 1px 3px;
       font-size: 12px;
       line-height: 15px;
       background-color: rgba(255, 255, 255, 0.7);
-      border: 2px solid #000;
+      border: 2px solid #302a1e;
       width: 100px;
       height: 40px;
       top: 50%;
@@ -70,20 +79,43 @@
 
     a:last-child {
       position: relative;
+      z-index: 1;
       top: -10px;
       display: inline-flex;
       justify-content: center;
       align-items: center;
       width: 30px;
       height: 30px;
+      background-image: url(../images/bg/map_point.svg);
+      background-color: transparent;
+      background-repeat: no-repeat;
       border-radius: 50%;
-      background-color: #fff;
-      border: 3px solid #000;
+      background-position: center center;
       transition: all 0.23s;
-      font-size: 14px;
       margin-right: 80px;
       text-decoration: none;
-      color: #000;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 41px;
+        height: 9px;
+        top: 10px;
+        left: -40px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 41px;
+        height: 9px;
+        top: 10px;
+        right: -40px;
+      }
 
       &:hover {
         color: #da4216;
@@ -103,21 +135,7 @@
       a:last-child {
         cursor: default;
         pointer-events: none;
-        transform: scale(1.5);
-        border: 5px solid #da4216;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: #da4216;
-          margin-left: -4px;
-          margin-top: -4px;
-        }
+        background-image: url(../images/bg/map_point_sel.svg);
       }
     }
   }

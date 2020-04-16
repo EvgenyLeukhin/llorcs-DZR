@@ -10,7 +10,6 @@ const makeTrainStartScene = () => {
         x: '50%',
         ease: Linear.easeNone,
       }),
-      TweenLite.to('#train-smoke', 1, { x: -33, skewX: 40, ease: Linear.easeNone }),
     ]);
 
   return new ScrollMagic.Scene({
@@ -28,12 +27,6 @@ const makeTrainStationScene = (stationNumber) => {
         x: '-50%',
         delay: 900,
       }),
-      TweenLite.to('#train-smoke', 1, {
-        x: 0,
-        skewX: 0,
-        delay: 900,
-        ease: Linear.easeNone,
-      }),
     ])
 
     // train leave a station
@@ -41,12 +34,6 @@ const makeTrainStationScene = (stationNumber) => {
       TweenLite.to('#train', 1000, {
         x: '50%',
         delay: 1000,
-      }),
-      TweenLite.to('#train-smoke', 1, {
-        x: -33,
-        skewX: 40,
-        delay: 1000,
-        ease: Linear.easeNone,
       }),
     ]);
 
