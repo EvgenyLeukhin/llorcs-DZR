@@ -1,0 +1,7 @@
+@function em($target, $context: $font-size) {
+  @if ($target == 'em(0px)' or $target == 0) {
+    @return 0;
+  }
+
+  @return round(($target / $context * 1em) * 100) / 100;
+}

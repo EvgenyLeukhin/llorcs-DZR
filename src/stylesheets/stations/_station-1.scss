@@ -1,0 +1,214 @@
+.station-1 {
+  z-index: 10;
+
+  .crowd {
+    position: absolute;
+    left: 50%;
+    bottom: em(10px);
+    z-index: 3;
+    margin-left: em(-567px);
+    width: em(1105px);
+    height: em(80px);
+    background-repeat: no-repeat;
+    background-image: url(../images/station-1/crowd3.svg);
+    background-size: cover;
+    background-position: 0 0;
+  }
+
+  .build {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    width: em(1190px);
+    height: em(440px);
+    margin-left: em(-595px);
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 50%;
+      height: 100%;
+      background-position-y: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 0;
+    }
+
+    &::before {
+      right: 0;
+      background-image: url(../images/station-1/belorusskiy.png);
+      background-position-x: right;
+    }
+
+    &::after {
+      left: 0;
+      background-image: url(../images/station-1/belorusskiy.png);
+      transform: scaleX(-1);
+      background-position-x: left;
+    }
+  }
+
+  .left {
+    position: absolute;
+    z-index: 2;
+    left: em(-403px);
+    bottom: 0;
+    width: em(2620px);
+    height: em(330px);
+    background-position: em(10px) bottom, left bottom;
+    background-repeat: no-repeat;
+    background-size: em(130px) auto, contain;
+    background-image:
+      url(../images/bg/basic/tree1.svg),
+      url(../images/station-1/moscowBack.svg);
+  }
+
+  .right {
+    position: absolute;
+    z-index: 2;
+    right: em(-740px);
+    bottom: 0;
+    width: em(1430px);
+    height: em(330px);
+    background-image:
+      url(../images/bg/basic/tree2.svg),
+      url(../images/bg/basic/tree1.svg),
+      url(../images/station-1/crowd1-light.svg);
+    background-position:
+      61% bottom,
+      71% bottom,
+      56% 99.6%;
+    background-repeat: no-repeat;
+    background-size:
+      em(230px) auto,
+      em(120px) auto,
+      em(90px) auto;
+  }
+}
+
+.station-1-scene {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: em(53px);
+    padding-left: em(20px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
+    line-height: em(15px);
+    color: #302a1e;
+  }
+
+  &-photo-1 {
+    z-index: 11;
+    width: em(250px);
+    height: em(160px);
+    margin-left: em(-142px);
+    margin-top: em(-125px);
+    background-image: url(../images/bg/card2.png);
+  }
+
+  &-photo-2 {
+    z-index: 10;
+    width: em(350px);
+    height: em(240px);
+    margin-left: em(-185px);
+    margin-top: em(30px);
+    background-image: url(../images/station-1/cards/02.png);
+    transform: rotate(5deg);
+  }
+
+  &-photo-3 {
+    z-index: 10;
+    width: em(350px);
+    height: em(240px);
+    margin-left: em(205px);
+    margin-top: em(-185px);
+    background-image: url(../images/station-1/cards/03.png);
+    transform: rotate(8deg);
+  }
+
+  &-photo-4 {
+    z-index: 10;
+    width: em(310px);
+    height: em(180px);
+    margin-left: em(-518px);
+    margin-top: em(-172px);
+    background-image: url(../images/station-1/cards/04-2.png);
+    transform: rotate(-5deg);
+  }
+
+  &-photo-5.photo {
+    z-index: 10;
+    width: em(320px);
+    height: em(210px);
+    margin-left: em(210px);
+    margin-top: em(48px);
+    background-image: url(../images/bg/card3.png);
+    padding-top: em(48px);
+    padding-left: em(33px);
+    padding-right: em(40px);
+    padding-bottom: em(20px);
+  }
+
+  &-photo-6.photo {
+    z-index: 10;
+    width: em(270px);
+    height: em(185px);
+    margin-left: em(-483px);
+    margin-top: 0;
+    background-image: url(../images/station-1/cards/06.png);
+    padding-top: em(23px);
+    padding-left: em(23px);
+    padding-right: em(40px);
+    padding-bottom: em(20px);
+  }
+
+  &-photo-7 {
+    z-index: 10;
+    width: em(310px);
+    height: em(310px);
+    margin-left: em(597px);
+    margin-top: em(-45px);
+    background-image: url(../images/station-1/cards/07.png);
+    transform: rotate(-7deg);
+  }
+
+  &-photo-8 {
+    z-index: 11;
+    width: em(320px);
+    height: em(212px);
+    margin-left: em(-850px);
+    margin-top: em(90px);
+    background-image: url(../images/station-1/cards/08.png);
+    transform: rotate(-3deg);
+  }
+
+  &-photo-9.photo {
+    z-index: 10;
+    width: em(263px);
+    height: em(212px);
+    margin-left: em(-834px);
+    margin-top: em(-83px);
+    background-image: url(../images/station-1/cards/09.png);
+    padding-top: em(23px);
+    padding-left: em(23px);
+    padding-right: em(30px);
+    padding-bottom: em(20px);
+  }
+}
