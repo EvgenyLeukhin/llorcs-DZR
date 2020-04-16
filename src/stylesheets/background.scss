@@ -25,3 +25,11 @@
     background-size: contain;
   }
 }
+
+@media (min-width: $fullhd-width-breakpoint) and (min-height: $fullhd-height-breakpoint) {
+  .background {
+    &-rail {
+      height: 28px;
+    }
+  }
+}

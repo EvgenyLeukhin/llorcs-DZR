@@ -1,3 +1,6 @@
+$fullhd-height-breakpoint: 960px;
+$fullhd-width-breakpoint: 1500px;
+
 @import "~reset-css/reset.css";
 
 // backgrounds
@@ -26,15 +29,14 @@ body {
 }
 
 .train {
-  // visibility: hidden;
+  visibility: hidden;
   position: fixed;
   z-index: 15;
   width: 710px;
   height: 220px;
   bottom: 36%;
   right: 50%;
-  margin-left: -300px;
-  background-image: url('../images/bg/basic/train.svg');
+  background-image: url(../images/bg/basic/train.svg);
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -85,4 +87,11 @@ body {
   bottom: 0;
   position: absolute;
   z-index: 100;
+}
+
+@media (min-width: $fullhd-width-breakpoint) and (min-height: $fullhd-height-breakpoint) {
+  .train {
+    width: 1360px;
+    height: 400px;
+  }
 }

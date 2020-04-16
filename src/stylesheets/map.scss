@@ -33,8 +33,6 @@
   height: 15px;
   padding-left: 55px;
   padding-right: 55px;
-  // linear-gradient for #302a1e line in center
-  // background-image: linear-gradient(to right, white 0, white 10%, #302a1e 10%, #302a1e 20%, white 20%, white 30%, #302a1e 30%, #302a1e 40%, white 40%, white 50%, #302a1e 50%, #302a1e 60%, white 60%, white 70%, #302a1e 70%, #302a1e 80%, white 80%, white 90%, #302a1e 90%, #302a1e 100%);
   border-top: 3px solid #302a1e;
   border-bottom: 3px solid #302a1e;
   background-color: #ece3d4;
@@ -168,5 +166,51 @@
   .rzd-logo {
     width: 58px;
     height: auto;
+  }
+}
+
+@media (min-width: $fullhd-width-breakpoint) and (min-height: $fullhd-height-breakpoint) {
+  .menu {
+    height: 26px;
+    bottom: 31%;
+    border-top: 4px solid #302a1e;
+    border-bottom: 4px solid #302a1e;
+
+    &-item {
+      &:last-child {
+        a:first-child { margin-left: -70px; }
+      }
+
+      a:first-child {
+        margin-left: -130px;
+        margin-top: -145px;
+        width: 135px;
+        height: 75px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      a:last-child {
+        margin-right: 130px;
+        width: 50px;
+        height: 50px;
+        top: -15px;
+
+        &::before,
+        &::after {
+          height: 20px;
+          width: 65px;
+          top: 15px;
+        }
+
+        &::before {
+          left: -62px;
+        }
+
+        &::after {
+          right: -62px;
+        }
+      }
+    }
   }
 }
