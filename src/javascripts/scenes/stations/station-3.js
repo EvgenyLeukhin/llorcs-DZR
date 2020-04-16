@@ -23,32 +23,32 @@ const makeStation3Scene = () => {
 
       // show station scene
       TweenLite.fromTo('.station-3-scene-photo-1', 6000,
-        { y: -1000, rotation: 0, ease: Linear.easeNone },
-        { y: 0, rotation: -8, ease: Linear.easeNone }),
+        { y: -1000, ease: Linear.easeNone },
+        { y: 0, ease: Linear.easeNone }),
 
       TweenLite.fromTo('.station-3-scene-photo-2', 6000,
-        { y: 2000, rotation: 0, ease: Linear.easeNone },
-        { y: 0, rotation: 8, ease: Linear.easeNone }),
-
-      TweenLite.fromTo('.station-3-scene-photo-3', 6000,
-        { y: -2000, ease: Linear.easeNone },
-        { y: 0, ease: Linear.easeNone }),
-
-      TweenLite.fromTo('.station-3-scene-photo-4', 6000,
-        { y: 1000, ease: Linear.easeNone },
-        { y: 0, ease: Linear.easeNone }),
-
-      TweenLite.fromTo('.station-3-scene-photo-5', 6000,
-        { y: -1000, rotation: 0, ease: Linear.easeNone },
-        { y: 0, rotation: -6, ease: Linear.easeNone }),
-
-      TweenLite.fromTo('.station-3-scene-photo-6', 6000,
         { y: 2000, ease: Linear.easeNone },
         { y: 0, ease: Linear.easeNone }),
 
+      TweenLite.fromTo('.station-3-scene-photo-3', 6000,
+        { y: -2000, ease: Linear.easeNone },
+        { y: 0, rotation: 8, ease: Linear.easeNone }),
+
+      TweenLite.fromTo('.station-3-scene-photo-4', 6000,
+        { y: 1000, ease: Linear.easeNone },
+        { y: 0, rotation: -11, ease: Linear.easeNone }),
+
+      TweenLite.fromTo('.station-3-scene-photo-5', 6000,
+        { y: -1000, ease: Linear.easeNone },
+        { y: 0, ease: Linear.easeNone }),
+
+      TweenLite.fromTo('.station-3-scene-photo-6', 6000,
+        { y: 2000, ease: Linear.easeNone },
+        { y: 0, rotation: -12, ease: Linear.easeNone }),
+
       TweenLite.fromTo('.station-3-scene-photo-7', 6000,
         { y: -2000, ease: Linear.easeNone },
-        { y: 0, rotation: 4, ease: Linear.easeNone }),
+        { y: 0, rotation: 8, ease: Linear.easeNone }),
 
       TweenLite.to('#station-3-scene', 6000, {
         ease: Linear.easeNone,

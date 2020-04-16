@@ -1,11 +1,154 @@
 .station-3 {
   z-index: 10;
 
-  .eshelons {
-    width: 1190px;
-    height: 440px;
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .eshelons1 {
+    width: 2950px;
+    height: 250px;
     left: 50%;
-    outline: 1px solid red;
-    margin-left: -567px;
+    bottom: 18px;
+    margin-left: -1709px;
+    background-size: contain;
+    background-position: 0 0;
+    background-image: url(../images/station-3/eshelon1.svg);
+  }
+
+  .eshelons2 {
+    z-index: 1;
+    width: 2900px;
+    height: 140px;
+    left: 50%;
+    bottom: 13px;
+    margin-left: -1500px;
+    background-size: contain;
+    background-position: 0 0;
+    background-image: url(../images/station-3/eshelon2.svg);
+  }
+
+  .crowd1 {
+    width: 1750px;
+    height: 130px;
+    left: 50%;
+    bottom: 5px;
+    margin-left: -683px;
+    background-image: url(../images/station-3/crowd5.svg);
+    background-size: contain;
+  }
+}
+
+.station-3-scene {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 53px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &-photo-1.photo {
+    z-index: 11;
+    width: 279px;
+    height: 184px;
+    margin-left: -376px;
+    margin-top: -189px;
+    background-image: url(../images/bg/card3.png);
+    padding-top: 44px;
+    padding-left: 29px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+  }
+
+  &-photo-2.photo {
+    z-index: 11;
+    width: 246px;
+    height: 160px;
+    margin-left: 360px;
+    margin-top: -177px;
+    background-image: url(../images/bg/card2.png);
+    padding-top: 34px;
+    padding-left: 23px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+  }
+
+  &-photo-3 {
+    z-index: 10;
+    width: 310px;
+    height: 210px;
+    margin-top: -188px;
+    transform: rotate(8deg);
+    background-image: url(../images/station-3/cards/02.png);
+  }
+
+  &-photo-4 {
+    z-index: 10;
+    width: 425px;
+    height: 240px;
+    margin-left: -518px;
+    margin-top: -12px;
+    transform: rotate(-11deg);
+    background-image: url(../images/station-3/cards/01.png);
+  }
+
+  &-photo-5.photo {
+    z-index: 10;
+    width: 268px;
+    height: 208px;
+    margin-left: -37px;
+    background-image: url(../images/bg/card1.png);
+    padding-left: 34px;
+    padding-right: 30px;
+    padding-bottom: 27px;
+  }
+
+  &-photo-6 {
+    z-index: 10;
+    width: 348px;
+    height: 188px;
+    margin-left: 315px;
+    margin-top: -23px;
+    transform: rotate(-12deg);
+    background-image: url(../images/station-3/cards/03.png);
+  }
+
+  &-photo-7 {
+    z-index: 10;
+    width: 331px;
+    height: 226px;
+    margin-left: 699px;
+    margin-top: -207px;
+    transform: rotate(8deg);
+    background-image: url(../images/station-3/cards/04.png);
+  }
+
+  &-photo-8.photo {
+    z-index: 11;
+    width: 272px;
+    height: 190px;
+    margin-left: 704px;
+    margin-top: 9px;
+    padding-top: 23px;
+    padding-left: 40px;
+    background-image: url(../images/bg/card3.png);
   }
 }
