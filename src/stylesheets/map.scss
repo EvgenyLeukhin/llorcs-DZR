@@ -40,10 +40,15 @@
   background-color: #ece3d4;
   list-style: none;
   display: flex;
-  // justify-content: center;
+  justify-content: center;
 
   &-item {
     position: relative;
+
+    &:last-child {
+      a:first-child { margin-left: -50px; }
+      a:last-child { margin-right: 0; }
+    }
 
     &:nth-child(even) {
       a:last-child {
@@ -60,7 +65,7 @@
       padding: 1px 3px;
       font-size: 12px;
       line-height: 15px;
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: #ece3d4;
       border: 2px solid #302a1e;
       width: 100px;
       height: 40px;
