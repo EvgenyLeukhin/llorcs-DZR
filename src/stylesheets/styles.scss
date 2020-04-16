@@ -1,40 +1,15 @@
-$fullhd-height-breakpoint: 960px;
-$fullhd-width-breakpoint: 1500px;
-
-@import "~reset-css/reset.css";
-
-// backgrounds
-@import "map";
-@import "background";
-
-// stations
-@import "stations/start";
-@import "stations/station-1.scss";
-@import "stations/station-2.scss";
-@import "stations/station-3.scss";
-@import "stations/station-4.scss";
-@import "stations/station-5.scss";
-@import "stations/station-6.scss";
-@import "stations/station-7.scss";
-@import "stations/station-8.scss";
-@import "stations/station-9.scss";
-@import "stations/station-10.scss";
-@import "stations/end";
-
-* { box-sizing: border-box; }
-
-body {
-  background-color: #adbdb1;
-  font-family: Verdana, sans-serif;
-}
+@import "base/index";
+@import "layouts/index";
+@import "backgrounds/index";
+@import "stations/index";
 
 .train {
-  // visibility: hidden;
+  //visibility: hidden;
   position: fixed;
   z-index: 15;
-  width: 710px;
-  height: 220px;
-  bottom: 36%;
+  width: em(710px);
+  height: em(220px);
+  bottom: 33%;
   right: 50%;
   background-image: url(../images/bg/basic/train.svg);
   background-position: center bottom;
@@ -47,7 +22,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 34%;
+  bottom: 33%;
 }
 
 .scene {
@@ -68,30 +43,4 @@ body {
   right: 0;
   bottom: 0;
   overflow: visible;
-}
-
-.road-1,
-.road-2,
-.road-3,
-.road-4,
-.road-5,
-.road-6,
-.road-7,
-.road-8,
-.road-9,
-.road-10 {
-  background-color: rgba(255, 255, 255, 0.5);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 100;
-}
-
-@media (min-width: $fullhd-width-breakpoint) and (min-height: $fullhd-height-breakpoint) {
-  .train {
-    width: 1360px;
-    height: 400px;
-  }
 }

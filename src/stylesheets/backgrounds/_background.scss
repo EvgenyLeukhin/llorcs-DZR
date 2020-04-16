@@ -19,17 +19,9 @@
     position: absolute;
     z-index: 15;
     width: 100%;
-    bottom: 0;
-    height: 16px;
+    top: 100%;
+    height: em(16px);
     background-image: url('../images/bg/basic/rails.svg');
     background-size: contain;
-  }
-}
-
-@media (min-width: $fullhd-width-breakpoint) and (min-height: $fullhd-height-breakpoint) {
-  .background {
-    &-rail {
-      height: 28px;
-    }
   }
 }

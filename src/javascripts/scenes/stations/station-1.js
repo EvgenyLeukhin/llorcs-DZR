@@ -23,8 +23,8 @@ const makeStation1Scene = () => {
 
       // show station scene
       TweenLite.fromTo('.station-1-scene-photo-1', 6000,
-        { y: -1000, ease: Linear.easeNone },
-        { y: 0, ease: Linear.easeNone }),
+        { y: '-50vh', ease: Linear.easeNone },
+        { y: 0, ease: Linear.easeNone, delay: 1000 }),
 
       TweenLite.fromTo('.station-1-scene-photo-2', 6000,
         { y: 2000, ease: Linear.easeNone },

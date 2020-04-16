@@ -8,11 +8,11 @@
   }
 
   .eshelons1 {
-    width: 2950px;
-    height: 250px;
+    width: em(2950px);
+    height: em(250px);
     left: 50%;
-    bottom: 18px;
-    margin-left: -1709px;
+    bottom: em(18px);
+    margin-left: em(-1709px);
     background-size: contain;
     background-position: 0 0;
     background-image: url(../images/station-3/eshelon1.svg);
@@ -20,22 +20,22 @@
 
   .eshelons2 {
     z-index: 1;
-    width: 2900px;
-    height: 140px;
+    width: em(2900px);
+    height: em(140px);
     left: 50%;
-    bottom: 13px;
-    margin-left: -1500px;
+    bottom: em(13px);
+    margin-left: em(-1500px);
     background-size: contain;
     background-position: 0 0;
     background-image: url(../images/station-3/eshelon2.svg);
   }
 
   .crowd1 {
-    width: 1750px;
-    height: 130px;
+    width: em(1750px);
+    height: em(130px);
     left: 50%;
-    bottom: 5px;
-    margin-left: -683px;
+    bottom: em(5px);
+    margin-left: em(-683px);
     background-image: url(../images/station-3/crowd5.svg);
     background-size: contain;
   }
@@ -57,98 +57,97 @@
     top: 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 53px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 27px;
-    font-size: 12px;
-    line-height: 15px;
+    padding-top: em(53px);
+    padding-left: em(20px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
+    line-height: em(15px);
   }
 
   &-photo-1.photo {
     z-index: 11;
-    width: 279px;
-    height: 184px;
-    margin-left: -376px;
-    margin-top: -189px;
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-376px);
+    margin-top: em(-189px);
     background-image: url(../images/bg/card3.png);
-    padding-top: 44px;
-    padding-left: 29px;
-    padding-right: 20px;
-    padding-bottom: 27px;
+    padding-top: em(44px);
+    padding-left: em(29px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
   }
 
   &-photo-2.photo {
     z-index: 11;
-    width: 246px;
-    height: 160px;
-    margin-left: 360px;
-    margin-top: -177px;
+    width: em(246px);
+    height: em(160px);
+    margin-left: em(360px);
+    margin-top: em(-177px);
     background-image: url(../images/bg/card2.png);
-    padding-top: 34px;
-    padding-left: 23px;
-    padding-right: 20px;
-    padding-bottom: 27px;
+    padding-top: em(34px);
+    padding-left: em(23px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
   }
 
   &-photo-3 {
     z-index: 10;
-    width: 310px;
-    height: 210px;
-    margin-top: -188px;
+    width: em(310px);
+    height: em(210px);
+    margin-top: em(-188px);
     transform: rotate(8deg);
     background-image: url(../images/station-3/cards/02.png);
   }
 
   &-photo-4 {
     z-index: 10;
-    width: 425px;
-    height: 240px;
-    margin-left: -518px;
-    margin-top: -12px;
+    width: em(425px);
+    height: em(240px);
+    margin-left: em(-518px);
+    margin-top: em(-12px);
     transform: rotate(-11deg);
     background-image: url(../images/station-3/cards/01.png);
   }
 
   &-photo-5.photo {
     z-index: 10;
-    width: 268px;
-    height: 208px;
-    margin-left: -37px;
+    width: em(268px);
+    height: em(208px);
+    margin-left: em(-37px);
     background-image: url(../images/bg/card1.png);
-    padding-left: 34px;
-    padding-right: 30px;
-    padding-bottom: 27px;
+    padding-left: em(34px);
+    padding-right: em(30px);
+    padding-bottom: em(27px);
   }
 
   &-photo-6 {
     z-index: 10;
-    width: 348px;
-    height: 188px;
-    margin-left: 315px;
-    margin-top: -23px;
+    width: em(348px);
+    height: em(188px);
+    margin-left: em(315px);
+    margin-top: em(-23px);
     transform: rotate(-12deg);
     background-image: url(../images/station-3/cards/03.png);
   }
 
   &-photo-7 {
     z-index: 10;
-    width: 331px;
-    height: 226px;
-    margin-left: 699px;
-    margin-top: -207px;
+    width: em(331px);
+    height: em(226px);
+    margin-left: em(699px);
+    margin-top: em(-207px);
     transform: rotate(8deg);
     background-image: url(../images/station-3/cards/04.png);
   }
 
   &-photo-8.photo {
     z-index: 11;
-    width: 272px;
-    height: 190px;
-    margin-left: 704px;
-    margin-top: 9px;
-    padding-top: 23px;
-    padding-left: 40px;
+    width: em(272px);
+    height: em(190px);
+    margin-left: em(704px);
+    margin-top: em(9px);
+    padding-top: em(23px);
+    padding-left: em(40px);
     background-image: url(../images/bg/card3.png);
   }
 }

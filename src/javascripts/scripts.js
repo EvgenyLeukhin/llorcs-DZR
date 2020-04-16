@@ -35,7 +35,7 @@ import endScene from './scenes/end-scene';
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
 
-// Init controller
+// Init scrollmagic
 const controller = new ScrollMagic.Controller();
 
 controller.scrollTo((y) => {
@@ -83,6 +83,31 @@ document.getElementById('menu')
     linkEl.addEventListener('click', (e) => {
       e.preventDefault();
 
-      controller.scrollTo(e.target.getAttribute('href'));
+      controller.scrollTo(document.getElementById(e.target.getAttribute('href').slice(1)));
     });
   });
+
+function windowResize() {
+  const preferredWidth = 1920; // px
+  const preferredHeight = 1080; // px
+
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+
+  const widthPercentage = (windowWidth * 100) / preferredWidth;
+  const heightPercentage = (windowHeight * 100) / preferredHeight;
+  const percentage = Math.min(heightPercentage, widthPercentage);
+  const newFontSize = Math.max(percentage, 50).toFixed(2);
+
+  document.body.style.fontSize = `${newFontSize}%`;
+}
+
+windowResize();
+
+setTimeout(() => {
+  windowResize();
+}, 100);
+
+window.addEventListener('resize', () => {
+  windowResize();
+});
