@@ -98,3 +98,126 @@
       contain;
   }
 }
+
+.station-1-scene {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 53px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &-photo-1 {
+    z-index: 10;
+    width: 250px;
+    height: 160px;
+    margin-left: -142px;
+    margin-top: -125px;
+    background-image: url(../images/bg/card2.png);
+  }
+
+  &-photo-2 {
+    z-index: 10;
+    width: 350px;
+    height: 240px;
+    margin-left: -185px;
+    margin-top: 30px;
+    background-image: url(../images/station-1/cards/02.png);
+    transform: rotate(5deg);
+  }
+
+  &-photo-3 {
+    z-index: 10;
+    width: 350px;
+    height: 240px;
+    margin-left: 205px;
+    margin-top: -185px;
+    background-image: url(../images/station-1/cards/03.png);
+    transform: rotate(8deg);
+  }
+
+  &-photo-4 {
+    z-index: 10;
+    width: 310px;
+    height: 180px;
+    margin-left: -518px;
+    margin-top: -172px;
+    background-image: url(../images/station-1/cards/04-2.png);
+    transform: rotate(-5deg);
+  }
+
+  &-photo-5.photo {
+    z-index: 10;
+    width: 320px;
+    height: 210px;
+    margin-left: 210px;
+    margin-top: 48px;
+    background-image: url(../images/bg/card3.png);
+    padding-top: 48px;
+    padding-left: 33px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+  }
+
+  &-photo-6.photo {
+    z-index: 10;
+    width: 270px;
+    height: 185px;
+    margin-left: -483px;
+    margin-top: 0;
+    background-image: url(../images/station-1/cards/06.png);
+    padding-top: 23px;
+    padding-left: 23px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+  }
+
+  &-photo-7 {
+    z-index: 10;
+    width: 310px;
+    height: 310px;
+    margin-left: 597px;
+    margin-top: -45px;
+    background-image: url(../images/station-1/cards/07.png);
+    transform: rotate(-7deg);
+  }
+
+  &-photo-8 {
+    z-index: 11;
+    width: 320px;
+    height: 212px;
+    margin-left: -850px;
+    margin-top: 90px;
+    background-image: url(../images/station-1/cards/08.png);
+    transform: rotate(-3deg);
+  }
+
+  &-photo-9.photo {
+    z-index: 10;
+    width: 263px;
+    height: 212px;
+    margin-left: -834px;
+    margin-top: -83px;
+    background-image: url(../images/station-1/cards/09.png);
+    padding-top: 23px;
+    padding-left: 23px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+}

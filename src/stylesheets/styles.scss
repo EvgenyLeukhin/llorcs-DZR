@@ -6,16 +6,18 @@
 @import "train";
 
 // stations
-@import "stations/start-scene";
+@import "stations/start";
 @import "stations/station-1.scss";
-@import "stations/station-1-cards.scss";
 @import "stations/station-2.scss";
-@import "stations/station-2-cards.scss";
-@import "stations/end-scene";
-
-// roads
-@import "roads/road-1.scss";
-@import "roads/road-2.scss";
+@import "stations/station-3.scss";
+@import "stations/station-4.scss";
+@import "stations/station-5.scss";
+@import "stations/station-6.scss";
+@import "stations/station-7.scss";
+@import "stations/station-8.scss";
+@import "stations/station-9.scss";
+@import "stations/station-10.scss";
+@import "stations/end";
 
 * { box-sizing: border-box; }
 
