@@ -1,0 +1,49 @@
+.social-icons {
+  position: fixed;
+  top: em(3px);
+  right: em(15px);
+  z-index: 11;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: em(160px);
+  height: em(30px);
+
+  li {
+    a {
+      display: inline-flex;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 28% auto;
+      width: em(30px);
+      height: em(30px);
+
+      &.vk {
+        background-image: url(../images/social/icon_vk.svg);
+        background-size: 55% auto;
+      }
+
+      &.fb {
+        background-image: url(../images/social/icon_fb.svg);
+        background-size: 28% auto;
+      }
+
+      &.ok {
+        background-image: url(../images/social/icon_ok.svg);
+        background-size: 35% auto;
+      }
+
+      &.wh {
+        background-image: url(../images/social/icon_wu.svg);
+        background-size: 50% auto;
+      }
+
+      &.te {
+        position: relative;
+        top: em(1px);
+        background-image: url(../images/social/icon_te.svg);
+        background-size: 55% auto;
+      }
+    }
+  }
+}
