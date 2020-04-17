@@ -27,7 +27,7 @@ const makeStation1Scene = () => {
       TweenLite.fromTo('.station-1-scene-photo-9', 2000,
         {
           x: '-50vw',
-          y: '-100vh',
+          y: '-120vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -41,7 +41,7 @@ const makeStation1Scene = () => {
       TweenLite.fromTo('.station-1-scene-photo-8', 2000,
         {
           x: '50vw',
-          y: '100vh',
+          y: '120vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -70,7 +70,7 @@ const makeStation1Scene = () => {
       TweenLite.fromTo('.station-1-scene-photo-4', 2000,
         {
           x: '100vw',
-          y: '-100vh',
+          y: '-120vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -84,7 +84,7 @@ const makeStation1Scene = () => {
       TweenLite.fromTo('.station-1-scene-photo-6', 2000,
         {
           x: '100vw',
-          y: '100vh',
+          y: '120vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -114,7 +114,7 @@ const makeStation1Scene = () => {
       TweenLite.fromTo('.station-1-scene-photo-1', 2000,
         {
           x: '200vw',
-          y: '-100vh',
+          y: '-120vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
