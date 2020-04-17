@@ -112,7 +112,6 @@
     padding-left: em(20px);
     padding-right: em(20px);
     padding-bottom: em(27px);
-    line-height: em(15px);
     color: #302a1e;
   }
 
@@ -149,7 +148,7 @@
     z-index: 10;
     width: em(310px);
     height: em(180px);
-    margin-left: em(-518px);
+    margin-left: em(-142px);
     margin-top: em(-172px);
     background-image: url(../images/station-1/cards/04-2.png);
     transform: rotate(-5deg);
@@ -162,23 +161,33 @@
     margin-left: em(-150px);
     margin-top: em(48px);
     background-image: url(../images/bg/card3.png);
-    padding-top: em(48px);
-    padding-left: em(33px);
-    padding-right: em(40px);
-    padding-bottom: em(20px);
+    padding-top: em(40px, 9px);
+    padding-left: em(35px, 9px);
+    padding-right: em(40px, 9px);
+    padding-bottom: em(40px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
   }
 
   &-photo-6.photo {
     z-index: 10;
     width: em(270px);
     height: em(185px);
-    margin-left: em(-483px);
+    margin-left: em(-110px);
     margin-top: 0;
-    background-image: url(../images/station-1/cards/06.png);
-    padding-top: em(23px);
-    padding-left: em(23px);
-    padding-right: em(40px);
-    padding-bottom: em(20px);
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(20px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(25px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
   }
 
   &-photo-7 {
@@ -195,7 +204,7 @@
     z-index: 11;
     width: em(320px);
     height: em(212px);
-    margin-left: em(-850px);
+    margin-left: em(-150px);
     margin-top: em(90px);
     background-image: url(../images/station-1/cards/08.png);
     transform: rotate(-3deg);
@@ -205,12 +214,17 @@
     z-index: 10;
     width: em(263px);
     height: em(212px);
-    margin-left: em(-834px);
+    margin-left: em(-130px);
     margin-top: em(-83px);
     background-image: url(../images/station-1/cards/09.png);
-    padding-top: em(23px);
-    padding-left: em(23px);
-    padding-right: em(30px);
-    padding-bottom: em(20px);
+    padding-top: em(30px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(25px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
   }
 }
