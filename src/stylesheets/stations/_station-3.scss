@@ -11,7 +11,7 @@
     width: em(2950px);
     height: em(250px);
     left: 50%;
-    bottom: em(18px);
+    bottom: 0;
     margin-left: em(-1709px);
     background-size: contain;
     background-position: 0 0;
@@ -23,7 +23,7 @@
     width: em(2900px);
     height: em(140px);
     left: 50%;
-    bottom: em(13px);
+    bottom: 0;
     margin-left: em(-1500px);
     background-size: contain;
     background-position: 0 0;
@@ -34,14 +34,15 @@
     width: em(1750px);
     height: em(130px);
     left: 50%;
-    bottom: em(5px);
-    margin-left: em(-683px);
+    bottom: em(-18px);
+    margin-left: em(-670px);
     background-image: url(../images/station-3/crowd5.svg);
     background-size: contain;
   }
 }
 
 .station-3-scene {
+  visibility: hidden;
   display: none;
   position: absolute;
   z-index: 100;

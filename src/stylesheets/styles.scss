@@ -4,12 +4,12 @@
 @import "stations/index";
 
 .train {
-  //visibility: hidden;
+  // visibility: hidden;
   position: fixed;
   z-index: 15;
   width: em(710px);
   height: em(220px);
-  bottom: 33%;
+  bottom: $rail-line;
   right: 50%;
   background-image: url(../images/bg/basic/train.svg);
   background-position: center bottom;
@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 33%;
+  bottom: $rail-line;
 }
 
 .scene {

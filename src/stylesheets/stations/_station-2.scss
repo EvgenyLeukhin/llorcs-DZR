@@ -9,7 +9,7 @@
 
   .sanitary-train {
     left: 50%;
-    bottom: em(8px);
+    bottom: em(-10px);
     width: em(2000px);
     margin-left: em(-1000px);
     height: em(250px);
@@ -118,6 +118,7 @@
 }
 
 .station-2-scene {
+  visibility: hidden;
   display: none;
   position: absolute;
   z-index: 100;

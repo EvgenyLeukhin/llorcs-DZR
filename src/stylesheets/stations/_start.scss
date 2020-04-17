@@ -9,10 +9,20 @@
     top: 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: em(53px);
+  }
+
+  &-photo-1 {
+    z-index: 10;
+    width: em(430px);
+    height: em(470px);
+    margin-left: em(-225px);
+    margin-top: em(-120px);
+    background-size: cover;
+    background-image: url(../images/bg/card4.jpg);
+    padding-top: em(50px);
     padding-left: em(20px);
     padding-right: em(20px);
-    padding-bottom: em(27px);
+    padding-bottom: em(40px);
     color: #302a1e;
 
     h2 {
@@ -25,9 +35,10 @@
     }
 
     p {
-      font-size: em(14px, 12px);
-      line-height: em(16px, 14px);
+      font-size: em(14px);
+      line-height: em(17px, 14px);
       text-align: justify;
+      margin-bottom: em(3px);
     }
 
     .arrow-down {
@@ -35,10 +46,10 @@
       animation-duration: 1.25s;
       animation-iteration-count: 10;
       position: absolute;
-      bottom: em(33px);
+      bottom: em(30px);
       left: 50%;
       width: em(70px);
-      margin-left: em(-35px);
+      margin-left: em(-40px);
       height: em(25px);
       background-image: url(../images/start-screen/scrollarrow.svg);
       background-repeat: no-repeat;
@@ -49,16 +60,6 @@
         100% { bottom: em(20px); }
       }
     }
-  }
-
-  &-photo-1 {
-    z-index: 10;
-    width: em(430px);
-    height: em(470px);
-    margin-left: em(-225px);
-    margin-top: em(-120px);
-    background-size: cover;
-    background-image: url(../images/bg/card4.jpg);
   }
 
   &-photo-2 {
