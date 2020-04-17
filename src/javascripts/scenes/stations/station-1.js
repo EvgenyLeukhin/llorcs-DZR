@@ -191,6 +191,30 @@ const makeStation1Scene = () => {
         ease: Linear.easeNone,
         delay: 14000,
       }),
+
+      // 7 card show
+      TweenLite.fromTo('.station-1-scene-photo-7', 2000,
+        {
+          x: '-100vw',
+          y: '200vh',
+          ease: Linear.easeNone,
+          rotation: -320,
+        },
+        {
+          x: 0,
+          y: 0,
+          ease: Linear.easeNone,
+          delay: 13000,
+          rotation: -5,
+        }),
+
+      // 7 card hide
+      TweenLite.to('.station-1-scene-photo-7', 2000, {
+        x: '-300vw',
+        display: 'none',
+        ease: Linear.easeNone,
+        delay: 16000,
+      }),
     ])
 
 
