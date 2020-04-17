@@ -4,7 +4,8 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import 'gsap/ScrollToPlugin';
 
 // scenes
-import backgroundScenes from './scenes/background';
+import bgRoadScenes from './scenes/bg-road-rails';
+import bgStationsScenes from './scenes/bg-station-rails';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
 import road1 from './scenes/roads/road-1';
@@ -47,7 +48,8 @@ controller.scrollTo((y) => {
 });
 
 // adding scenes
-backgroundScenes(controller);
+bgRoadScenes(controller);
+bgStationsScenes(controller);
 trainScenes(controller);
 
 // roads

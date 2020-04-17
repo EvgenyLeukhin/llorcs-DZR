@@ -25,7 +25,7 @@ const makeTrainStationScene = (stationNumber) => {
     .add([
       TweenLite.to('#train', 1000, {
         x: '-50%',
-        delay: 900,
+        delay: 2500,
       }),
     ])
 
@@ -33,7 +33,7 @@ const makeTrainStationScene = (stationNumber) => {
     .add([
       TweenLite.to('#train', 1000, {
         x: '50%',
-        delay: 1000,
+        delay: 2500,
       }),
     ]);
 

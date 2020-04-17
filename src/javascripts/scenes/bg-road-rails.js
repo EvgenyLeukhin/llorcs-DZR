@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TimelineLite, TweenLite } from 'gsap';
 
-const makeBackgroundsScene = (triggerNumber) => {
+const makeBackgroundsRailScene = (triggerNumber) => {
   const backgroundTimeline = new TimelineLite()
     .duration(1)
     .add([
@@ -24,7 +24,7 @@ const makeBackgroundsScene = (triggerNumber) => {
 };
 
 export default (container) => {
-  makeBackgroundsScene(1).addTo(container); // #road-trigger-1
-  makeBackgroundsScene(2).addTo(container); // #road-trigger-2
-  makeBackgroundsScene(3).addTo(container); // #road-trigger-3
+  makeBackgroundsRailScene(1).addTo(container); // #road-trigger-1
+  makeBackgroundsRailScene(2).addTo(container); // #road-trigger-2
+  makeBackgroundsRailScene(3).addTo(container); // #road-trigger-3
 };
