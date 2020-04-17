@@ -1,18 +1,99 @@
-.road-1,
-.road-2,
-.road-3,
-.road-4,
-.road-5,
-.road-6,
-.road-7,
-.road-8,
-.road-9,
-.road-10 {
-  background-color: rgba(255, 255, 255, 0.5);
+.road {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  position: absolute;
   z-index: 100;
+  background-repeat: no-repeat;
 }
+
+.road-1 {
+  background-image:
+    url(../images/bg/clouds/cloud1.png),
+    url(../images/bg/clouds/cloud3.png),
+    url(../images/bg/clouds/cloud2.png);
+  background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+  background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+}
+
+.road-2 {
+  background-image:
+    url(../images/bg/clouds/cloud3.png),
+    url(../images/bg/clouds/cloud1.png),
+    url(../images/bg/clouds/cloud2.png);
+  background-position: em(80px) top, em(740px) em(25px), em(380px) em(50px);
+  background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+}
+
+.road-3 {
+  background-image:
+    url(../images/bg/clouds/cloud2.png),
+    url(../images/bg/clouds/cloud1.png),
+    url(../images/bg/clouds/cloud3.png);
+  background-position: em(80px) em(10px), em(700px) top, em(400px) em(20px);
+  background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+}
+
+.road-4 {
+  background-image:
+    url(../images/bg/clouds/cloud2.png),
+    url(../images/bg/clouds/cloud3.png),
+    url(../images/bg/clouds/cloud1.png);
+  background-position: em(80px) top, em(700px) top, em(400px) top;
+  background-size: em(200px) auto, em(180px) auto, em(150px) auto;
+}
+
+.road-5 {
+  background-image:
+    url(../images/bg/clouds/cloud1.png),
+    url(../images/bg/clouds/cloud2.png),
+    url(../images/bg/clouds/cloud3.png);
+  background-position: em(70px) top, em(680px) top, em(420px) top;
+  background-size: em(180px) auto, em(220px) auto, em(130px) auto;
+}
+
+.road-6 {
+  background-image:
+    url(../images/bg/clouds/cloud3.png),
+    url(../images/bg/clouds/cloud1.png),
+    url(../images/bg/clouds/cloud2.png);
+  background-position: em(90px) top, em(720px) top, em(450px) top;
+  background-size: em(220px) auto, em(200px) auto, em(170px) auto;
+}
+
+// .road-4 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+//   background-color: rgba(2, 55, 0, 0.75);
+// }
+
+// .road-5 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+// }
+
+// .road-6 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+// }
+
+// .road-7 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+// }
+
+// .road-8 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+// }
+
+// .road-9 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+// }
+
+// .road-10 {
+//   background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+//   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+// }
