@@ -8,11 +8,11 @@ const makeStation1Scene = () => {
       TweenLite.fromTo('#station-1', 30000, { // show station duration
         // styles before
         x: '200%',
-        display: 'block',
+        display: 'none',
       }, {
         // styles afrer
         x: '-200%',
-        display: 'none',
+        display: 'block',
         ease: Linear.easeNone,
       }),
 
@@ -220,7 +220,7 @@ const makeStation1Scene = () => {
     ])
 
 
-    // hide station scene
+    // hide station and scene
     .add([
       TweenLite.to('#station-1-scene', 1000, {
         x: '-300%',
@@ -230,7 +230,7 @@ const makeStation1Scene = () => {
 
       // hide station
       TweenLite.to('#station-1', 8000, {
-        x: '-200%',
+        x: '-750%',
         display: 'none',
         ease: Linear.easeNone,
       }),
