@@ -52,13 +52,13 @@ const makeStation1Scene = () => {
         }),
       // 9-8 card hide
       TweenLite.to('.station-1-scene-photo-9', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
         delay: 8000,
       }),
       TweenLite.to('.station-1-scene-photo-8', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
         delay: 8000,
@@ -76,7 +76,7 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 7000,
+          delay: 6500,
           rotation: -5,
         }),
       TweenLite.fromTo('.station-1-scene-photo-6', 2000,
@@ -90,22 +90,22 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 7000,
+          delay: 6500,
           rotation: 0,
         }),
 
       // 4-6 card hide
       TweenLite.to('.station-1-scene-photo-4', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 10000,
+        delay: 9500,
       }),
       TweenLite.to('.station-1-scene-photo-6', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 10000,
+        delay: 9500,
       }),
 
       // 1-2 card show
@@ -120,7 +120,7 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 9000,
+          delay: 8000,
           rotation: 0,
         }),
       TweenLite.fromTo('.station-1-scene-photo-2', 2000,
@@ -134,22 +134,22 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 9000,
+          delay: 8000,
           rotation: 5,
         }),
 
       // 1-2 card hide
       TweenLite.to('.station-1-scene-photo-1', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 12000,
+        delay: 11000,
       }),
       TweenLite.to('.station-1-scene-photo-2', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 12000,
+        delay: 11000,
       }),
 
       // 5-3 card show
@@ -162,7 +162,7 @@ const makeStation1Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: 11000,
+          delay: 9500,
           rotation: 0,
         }),
       TweenLite.fromTo('.station-1-scene-photo-3', 2000,
@@ -174,22 +174,22 @@ const makeStation1Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: 11000,
+          delay: 9500,
           rotation: 8,
         }),
 
       // 5-3 card hide
       TweenLite.to('.station-1-scene-photo-5', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 14000,
+        delay: 12500,
       }),
       TweenLite.to('.station-1-scene-photo-3', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 14000,
+        delay: 12500,
       }),
 
       // 7 card show
@@ -204,16 +204,16 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 13000,
+          delay: 11000,
           rotation: -7,
         }),
 
       // 7 card hide
       TweenLite.to('.station-1-scene-photo-7', 2000, {
-        x: '-300vw',
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 16000,
+        delay: 14000,
       }),
     ])
 
