@@ -1,3 +1,55 @@
 .station-5 {
   z-index: 10;
+
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .wires {
+    width: em(1870px);
+    height: em(245px);
+    margin-left: em(-970px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(20px);
+    background-image: url(../images/station-5/rocadapoles.svg);
+  }
+
+  .workers {
+    width: em(1400px);
+    height: em(82px);
+    margin-left: em(-813px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/station-5/rocadaworkers.svg);
+  }
+
+  .death-tree {
+    width: em(200px);
+    height: em(260px);
+    margin-left: em(-460px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/bg/trees/deadtree1.svg);
+  }
+
+  .tree {
+    z-index: 1;
+    width: em(280px);
+    height: em(340px);
+    margin-left: em(190px);
+    left: 50%;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/bg/trees/deadtree2.svg);
+  }
 }

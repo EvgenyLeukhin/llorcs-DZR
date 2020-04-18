@@ -1,3 +1,44 @@
 .station-6 {
   z-index: 10;
+
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .construction {
+    width: em(1530px);
+    height: em(207px);
+    margin-left: em(-815px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(20px);
+    background-image: url(../images/station-6/leninconstr.svg);
+  }
+
+  .workers {
+    width: em(1470px);
+    height: em(90px);
+    margin-left: em(-784px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/station-6/leninworkers1.svg);
+  }
+
+  .sands-and-tree {
+    z-index: 1;
+    width: em(1460px);
+    height: em(335px);
+    margin-left: em(-607px);
+    left: 50%;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 em(10px);
+    background-image: url(../images/station-6/lenintrees.svg);
+  }
 }
