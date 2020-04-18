@@ -1,3 +1,80 @@
 .station-4 {
   z-index: 10;
+
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .heavy-train {
+    width: em(2660px);
+    height: em(250px);
+    margin-left: em(-1280px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 0;
+    background-image: url(../images/station-4/bron1.svg);
+  }
+
+  .bridge {
+    z-index: 1;
+    width: em(1500px);
+    height: em(420px);
+    margin-left: em(-650px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 0;
+    background-image: url(../images/station-4/bridge.svg);
+  }
+
+  .crowd {
+    width: em(478px);
+    height: em(124px);
+    margin-left: em(-673px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/station-4/crowd6.svg);
+  }
+
+  .death-tree {
+    width: em(200px);
+    height: em(260px);
+    margin-left: em(435px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/station-4/deadtree1.svg);
+  }
+
+  .tree1 {
+    z-index: 1;
+    width: em(210px);
+    height: em(270px);
+    margin-left: em(850px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    transform: scaleX(-1);
+    background-image: url(../images/station-4/deadtree2.svg);
+  }
+
+  .tree2 {
+    z-index: 1;
+    width: em(280px);
+    height: em(340px);
+    margin-left: em(-925px);
+    left: 50%;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/station-4/deadtree2.svg);
+  }
 }
