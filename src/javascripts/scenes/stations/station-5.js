@@ -48,7 +48,7 @@ const makeStation5Scene = () => {
         {
           x: 0,
           y: 0,
-          rotation: -11,
+          rotation: 10,
           ease: Linear.easeNone,
           delay: 7000,
         }),
@@ -79,7 +79,7 @@ const makeStation5Scene = () => {
           y: 0,
           ease: Linear.easeNone,
           delay: 9500,
-          rotation: 8,
+          rotation: -5,
         }),
       TweenLite.fromTo('.station-5-scene-photo-4', 2000,
         {
@@ -137,7 +137,7 @@ const makeStation5Scene = () => {
           y: 0,
           ease: Linear.easeNone,
           delay: 12000,
-          rotation: -12,
+          rotation: 7,
         }),
 
       // 5-6 card hide
@@ -157,31 +157,25 @@ const makeStation5Scene = () => {
       // 7-8 card show
       TweenLite.fromTo('.station-5-scene-photo-7', 2000,
         {
-          x: '200vw',
-          y: '-120vh',
+          y: '-200vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
         {
-          x: 0,
           y: 0,
           ease: Linear.easeNone,
           delay: 14500,
-          rotation: 0,
+          rotation: -5,
         }),
       TweenLite.fromTo('.station-5-scene-photo-8', 2000,
         {
-          x: '-100vw',
           y: '200vh',
           ease: Linear.easeNone,
-          rotation: -320,
         },
         {
-          x: 0,
           y: 0,
           ease: Linear.easeNone,
           delay: 14500,
-          rotation: -12,
         }),
 
       // 7-8 card hide
@@ -225,7 +219,7 @@ const makeStation5Scene = () => {
           y: 0,
           ease: Linear.easeNone,
           delay: 17000,
-          rotation: -12,
+          rotation: 11,
         }),
 
       // 9-10 card hide

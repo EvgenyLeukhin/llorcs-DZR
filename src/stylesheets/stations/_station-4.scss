@@ -100,19 +100,20 @@
     padding-right: em(20px);
     padding-bottom: em(27px);
     line-height: em(15px);
-    background-color: rgba(255, 0, 0, 0.25);
+    // background-color: rgba(255, 0, 0, 0.25);
   }
 
   &-photo-1.photo {
-    width: em(279px);
+    width: em(270px);
     height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    margin-left: em(-140px);
+    margin-top: em(-160px);
     z-index: 10;
-    padding-top: em(30px, 9px);
-    padding-left: em(40px, 9px);
-    padding-right: em(30px, 9px);
-    padding-bottom: em(30px, 9px);
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(20px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(25px, 9px);
+    padding-bottom: em(20px, 9px);
 
     p {
       font-size: em(12px, 9px);
@@ -121,30 +122,33 @@
   }
 
   &-photo-2 {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(360px);
+    height: em(215px);
+    margin-left: em(-220px);
+    margin-top: em(5px);
+    background-image: url(../images/station-4/cards/01.png);
     z-index: 10;
   }
 
   &-photo-3 {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(310px);
+    height: em(190px);
+    margin-left: em(-186px);
+    margin-top: em(-110px);
     z-index: 10;
+    background-image: url(../images/station-4/cards/02.png);
   }
 
   &-photo-4.photo {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(270px);
+    height: em(210px);
+    margin-left: em(-130px);
+    margin-top: em(55px);
     z-index: 10;
-    padding-top: em(30px, 9px);
-    padding-left: em(40px, 9px);
-    padding-right: em(30px, 9px);
+    background-image: url(../images/bg/card1.png);
+    padding-top: em(40px, 9px);
+    padding-left: em(35px, 9px);
+    padding-right: em(25px, 9px);
     padding-bottom: em(30px, 9px);
 
     p {
@@ -159,6 +163,7 @@
     margin-left: em(-150px);
     margin-top: em(-189px);
     z-index: 10;
+    background-image: url(../images/bg/card3.png);
     padding-top: em(30px, 9px);
     padding-left: em(40px, 9px);
     padding-right: em(30px, 9px);
@@ -171,31 +176,34 @@
   }
 
   &-photo-6 {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(340px);
+    height: em(230px);
+    margin-left: em(-190px);
+    margin-top: em(-14px);
     z-index: 10;
+    background-image: url(../images/station-4/cards/03.png);
   }
 
   &-photo-7 {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(360px);
+    height: em(230px);
+    margin-left: em(-245px);
+    margin-top: em(-190px);
+    background-image: url(../images/station-4/cards/04.png);
     z-index: 10;
   }
 
   &-photo-8.photo {
-    width: em(279px);
-    height: em(184px);
+    width: em(260px);
+    height: em(170px);
     margin-left: em(-150px);
-    margin-top: em(-189px);
+    margin-top: em(30px);
     z-index: 10;
-    padding-top: em(30px, 9px);
-    padding-left: em(40px, 9px);
-    padding-right: em(30px, 9px);
-    padding-bottom: em(30px, 9px);
+    padding-top: em(20px, 9px);
+    padding-left: em(20px, 9px);
+    padding-right: em(20px, 9px);
+    padding-bottom: em(20px, 9px);
+    background-image: url(../images/bg/card2.png);
 
     p {
       font-size: em(12px, 9px);
@@ -204,18 +212,29 @@
   }
 
   &-photo-9.photo {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(260px);
+    height: em(180px);
+    margin-left: em(-165px);
+    margin-top: em(-200px);
     z-index: 10;
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(20px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(25px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
   }
 
   &-photo-10 {
-    width: em(279px);
-    height: em(184px);
-    margin-left: em(-150px);
-    margin-top: em(-189px);
+    width: em(250px);
+    height: em(280px);
+    margin-left: em(-160px);
+    margin-top: em(-7px);
     z-index: 10;
+    background-image: url(../images/station-4/cards/05.png);
   }
 }
