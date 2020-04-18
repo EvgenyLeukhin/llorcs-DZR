@@ -42,3 +42,144 @@
     background-image: url(../images/station-6/lenintrees.svg);
   }
 }
+
+.station-6-scene {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: em(53px);
+    padding-left: em(20px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
+    line-height: em(15px);
+    background-color: rgba(255, 0, 0, 0.25);
+  }
+
+  &-photo-1.photo {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+    padding-top: em(30px, 9px);
+    padding-left: em(40px, 9px);
+    padding-right: em(30px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-2 {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+  }
+
+  &-photo-3 {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+  }
+
+  &-photo-4.photo {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+    padding-top: em(30px, 9px);
+    padding-left: em(40px, 9px);
+    padding-right: em(30px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-5.photo {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+    padding-top: em(30px, 9px);
+    padding-left: em(40px, 9px);
+    padding-right: em(30px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-6 {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+  }
+
+  &-photo-7 {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+  }
+
+  &-photo-8.photo {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+    padding-top: em(30px, 9px);
+    padding-left: em(40px, 9px);
+    padding-right: em(30px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-9.photo {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+  }
+
+  &-photo-10 {
+    width: em(279px);
+    height: em(184px);
+    margin-left: em(-150px);
+    margin-top: em(-189px);
+    z-index: 10;
+  }
+}
