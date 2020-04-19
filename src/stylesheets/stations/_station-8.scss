@@ -1,3 +1,176 @@
 .station-8 {
   z-index: 10;
+
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .heavy-train {
+    width: em(3100px);
+    height: em(250px);
+    margin-left: em(-1720px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(20px);
+    background-image: url(../images/station-8/ilya.svg);
+  }
+
+  .crowd {
+    width: em(1080px);
+    height: em(130px);
+    margin-left: em(-555px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(20px);
+    background-image: url(../images/station-8/ilyacrew.svg);
+  }
+
+  .tree {
+    z-index: 1;
+    width: em(160px);
+    height: em(200px);
+    margin-left: em(-175px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(24px);
+    transform: scaleX(-1);
+    background-image: url(../images/bg/trees/tree1.svg);
+  }
+}
+
+.station-8-scene {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: em(53px);
+    padding-left: em(20px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
+    line-height: em(15px);
+  }
+
+  &-photo-1.photo {
+    width: em(290px);
+    height: em(200px);
+    margin-left: em(-140px);
+    margin-top: em(-195px);
+    z-index: 11;
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(30px, 9px);
+    padding-left: em(30px, 9px);
+    padding-right: em(30px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-2 {
+    width: em(380px);
+    height: em(280px);
+    margin-left: em(-200px);
+    margin-top: em(-40px);
+    background-image: url(../images/station-8/cards/01.png);
+    z-index: 10;
+  }
+
+  &-photo-3 {
+    width: em(340px);
+    height: em(220px);
+    margin-left: em(-160px);
+    margin-top: em(-135px);
+    z-index: 10;
+    background-image: url(../images/station-8/cards/02.png);
+  }
+
+  &-photo-4.photo {
+    width: em(270px);
+    height: em(180px);
+    margin-left: em(-130px);
+    margin-top: em(70px);
+    z-index: 10;
+    background-image: url(../images/bg/card3.png);
+    padding-top: em(25px, 9px);
+    padding-left: em(40px, 9px);
+    padding-right: em(15px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-5.photo {
+    width: em(275px);
+    height: em(190px);
+    margin-left: em(-150px);
+    margin-top: em(-170px);
+    z-index: 11;
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(30px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(20px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-6 {
+    width: em(305px);
+    height: em(225px);
+    margin-left: em(-200px);
+    margin-top: 0;
+    z-index: 10;
+    background-image: url(../images/station-8/cards/03.png);
+  }
+
+  &-photo-7 {
+    width: em(360px);
+    height: em(240px);
+    margin-left: em(-200px);
+    margin-top: em(-130px);
+    background-image: url(../images/station-8/cards/04.png);
+    z-index: 10;
+  }
+
+  &-photo-8.photo {
+    width: em(270px);
+    height: em(210px);
+    margin-left: em(-145px);
+    margin-top: em(80px);
+    z-index: 10;
+    padding-top: em(30px, 9px);
+    padding-left: em(30px, 9px);
+    padding-right: em(20px, 9px);
+    padding-bottom: em(20px, 9px);
+    background-image: url(../images/bg/card1.png);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
 }

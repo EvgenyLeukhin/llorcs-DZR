@@ -4,7 +4,7 @@
 @import "stations/index";
 
 .train {
-  // visibility: hidden;
+  visibility: hidden;
   position: fixed;
   z-index: 15;
   width: em(710px);

@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TimelineLite, TweenLite } from 'gsap';
 
-const makeStation6Scene = () => {
+const makeStation7Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
@@ -263,6 +263,6 @@ const makeStation6Scene = () => {
 };
 
 export default (container) => {
-  makeStation6Scene()
+  makeStation7Scene()
     .addTo(container);
 };
