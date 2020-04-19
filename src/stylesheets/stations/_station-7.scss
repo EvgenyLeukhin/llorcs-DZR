@@ -1,3 +1,206 @@
 .station-7 {
   z-index: 10;
+
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+
+  .work-train {
+    width: em(2250px);
+    height: em(265px);
+    margin-left: em(-1100px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(20px);
+    background-image: url(../images/station-7/lunin_loco.svg);
+    // background-color: rgba(255, 0, 0, 0.25);
+  }
+
+  .tree1 {
+    z-index: 2;
+    width: em(280px);
+    height: em(340px);
+    margin-left: em(530px);
+    left: 50%;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 em(20px);
+    background-image: url(../images/bg/trees/deadtree2.svg);
+  }
+
+  .tree2 {
+    z-index: 1;
+    width: em(200px);
+    height: em(260px);
+    margin-left: em(-255px);
+    left: 50%;
+    bottom: 0;
+    background-size: contain;
+    background-position: 0 em(8px);
+    background-image: url(../images/bg/trees/deadtree1.svg);
+  }
+}
+
+.station-7-scene {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+
+  .photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: em(53px);
+    padding-left: em(20px);
+    padding-right: em(20px);
+    padding-bottom: em(27px);
+    line-height: em(15px);
+    // background-color: rgba(255, 0, 0, 0.25);
+  }
+
+  &-photo-1.photo {
+    width: em(285px);
+    height: em(185px);
+    margin-left: em(-140px);
+    margin-top: em(-170px);
+    z-index: 11;
+    background-image: url(../images/bg/card3.png);
+    padding-top: em(30px, 9px);
+    padding-left: em(30px, 9px);
+    padding-right: em(30px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-2 {
+    width: em(360px);
+    height: em(280px);
+    margin-left: em(-170px);
+    margin-top: em(-10px);
+    background-image: url(../images/station-7/cards/01.png);
+    z-index: 10;
+  }
+
+  &-photo-3 {
+    width: em(350px);
+    height: em(210px);
+    margin-left: em(-210px);
+    margin-top: em(-120px);
+    z-index: 10;
+    background-image: url(../images/station-7/cards/02.png);
+  }
+
+  &-photo-4.photo {
+    width: em(270px);
+    height: em(190px);
+    margin-left: em(-130px);
+    margin-top: em(70px);
+    z-index: 10;
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(30px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(15px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-5.photo {
+    width: em(265px);
+    height: em(205px);
+    margin-left: em(-150px);
+    margin-top: em(-180px);
+    z-index: 11;
+    background-image: url(../images/bg/card1.png);
+    padding-top: em(30px, 9px);
+    padding-left: em(25px, 9px);
+    padding-right: em(20px, 9px);
+    padding-bottom: em(30px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-6 {
+    width: em(370px);
+    height: em(270px);
+    margin-left: em(-230px);
+    margin-top: 0;
+    z-index: 10;
+    background-image: url(../images/station-7/cards/03.png);
+  }
+
+  &-photo-7 {
+    width: em(360px);
+    height: em(260px);
+    margin-left: em(-200px);
+    margin-top: em(-130px);
+    background-image: url(../images/station-7/cards/04.png);
+    z-index: 10;
+  }
+
+  &-photo-8.photo {
+    width: em(250px);
+    height: em(160px);
+    margin-left: em(-150px);
+    margin-top: em(100px);
+    z-index: 10;
+    padding-top: em(2px, 9px);
+    padding-left: em(20px, 9px);
+    padding-right: em(20px, 9px);
+    padding-bottom: em(20px, 9px);
+    background-image: url(../images/bg/card2.png);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-9.photo {
+    width: em(270px);
+    height: em(185px);
+    margin-left: em(-165px);
+    margin-top: em(-210px);
+    z-index: 10;
+    background-image: url(../images/bg/card2-2.png);
+    padding-top: em(40px, 9px);
+    padding-left: em(35px, 9px);
+    padding-right: em(20px, 9px);
+    padding-bottom: em(20px, 9px);
+
+    p {
+      font-size: em(12px, 9px);
+      line-height: em(13px, 9px);
+    }
+  }
+
+  &-photo-10 {
+    width: em(260px);
+    height: em(400px);
+    margin-left: em(-210px);
+    margin-top: em(-50px);
+    z-index: 10;
+    background-image: url(../images/station-7/cards/05.png);
+  }
 }
