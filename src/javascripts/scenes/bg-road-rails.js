@@ -27,4 +27,11 @@ export default (container) => {
   makeBackgroundsRailScene(1).addTo(container); // #road-trigger-1
   makeBackgroundsRailScene(2).addTo(container); // #road-trigger-2
   makeBackgroundsRailScene(3).addTo(container); // #road-trigger-3
+  makeBackgroundsRailScene(4).addTo(container); // #road-trigger-4
+  makeBackgroundsRailScene(5).addTo(container); // #road-trigger-5
+  makeBackgroundsRailScene(6).addTo(container); // #road-trigger-6
+  makeBackgroundsRailScene(7).addTo(container); // #road-trigger-7
+  makeBackgroundsRailScene(8).addTo(container); // #road-trigger-8
+  makeBackgroundsRailScene(9).addTo(container); // #road-trigger-9
+  makeBackgroundsRailScene(10).addTo(container); // #road-trigger-10
 };

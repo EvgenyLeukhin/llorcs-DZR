@@ -5,19 +5,10 @@ import 'gsap/ScrollToPlugin';
 
 // scenes
 import bgRoadScenes from './scenes/bg-road-rails';
+import bgRoadsClouds from './scenes/bg-roads-clouds';
 import bgStationsScenes from './scenes/bg-station-rails';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
-import road1 from './scenes/roads/road-1';
-import road2 from './scenes/roads/road-2';
-import road3 from './scenes/roads/road-3';
-import road4 from './scenes/roads/road-4';
-import road5 from './scenes/roads/road-5';
-import road6 from './scenes/roads/road-6';
-import road7 from './scenes/roads/road-7';
-import road8 from './scenes/roads/road-8';
-import road9 from './scenes/roads/road-9';
-import road10 from './scenes/roads/road-10';
 import station1 from './scenes/stations/station-1';
 import station2 from './scenes/stations/station-2';
 import station3 from './scenes/stations/station-3';
@@ -53,16 +44,7 @@ bgStationsScenes(controller);
 trainScenes(controller);
 
 // roads
-road1(controller);
-road2(controller);
-road3(controller);
-road4(controller);
-road5(controller);
-road6(controller);
-road7(controller);
-road8(controller);
-road9(controller);
-road10(controller);
+bgRoadsClouds(controller);
 
 // stations
 startScene(controller);
