@@ -42,8 +42,10 @@
     }
 
     .arrow-down {
+      cursor: pointer;
+      display: block;
       animation-name: arrowDown;
-      animation-duration: 1.25s;
+      animation-duration: 1s;
       animation-iteration-count: 10;
       position: absolute;
       bottom: em(30px);
@@ -56,8 +58,8 @@
       background-size: contain;
 
       @keyframes arrowDown {
-        0% { bottom: em(50px); }
-        100% { bottom: em(20px); }
+        0% { bottom: em(45px); }
+        100% { bottom: em(30px); }
       }
     }
   }

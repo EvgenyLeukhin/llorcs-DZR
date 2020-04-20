@@ -1,6 +1,7 @@
 .footer {
-  position: absolute;
-  z-index: 2;
+  background: transparent;
+  position: fixed;
+  z-index: 100;
   height: em(50px);
   left: 0;
   right: 0;

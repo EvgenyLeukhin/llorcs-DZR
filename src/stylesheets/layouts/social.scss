@@ -47,3 +47,17 @@
     }
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .social-icons {
+    width: em(240px);
+    height: em(40px);
+
+    li {
+      a {
+        width: em(40px);
+        height: em(40px);
+      }
+    }
+  }
+}
