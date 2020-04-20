@@ -27,7 +27,6 @@
 
     h2 {
       font-weight: normal;
-      text-transform: capitalize;
       font-size: em(22px);
       margin-bottom: em(34px, 22px);
       text-align: center;
@@ -46,7 +45,7 @@
       display: block;
       animation-name: arrowDown;
       animation-duration: 1s;
-      animation-iteration-count: 10;
+      animation-iteration-count: infinite;
       position: absolute;
       bottom: em(30px);
       left: 50%;

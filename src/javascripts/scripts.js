@@ -7,7 +7,7 @@ import 'gsap/ScrollToPlugin';
 import bgRoadScenes from './scenes/bg-road-rails';
 import bgRoadsClouds from './scenes/bg-roads-clouds';
 import bgStationsScenes from './scenes/bg-station-rails';
-import bgMapScene from './scenes/bg-menu';
+// import bgMenuScene from './scenes/bg-menu';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
 import station1 from './scenes/stations/station-1';
@@ -23,7 +23,7 @@ import station10 from './scenes/stations/station-10';
 import endScene from './scenes/end-scene';
 
 // scroll to top when refresh page
-window.onbeforeunload = () => window.scrollTo(0, 0);
+// window.onbeforeunload = () => window.scrollTo(0, 0);
 
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
@@ -42,7 +42,7 @@ controller.scrollTo((y) => {
 // adding scenes
 bgRoadScenes(controller);
 bgStationsScenes(controller);
-bgMapScene(controller);
+// bgMenuScene(controller);
 trainScenes(controller);
 
 // roads

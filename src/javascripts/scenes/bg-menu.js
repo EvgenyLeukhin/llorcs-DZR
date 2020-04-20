@@ -2,31 +2,31 @@ import ScrollMagic from 'scrollmagic';
 import { TweenLite } from 'gsap';
 
 const makeMenuStartScene = () => {
-  const roadOneTween = TweenLite.to('#menu', 1, { marginLeft: '45vw' });
-  return new ScrollMagic.Scene({ triggerElement: '#start-scene-trigger', duration: '1%' })
+  const roadOneTween = TweenLite.to('#menu', 1, { marginLeft: '35vw' });
+  return new ScrollMagic.Scene({ triggerElement: '#start-scene-trigger', duration: '100%' })
     .setTween(roadOneTween);
 };
 
 const makeMenu1Scene = () => {
-  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '45vw' }, { marginLeft: '35vw' });
+  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '35vw' }, { marginLeft: '10vw' });
   return new ScrollMagic.Scene({ triggerElement: '#station-1-trigger', duration: '100%' })
     .setTween(roadOneTween);
 };
 
 const makeMenu2Scene = () => {
-  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '35vw' }, { marginLeft: '25vw' });
+  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '10vw' }, { marginLeft: '-15vw' });
   return new ScrollMagic.Scene({ triggerElement: '#station-2-trigger', duration: '100%' })
     .setTween(roadOneTween);
 };
 
 const makeMenu3Scene = () => {
-  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '25vw' }, { marginLeft: '15vw' });
+  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '-15vw' }, { marginLeft: '-40vw' });
   return new ScrollMagic.Scene({ triggerElement: '#station-3-trigger', duration: '100%' })
     .setTween(roadOneTween);
 };
 
 const makeMenu4Scene = () => {
-  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '15vw' }, { marginLeft: '5vw' });
+  const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '-40vw' }, { marginLeft: '-65vw' });
   return new ScrollMagic.Scene({ triggerElement: '#station-4-trigger', duration: '100%' })
     .setTween(roadOneTween);
 };
