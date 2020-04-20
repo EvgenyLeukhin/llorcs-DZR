@@ -7,6 +7,15 @@
     background-repeat: no-repeat;
   }
 
+  .clouds {
+    background-image:
+      url(../images/bg/clouds/cloud2.png),
+      url(../images/bg/clouds/cloud3.png),
+      url(../images/bg/clouds/cloud1.png);
+    background-position: em(80px) top, em(700px) top, em(400px) top;
+    background-size: em(200px) auto, em(180px) auto, em(150px) auto;
+  }
+
   .construction {
     width: em(1530px);
     height: em(207px);

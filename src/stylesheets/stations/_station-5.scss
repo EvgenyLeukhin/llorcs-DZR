@@ -7,6 +7,15 @@
     background-repeat: no-repeat;
   }
 
+  .clouds {
+    background-image:
+      url(../images/bg/clouds/cloud3.png),
+      url(../images/bg/clouds/cloud1.png),
+      url(../images/bg/clouds/cloud2.png);
+    background-position: em(90px) top, em(720px) top, em(450px) top;
+    background-size: em(220px) auto, em(200px) auto, em(170px) auto;
+  }
+
   .wires {
     width: em(1870px);
     height: em(245px);

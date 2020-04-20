@@ -1,6 +1,16 @@
 .station-10 {
   z-index: 10;
 
+  .clouds {
+    background-image:
+      url(../images/bg/clouds/cloud1.png),
+      url(../images/bg/clouds/cloud3.png),
+      url(../images/bg/clouds/cloud2.png);
+    background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+    background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+    transform: scaleX(-1);
+  }
+
   .crowd {
     position: absolute;
     left: 50%;

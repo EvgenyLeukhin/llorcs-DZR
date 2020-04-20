@@ -7,6 +7,16 @@
     background-repeat: no-repeat;
   }
 
+  .clouds {
+    background-image:
+      url(../images/bg/clouds/cloud1.png),
+      url(../images/bg/clouds/cloud3.png),
+      url(../images/bg/clouds/cloud2.png);
+    background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+    background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+    transform: scaleX(-1);
+  }
+
   .reih {
     z-index: 2;
     width: em(1160px);
