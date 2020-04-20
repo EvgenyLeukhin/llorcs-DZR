@@ -1,6 +1,12 @@
 import ScrollMagic from 'scrollmagic';
 import { TweenLite } from 'gsap';
 
+const makeMenuStartScene = () => {
+  const roadOneTween = TweenLite.to('#menu', 1, { marginLeft: '45vw' });
+  return new ScrollMagic.Scene({ triggerElement: '#start-scene-trigger', duration: '1%' })
+    .setTween(roadOneTween);
+};
+
 const makeMenu1Scene = () => {
   const roadOneTween = TweenLite.fromTo('#menu', 1, { marginLeft: '45vw' }, { marginLeft: '35vw' });
   return new ScrollMagic.Scene({ triggerElement: '#station-1-trigger', duration: '100%' })
@@ -72,4 +78,5 @@ export default (container) => {
   makeMenu8Scene().addTo(container);
   makeMenu9Scene().addTo(container);
   makeMenu10Scene().addTo(container);
+  makeMenuStartScene().addTo(container);
 };
