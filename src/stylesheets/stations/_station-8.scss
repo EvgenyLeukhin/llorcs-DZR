@@ -183,3 +183,21 @@
     }
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .station-8-scene {
+    &-photo-2 {
+      margin-left: em(-190px);
+      margin-top: 0;
+    }
+
+    &-photo-6 {
+      margin-left: em(-140px);
+      margin-top: em(40px);
+    }
+
+    &-photo-7 {
+      margin-left: em(-180px);
+    }
+  }
+}

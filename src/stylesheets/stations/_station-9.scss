@@ -186,3 +186,16 @@
     }
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .station-9-scene {
+    &-photo-5.photo {
+      margin-left: em(-120px);
+    }
+
+    &-photo-6 {
+      margin-left: em(-160px);
+      margin-top: 0;
+    }
+  }
+}

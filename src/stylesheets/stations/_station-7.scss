@@ -213,3 +213,37 @@
     background-image: url(../images/station-7/cards/05.png);
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .station-7-scene {
+    &-photo-2 {
+      margin-left: em(-180px);
+    }
+
+    &-photo-3 {
+      margin-left: em(-180px);
+    }
+
+    &-photo-6 {
+      margin-left: em(-190px);
+      margin-top: em(10px);
+    }
+
+    &-photo-7 {
+      margin-left: em(-180px);
+    }
+
+    &-photo-8.photo {
+      margin-left: em(-120px);
+    }
+
+    &-photo-9.photo {
+      margin-left: em(-120px);
+    }
+
+    &-photo-10 {
+      margin-left: em(-130px);
+      margin-top: em(-30px);
+    }
+  }
+}

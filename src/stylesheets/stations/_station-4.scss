@@ -248,3 +248,44 @@
     background-image: url(../images/station-4/cards/05.png);
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .station-4-scene {
+    &-photo-1.photo {
+      margin-left: em(-130px);
+    }
+
+    &-photo-2 {
+      margin-left: em(-180px);
+      margin-top: em(15px);
+    }
+
+    &-photo-3 {
+      margin-left: em(-150px);
+    }
+
+    &-photo-5.photo {
+      margin-left: em(-130px);
+    }
+
+    &-photo-6 {
+      margin-left: em(-170px);
+    }
+
+    &-photo-7 {
+      margin-left: em(-180px);
+    }
+
+    &-photo-8.photo {
+      margin-left: em(-130px);
+    }
+
+    &-photo-9.photo {
+      margin-left: em(-130px);
+    }
+
+    &-photo-10 {
+      margin-left: em(-120px);
+    }
+  }
+}

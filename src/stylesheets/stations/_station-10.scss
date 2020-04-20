@@ -202,7 +202,7 @@
     }
   }
 
-  &-photo-6.photo {
+  &-photo-6 {
     z-index: 10;
     width: em(335px);
     height: em(230px);
@@ -218,5 +218,38 @@
     margin-left: em(-100px);
     margin-top: em(-155px);
     background-image: url(../images/station-10/cards/04.png);
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .station-10-scene {
+    &-photo-1.photo {
+      margin-left: em(-125px);
+    }
+
+    &-photo-2 {
+      margin-left: em(-165px);
+      margin-top: em(45px);
+    }
+
+    &-photo-3 {
+      margin-left: em(-175px);
+    }
+
+    &-photo-4.photo {
+      margin-left: em(-155px);
+    }
+
+    &-photo-5.photo {
+      margin-left: em(-125px);
+    }
+
+    &-photo-6 {
+      margin-left: em(-165px);
+    }
+
+    &-photo-7 {
+      margin-left: em(-152px);
+    }
   }
 }

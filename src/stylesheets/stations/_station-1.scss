@@ -251,3 +251,27 @@
     }
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .station-1-scene {
+    &-photo-4 {
+      margin-left: em(-150px);
+    }
+
+    &-photo-6.photo {
+      margin-left: em(-130px);
+    }
+
+    &-photo-1.photo {
+      margin-left: em(-110px);
+    }
+
+    &-photo-2 {
+      margin-left: em(-170px);
+    }
+
+    &-photo-7 {
+      margin-left: em(-152px);
+    }
+  }
+}
