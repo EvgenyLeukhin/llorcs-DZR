@@ -7,6 +7,7 @@ import 'gsap/ScrollToPlugin';
 import bgRoadScenes from './scenes/bg-road-rails';
 import bgRoadsClouds from './scenes/bg-roads-clouds';
 import bgStationsScenes from './scenes/bg-station-rails';
+import bgMapScene from './scenes/bg-menu';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
 import station1 from './scenes/stations/station-1';
@@ -41,6 +42,7 @@ controller.scrollTo((y) => {
 // adding scenes
 bgRoadScenes(controller);
 bgStationsScenes(controller);
+bgMapScene(controller);
 trainScenes(controller);
 
 // roads
