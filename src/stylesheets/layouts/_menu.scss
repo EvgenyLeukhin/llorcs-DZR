@@ -18,13 +18,14 @@
     flex-shrink: 0;
     position: relative;
     width: em(100px);
-    height: em(12.5px);
+    // height: em(12.35px);
 
     &:nth-child(odd) {
       background-color: #ece3d4;
     }
 
     &:nth-child(even) {
+      outline: em(1px) solid #302a1e;
       background-color: #302a1e;
     }
 
