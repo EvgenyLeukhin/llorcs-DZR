@@ -65,7 +65,7 @@ station10(controller);
 endScene(controller);
 
 // Init anchors
-document.querySelector('.scroll-to-links')
+document.querySelector('#menu')
   .querySelectorAll('a')
   .forEach((linkEl) => {
     linkEl.addEventListener('click', (e) => {
