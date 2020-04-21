@@ -85,6 +85,13 @@ div.clouds {
 }
 
 // fix jump layout on mobile
+@media (max-width: 900px) {
+  .road {
+    padding-left: 100vw;
+    padding-right: 100vw;
+  }
+}
+
 @media (max-width: $mobile-breakpoint) {
   .station {
     padding-left: 150vw;
