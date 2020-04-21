@@ -65,13 +65,14 @@ station10(controller);
 endScene(controller);
 
 // Init anchors
-document.getElementById('menu')
+document.querySelector('.scroll-to-links')
   .querySelectorAll('a')
   .forEach((linkEl) => {
     linkEl.addEventListener('click', (e) => {
       e.preventDefault();
 
-      controller.scrollTo(document.getElementById(e.target.getAttribute('href').slice(1)));
+      controller.scrollTo(e.target.getAttribute('href'));
+      // controller.scrollTo(document.getElementById(e.target.getAttribute('href').slice(1)));
     });
   });
 
