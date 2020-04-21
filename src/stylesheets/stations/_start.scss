@@ -177,3 +177,24 @@
     }
   }
 }
+
+@media (max-height: 500px) {
+  .start-scene {
+    &-photo-1 {
+      margin-top: em(-150px);
+      padding-top: em(30px);
+      padding-left: em(20px);
+      padding-right: em(20px);
+      padding-bottom: em(20px);
+
+      h2 {
+        margin-bottom: em(24px, 22px);
+      }
+
+      p {
+        text-align: justify;
+        margin-bottom: em(2px);
+      }
+    }
+  }
+}
