@@ -205,7 +205,7 @@ const makeStation8Scene = () => {
       }),
 
       // hide station
-      TweenLite.to('#station-8', 8000, {
+      TweenLite.to('#station-8', 8000 * animKoef, {
         x: '-750vw',
         display: 'none',
         ease: Linear.easeNone,
