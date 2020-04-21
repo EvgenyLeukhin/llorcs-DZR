@@ -125,8 +125,22 @@
 
 @media (max-height: 500px) {
   .menu {
+    bottom: 50%;
     &-item {
       a:first-child { display: none; }
+
+      &-active {
+        a:first-child {
+          br { display: none; }
+
+          display: block;
+          top: em(25px);
+          width: em(100px);
+          height: auto;
+          margin-left: em(-50px);
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 }

@@ -21,3 +21,9 @@
     background-color: rgba(255, 155, 55, 0.25);
   }
 }
+
+@media (max-height: 500px) {
+  .map {
+    height: $rail-line-mobile-landscape;
+  }
+}

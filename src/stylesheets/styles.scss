@@ -108,3 +108,10 @@ div.clouds {
     right: 120vw;
   }
 }
+
+@media (max-height: 500px) {
+  .train,
+  .action {
+    bottom: $rail-line-mobile-landscape;
+  }
+}
