@@ -99,3 +99,34 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .menu {
+    &-item {
+      width: em(75px);
+
+      a:first-child {
+        top: em(-65px);
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .menu {
+    &-item { width: em(55px); }
+  }
+}
+
+@media (max-width: 500px) {
+  .menu { display: none; }
+}
+
+@media (max-height: 500px) {
+  .menu {
+    &-item {
+      a:first-child { display: none; }
+    }
+  }
+}
