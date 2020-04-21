@@ -1,4 +1,5 @@
-.menu {
+.menu,
+.mobile-menu {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -100,6 +101,8 @@
   }
 }
 
+.mobile-menu { display: none; }
+
 @media (max-width: 900px) {
   .menu {
     &-item {
@@ -121,6 +124,11 @@
 
 @media (max-width: 500px) {
   .menu { display: none; }
+
+  .mobile-menu {
+    display: flex;
+    width: em(1000px);
+  }
 }
 
 @media (max-height: 500px) {

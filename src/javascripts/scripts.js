@@ -8,7 +8,7 @@ import bgRoadScenes from './scenes/bg-road-rails';
 import bgWheelsScenes from './scenes/bg-wheels';
 import bgRoadsClouds from './scenes/bg-roads-clouds';
 import bgStationsScenes from './scenes/bg-station-rails';
-// import bgMenuScene from './scenes/bg-menu';
+import bgMenuScene from './scenes/bg-menu';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
 import station1 from './scenes/stations/station-1';
@@ -44,7 +44,7 @@ controller.scrollTo((y) => {
 bgRoadScenes(controller);
 bgStationsScenes(controller);
 bgWheelsScenes(controller);
-// bgMenuScene(controller);
+bgMenuScene(controller);
 trainScenes(controller);
 
 // roads
