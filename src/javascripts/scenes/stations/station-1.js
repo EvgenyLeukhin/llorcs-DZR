@@ -1,11 +1,13 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TimelineLite, TweenLite } from 'gsap';
 
+import animKoef from './animKoef';
+
 const makeStation1Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenLite.fromTo('#station-1', 30000, { // show station duration
+      TweenLite.fromTo('#station-1', 30000 * animKoef, { // show station duration
         // styles before
         x: '200vw',
         display: 'none',
@@ -238,7 +240,7 @@ const makeStation1Scene = () => {
 
   return new ScrollMagic.Scene({
     triggerElement: '#station-1-trigger',
-    duration: '400%',
+    duration: '800%',
     offset: 100,
   })
     .setTween(stationSceneTimeline);
