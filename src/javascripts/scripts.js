@@ -1,7 +1,7 @@
 import ScrollMagic from 'scrollmagic';
 import { TimelineLite, TweenLite } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
-import 'gsap/ScrollToPlugin';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 // scenes
 import bgRoadScenes from './scenes/bg-road-rails';
@@ -25,6 +25,7 @@ import endScene from './scenes/end-scene';
 
 // scroll to top when refresh page
 // window.onbeforeunload = () => window.scrollTo(0, 0);
+const scrollPlugin = ScrollToPlugin;
 
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
@@ -71,8 +72,11 @@ document.querySelector('#menu')
     linkEl.addEventListener('click', (e) => {
       e.preventDefault();
 
-      controller.scrollTo(e.target.getAttribute('href'));
-      // controller.scrollTo(document.getElementById(e.target.getAttribute('href').slice(1)));
+      if (scrollPlugin) {
+        controller.scrollTo(e.target.getAttribute('href'), {
+          behavior: 'smooth',
+        });
+      }
     });
   });
 
