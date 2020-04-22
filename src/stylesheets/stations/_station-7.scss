@@ -147,6 +147,10 @@
     p {
       font-size: em(12px, 9px);
       line-height: em(13px, 9px);
+
+      &.card-info.black {
+        padding-bottom: em(25px);
+      }
     }
   }
 

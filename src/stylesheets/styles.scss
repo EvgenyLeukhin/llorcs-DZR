@@ -14,7 +14,11 @@
     font-size: em(11px, 12px);
     line-height: em(13px, 12px);
     padding-bottom: em(5px);
-    // background-color: rgba(255, 0, 0, 0.25);
+
+    &.black {
+      padding-bottom: em(20px);
+      padding-right: em(5px);
+    }
 
     &.top {
       bottom: auto;
