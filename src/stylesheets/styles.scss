@@ -27,32 +27,6 @@
   }
 }
 
-.train {
-  // visibility: hidden;
-  position: fixed;
-  z-index: 15 !important; // fix Safari bug
-  width: em(710px);
-  height: em(220px);
-  bottom: $rail-line;
-  right: 50%;
-  background-image: url(../images/bg/train/train.png);
-  background-position: center bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  .wheels {
-    position: absolute;
-    display: block;
-    right: em(80px);
-    bottom: 0;
-    width: em(310px);
-    height: em(65px);
-    background-position: center bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
 .action {
   position: fixed;
   z-index: 10;
