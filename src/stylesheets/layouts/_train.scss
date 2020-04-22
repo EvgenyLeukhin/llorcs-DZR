@@ -1,0 +1,222 @@
+.train {
+  position: fixed;
+  bottom: $rail-line;
+  right: 50%;
+
+  width: em(1331px);
+  height: em(399px);
+
+  background: url(../images/bg/train/train.png) center bottom no-repeat;
+  background-size: contain;
+
+  z-index: 15;
+
+  $train-left-offset: 640px;
+  $train-wheel-offset: 104px;
+
+  &-wheel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: em(100px);
+    height: em(100px);
+
+    background: url(../images/bg/train/wheel.svg) center center no-repeat;
+    background-size: contain;
+
+    @for $i from 1 through 5 {
+      &-#{$i} {
+        left: em($train-left-offset + ($train-wheel-offset * ($i - 1)));
+      }
+    }
+  }
+
+  &-pusher {
+    position: absolute;
+    bottom: em(20px);
+
+    background-size: contain;
+
+    &-wheels-link {
+      bottom: em(58px);
+
+      width: em(103px);
+      height: em(21px);
+
+      background: url(../images/bg/train/wheels-link.svg) center center no-repeat;
+
+      @for $i from 1 through 4 {
+        &-#{$i} {
+          left: em($train-left-offset + 39px + ($train-wheel-offset * ($i - 1)));
+        }
+      }
+    }
+
+    &-main {
+      left: em($train-left-offset + 250px);
+      bottom: em(45px);
+
+      width: em(50px);
+      height: em(50px);
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: em(211px);
+        height: em(50px);
+
+        background: url(../images/bg/train/main-pusher.svg) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &-small {
+      left: em($train-left-offset + 252px);
+      bottom: em(30px);
+
+      width: em(50px);
+      height: em(50px);
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: em(148px);
+        height: em(34px);
+
+        background: url(../images/bg/train/small-pusher.svg) center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &-static-detail {
+    position: absolute;
+
+    background-size: contain;
+
+    &-top {
+      left: em($train-left-offset + 383px);
+      bottom: em(68px);
+
+      width: em(42px);
+      height: em(43px);
+
+      background: url(../images/bg/train/statictop.svg) center center no-repeat;
+    }
+
+    &-bar {
+      left: em($train-left-offset + 408px);
+      bottom: em(55px);
+
+      width: em(117px);
+      height: em(18px);
+
+      background: url(../images/bg/train/staticbar.svg) center center no-repeat;
+    }
+
+    &-bottom {
+      left: auto;
+      right: em(168px);
+      bottom: em(46px);
+
+      width: em(64px);
+      height: em(6px);
+
+      background: url(../images/bg/train/main-pusher-bar.svg) center center repeat-x;
+      background-size: auto 100%;
+    }
+  }
+
+  &-hummer {
+    position: absolute;
+    left: auto;
+    right: em(186px);
+    bottom: em(40px);
+
+    width: em(37px);
+    height: em(37px);
+
+    background: url(../images/bg/train/hummer.svg) center center no-repeat;
+    background-size: contain;
+  }
+
+  &-slev {
+    position: absolute;
+    left: auto;
+    right: em(290px);
+    bottom: em(70px);
+
+    width: em(18px);
+    height: em(44px);
+
+    background: url(../images/bg/train/slev.svg) center center no-repeat;
+    background-size: contain;
+
+    transform: rotate(-17deg);
+  }
+
+  &-rblev {
+    position: absolute;
+    left: auto;
+    right: em(175px);
+    bottom: em(36px);
+
+    width: em(64px);
+    height: em(110px);
+
+    background: url(../images/bg/train/rblev.svg) bottom center no-repeat;
+    background-size: contain;
+
+    transform: rotate(25deg);
+  }
+
+  &-rslev {
+    position: absolute;
+    left: auto;
+    right: em(142px);
+    bottom: em(21px);
+
+    width: em(80px);
+    height: em(35px);
+
+    background: url(../images/bg/train/rslev.svg) center left no-repeat;
+    background-size: contain;
+  }
+
+  &-topbar {
+    position: absolute;
+    left: auto;
+    right: em(315px);
+    bottom: em(100px);
+
+    width: em(37px);
+    height: em(20px);
+
+    background: url(../images/bg/train/topbar.svg) center left no-repeat;
+    background-size: contain;
+
+    transform: rotate(-90deg);
+  }
+
+  &-toplev {
+    position: absolute;
+    left: auto;
+    right: em(105px);
+    bottom: em(85px);
+
+    width: em(230px);
+    height: em(36px);
+
+    background: url(../images/bg/train/toplev.svg) center left no-repeat;
+    background-size: contain;
+  }
+}
