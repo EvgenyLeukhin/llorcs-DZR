@@ -96,13 +96,16 @@
 
 @media (max-width: $mobile-breakpoint) {
   .social-icons {
-    width: em(200px);
+    width: em(250px);
     height: em(40px);
 
     li {
+      width: em(40px) !important;
+      height: em(40px) !important;
+
       a {
-        width: em(40px);
-        height: em(40px);
+        width: em(40px) !important;
+        height: em(40px) !important;
       }
     }
   }
