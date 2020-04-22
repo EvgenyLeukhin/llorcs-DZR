@@ -24,7 +24,7 @@ import station10 from './scenes/stations/station-10';
 import endScene from './scenes/end-scene';
 
 // scroll to top when refresh page
-// window.onbeforeunload = () => window.scrollTo(0, 0);
+window.onbeforeunload = () => window.scrollTo(0, 0);
 const scrollPlugin = ScrollToPlugin;
 
 // Base setup
