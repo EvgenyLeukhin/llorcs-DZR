@@ -1,3 +1,4 @@
+import Preload from 'preload-it';
 import ScrollMagic from 'scrollmagic';
 import { TimelineLite, TweenLite } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
@@ -30,56 +31,80 @@ const scrollPlugin = ScrollToPlugin;
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
 
-// Init scrollmagic
-const controller = new ScrollMagic.Controller();
+// Init
+function init() {
+  const controller = new ScrollMagic.Controller();
 
-controller.scrollTo((y) => {
-  TweenLite.to(window, 1, {
-    scrollTo: {
-      y,
-    },
-  });
-});
-
-// adding scenes
-bgRoadScenes(controller);
-bgStationsScenes(controller);
-bgWheelsScenes(controller);
-bgMenuScene(controller);
-trainScenes(controller);
-
-// roads
-bgRoadsClouds(controller);
-
-// stations
-startScene(controller);
-station1(controller);
-station2(controller);
-station3(controller);
-station4(controller);
-station5(controller);
-station6(controller);
-station7(controller);
-station8(controller);
-station9(controller);
-station10(controller);
-endScene(controller);
-
-// Init anchors
-document.querySelector('#menu')
-  .querySelectorAll('a')
-  .forEach((linkEl) => {
-    linkEl.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      if (scrollPlugin) {
-        controller.scrollTo(e.target.getAttribute('href'), {
-          behavior: 'smooth',
-        });
-      }
+  controller.scrollTo((y) => {
+    TweenLite.to(window, 1, {
+      scrollTo: {
+        y,
+      },
     });
   });
 
+  // adding scenes
+  bgRoadScenes(controller);
+  bgStationsScenes(controller);
+  bgWheelsScenes(controller);
+  bgMenuScene(controller);
+  trainScenes(controller);
+
+  // roads
+  bgRoadsClouds(controller);
+
+  // stations
+  startScene(controller);
+  station1(controller);
+  station2(controller);
+  station3(controller);
+  station4(controller);
+  station5(controller);
+  station6(controller);
+  station7(controller);
+  station8(controller);
+  station9(controller);
+  station10(controller);
+  endScene(controller);
+
+  // Init anchors
+  document.querySelector('#menu')
+    .querySelectorAll('a')
+    .forEach((linkEl) => {
+      linkEl.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (scrollPlugin) {
+          controller.scrollTo(e.target.getAttribute('href'), {
+            behavior: 'smooth',
+          });
+        }
+      });
+    });
+}
+
+// Preload
+const $progressbar = document.getElementById('progressbar');
+
+const preload = Preload();
+
+preload.onprogress = (e) => {
+  $progressbar.innerText = `${e.progress}%`;
+};
+
+fetch('/assets.json')
+  .then((response) => response.json())
+  .then((assets) => {
+    preload.fetch(assets)
+      .then(() => {
+        document.getElementById('action').style.display = 'block';
+        document.getElementById('progressbar').style.display = 'none';
+
+        init();
+      });
+  });
+
+// Window resize
 function windowResize() {
   const preferredWidth = 1920; // px
   const preferredHeight = 1080; // px

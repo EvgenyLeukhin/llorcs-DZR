@@ -1,4 +1,5 @@
 const path = require('path');
+const SaveAssetsToJsonPlugin = require('./save-assets-to-json.plugin');
 
 const config = require('./site.config');
 const loaders = require('./webpack.loaders');
@@ -31,5 +32,8 @@ module.exports = {
   module: {
     rules: loaders,
   },
-  plugins,
+  plugins: [
+    ...plugins,
+    new SaveAssetsToJsonPlugin('assets.json', /^images\//)
+  ],
 };
