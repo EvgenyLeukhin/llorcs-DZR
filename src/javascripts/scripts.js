@@ -3,7 +3,7 @@ import { TimelineLite, TweenLite } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
-// scenes
+// backgrounds
 import bgRoadScenes from './scenes/bg-road-rails';
 import bgWheelsScenes from './scenes/bg-wheels';
 import bgRoadsClouds from './scenes/bg-roads-clouds';
@@ -11,6 +11,8 @@ import bgStationsScenes from './scenes/bg-station-rails';
 import bgMenuScene from './scenes/bg-menu';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
+
+// stations
 import station1 from './scenes/stations/station-1';
 import station2 from './scenes/stations/station-2';
 import station3 from './scenes/stations/station-3';
@@ -21,7 +23,6 @@ import station7 from './scenes/stations/station-7';
 import station8 from './scenes/stations/station-8';
 import station9 from './scenes/stations/station-9';
 import station10 from './scenes/stations/station-10';
-import endScene from './scenes/end-scene';
 
 // scroll to top when refresh page
 window.onbeforeunload = () => window.scrollTo(0, 0);
@@ -63,7 +64,6 @@ station7(controller);
 station8(controller);
 station9(controller);
 station10(controller);
-endScene(controller);
 
 // Init anchors
 document.querySelector('#menu')

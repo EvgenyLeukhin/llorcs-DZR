@@ -6,10 +6,14 @@ import animKoef from './stations/animKoef';
 const makeTrainStartScene = () => {
   const trainStartTween = new TimelineLite()
     .add([
-      TweenLite.fromTo('#train', 1, {
+      TweenLite.fromTo('#train', 1000, {
+        display: 'none',
         x: '-80%',
+        delay: 750,
       }, {
+        display: 'block',
         x: '50%',
+        delay: 750,
         ease: Linear.easeNone,
       }),
     ]);
