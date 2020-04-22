@@ -26,7 +26,7 @@
 .train {
   // visibility: hidden;
   position: fixed;
-  z-index: 15;
+  z-index: 15 !important; // fix Safari bug
   width: em(710px);
   height: em(220px);
   bottom: $rail-line;
