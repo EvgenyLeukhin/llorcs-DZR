@@ -4,27 +4,92 @@
   <meta charset="UTF-8">
   <title>РЖД | Дорога жизни</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="image"    content="images/favs/cover.png">
+
   <!-- favs -->
   <link rel="icon" type="image/png" sizes="16x16" href="images/favs/16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favs/32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favs/96.png">
 
-  <!-- cover -->
-  <meta name="image"               content="images/favs/cover.png" />
+  <!-- open graph -->
+  <meta property="og:url"          content="" />
+  <meta property="og:type"         content="website" />
+  <meta property="og:title"        content="РЖД | Дорога жизни" />
+  <meta property="og:description"  content="Your description" />
   <meta property="og:image"        content="images/favs/cover.png" />
   <meta property="og:image:type"   content="image/png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta name="twitter:image"       content="images/favs/cover.png" />
+  <meta property="og:site_name"    content="" />
+
+  <!-- google -->
+  <meta itemprop="name" content="" />
+  <meta itemprop="description" content="" />
+  <meta itemprop="image" content="images/favs/cover.png" />
+
+  <!-- twitter -->
+  <meta name="twitter:image" content="images/favs/cover.png" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="" />
+  <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+
 </head>
 <body>
 
   <ul class="social-icons">
-    <li><a class="vk" href="#" target="_blank"></a></li>
-    <li><a class="fb" href="#" target="_blank"></a></li>
-    <li><a class="ok" href="#" target="_blank"></a></li>
-    <li><a class="wh" href="#" target="_blank"></a></li>
-    <li><a class="te" href="#" target="_blank"></a></li>
+    <!-- <li><a class="vk" href="#" target="_blank"> -->
+    <li class="vk">
+      <script type="text/javascript">
+        // берет текущий url из браузерной строки
+        document.write(VK.Share.button(false,{type: "link_noicon", text: "Сохранить"}));
+      </script>
+    </li>
+    <li class="fb">
+      <!-- url для шаринга -->
+      <div
+        data-href="https://www.rzd.ru/"
+        class="fb-share-button"
+        data-layout="button"
+        data-size="small"
+      >
+        <a
+          target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+          class="fb-xfbml-parse-ignore"></a>
+      </div>
+    </li>
+    <li class="oclass">
+      <a class="ok" href="#" target="_blank">
+        <div id="ok_shareWidget"></div>
+        <script>
+        !function (d, id, did, st, title, description, image) {
+          function init(){
+            OK.CONNECT.insertShareWidget(id,did,st, title, description, image);
+          }
+          if (!window.OK || !OK.CONNECT || !OK.CONNECT.insertShareWidget) {
+            var js = d.createElement("script");
+            js.src = "https://connect.ok.ru/connect.js";
+            js.onload = js.onreadystatechange = function () {
+            if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+              if (!this.executed) {
+                this.executed = true;
+                setTimeout(init, 0);
+              }
+            }};
+            d.documentElement.appendChild(js);
+          } else {
+            init();
+          }
+        }(document,"ok_shareWidget",document.URL,'{"sz":20,"st":"oval","nc":1,"nt":1,"bgclr":"ED8207","txclr":"FFFFFF"}',"Заголовок","Описание","URL картинки");
+        </script>
+      </a>
+    </li>
+    <li class="wh">
+      <a href="whatsapp://send?text=https://www.rzd.ru/" data-action="share/whatsapp/share"  target="_blank"></a>
+    </li>
+    <li class="te">
+      <a href="https://t.me/share/url?url={https://www.rzd.ru/}&text={Текст сообщения}" target="_blank"></a></li>
   </ul>
 
   <div class="action" id="action">
@@ -397,7 +462,7 @@
       </li>
 
       <li class="menu-item" id="menu-station-7">
-        <a href="#station-7-trigger">Февраль <br>1943-го</a>
+        <a href="#station-7-trigger">Февраль <br>1943г</a>
         <a href="#station-7-trigger"></a>
       </li>
 
@@ -412,7 +477,7 @@
       </li>
 
       <li class="menu-item" id="menu-station-10">
-        <a href="#station-10-trigger">9&nbsp;мая <br>1945</a>
+        <a href="#station-10-trigger">9&nbsp;мая <br>1945г</a>
         <a href="#station-10-trigger"></a>
       </li>
     </ul>
@@ -460,5 +525,8 @@
     <div id="end-scene-trigger"   style="height: 1500px;"></div>
     <div id="end-scene-trigger-2" style="height: 10px;"></div>
   </div>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v6.0"></script>
 </body>
 </html>
