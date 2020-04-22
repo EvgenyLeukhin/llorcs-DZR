@@ -38,32 +38,6 @@
     background-image: url(../images/station-1/belorusskiy2.png);
     background-size: contain;
     background-position: 0 bottom;
-
-    // &::before,
-    // &::after {
-    //   position: absolute;
-    //   display: block;
-    //   content: "";
-    //   width: 50%;
-    //   height: 100%;
-    //   background-position-y: bottom;
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   top: 0;
-    // }
-
-    // &::before {
-    //   right: 0;
-    //   background-image: url(../images/station-1/belorusskiy.png);
-    //   background-position-x: right;
-    // }
-
-    // &::after {
-    //   left: 0;
-    //   background-image: url(../images/station-1/belorusskiy.png);
-    //   transform: scaleX(-1);
-    //   background-position-x: left;
-    // }
   }
 
   .left {
