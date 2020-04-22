@@ -1,5 +1,4 @@
-.menu,
-.mobile-menu {
+.menu {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -42,7 +41,6 @@
       top: em(-55px);
       color: #302a1e;
       font-weight: bold;
-      padding: 0;
       line-height: em(14px);
       border: em(1px) solid #302a1e;
       width: em(62px);
@@ -101,8 +99,6 @@
   }
 }
 
-.mobile-menu { display: none; }
-
 @media (max-width: 900px) {
   .menu {
     &-item {
@@ -122,18 +118,64 @@
   }
 }
 
-@media (max-width: 500px) {
-  .menu { display: none; }
+@media (min-width: 501px) {
+  .menu {
+    margin-left: 0 !important;
+  }
+}
 
-  .mobile-menu {
+@media (max-width: $mobile-breakpoint) {
+  .menu {
     display: flex;
     width: em(1000px);
+    border-top: 3px solid #302a1e;
+    border-bottom: 3px solid #302a1e;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      width: 100vw;
+      height: em(18px);
+      border-top: 3px solid #302a1e;
+      border-bottom: 3px solid #302a1e;
+      top: -3px;
+      display: block;
+    }
+
+    &::before {
+      left: 0;
+      margin-left: -100vw;
+      background-image: linear-gradient(to left, #302a1e 0, #302a1e em(55px), #ece3d4 em(55px), #ece3d4 em(110px), #302a1e em(110px), #302a1e em(165px), #ece3d4 em(165px), #ece3d4 em(220px), #302a1e em(220px), #302a1e em(285px), #ece3d4 em(285px), #ece3d4 em(340px));
+    }
+
+    &::after {
+      right: 0;
+      margin-right: -100vw;
+      background-image: linear-gradient(to right, #ece3d4 0, #ece3d4 em(55px), #302a1e em(55px), #302a1e em(110px), #ece3d4 em(110px), #ece3d4 em(165px), #302a1e em(165px), #302a1e em(220px), #ece3d4 em(220px), #ece3d4 em(285px), #302a1e em(285px), #302a1e em(340px), #ece3d4 em(340px), #ece3d4 em(395px), #302a1e em(395px), #302a1e em(450px));
+    }
+
+    &-item {
+      width: em(100px);
+
+      a:first-child { transform: rotate(0deg); }
+
+      &-active {
+        a:first-child {
+          border: em(2px) solid #da4216;
+          color: #da4216;
+        }
+      }
+    }
   }
 }
 
 @media (max-height: 500px) {
   .menu {
+    width: 100%;
     bottom: 50%;
+    margin-left: 0 !important;
 
     &-item {
       a:first-child { display: none; }

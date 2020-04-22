@@ -12,7 +12,9 @@
     "build:dist": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
     "deploy": "node ./config/site.deploy.js",
     "copy-wheels-images": "cpx \"src/images/bg/train/**/*\" \"dist/images/bg/train\"",
-    "deploy-gh": "npm run copy-wheels-images && gh-pages -d dist"
+    "copy-favs-images": "cpx \"src/images/favs/**/*\" \"dist/images/favs\"",
+    "copy-images": "npm run copy-wheels-images && npm run copy-favs-images",
+    "deploy-gh": "npm run copy-images && gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

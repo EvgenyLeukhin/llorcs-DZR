@@ -9,7 +9,7 @@
   background: url(../images/bg/train/train.png) center bottom no-repeat;
   background-size: contain;
 
-  z-index: 15;
+  z-index: 15 !important;
 
   $train-left-offset: 640px;
   $train-wheel-offset: 104px;

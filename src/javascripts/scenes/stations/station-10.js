@@ -3,6 +3,8 @@ import { Linear, TimelineLite, TweenLite } from 'gsap';
 
 import animKoef from './animKoef';
 
+const addKoef = 12000;
+
 const makeStation10Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
@@ -13,7 +15,7 @@ const makeStation10Scene = () => {
         display: 'none',
       }, {
         // styles afrer
-        x: '-200vw',
+        x: 0,
         display: 'block',
         ease: Linear.easeNone,
       }),
@@ -22,7 +24,7 @@ const makeStation10Scene = () => {
       TweenLite.to('#station-10-scene', 1, {
         css: { display: 'block' },
         ease: Linear.easeNone,
-        delay: 7000 * animKoef,
+        delay: (7000 + addKoef) * animKoef,
       }),
 
       // 1-2 card show
@@ -37,7 +39,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 7000 * animKoef,
+          delay: (7000 + addKoef) * animKoef,
           rotation: 0,
         }),
       TweenLite.fromTo('.station-10-scene-photo-2', 2000 * animKoef,
@@ -52,20 +54,20 @@ const makeStation10Scene = () => {
           y: 0,
           rotation: -13,
           ease: Linear.easeNone,
-          delay: 7000 * animKoef,
+          delay: (7000 + addKoef) * animKoef,
         }),
       // 1-2 card hide
       TweenLite.to('.station-10-scene-photo-1', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 11000 * animKoef,
+        delay: (11000 + addKoef) * animKoef,
       }),
       TweenLite.to('.station-10-scene-photo-2', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 11000 * animKoef,
+        delay: (11000 + addKoef) * animKoef,
       }),
 
       // 3-4 card show
@@ -80,7 +82,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 9500 * animKoef,
+          delay: (9500 + addKoef) * animKoef,
           rotation: 10,
         }),
       TweenLite.fromTo('.station-10-scene-photo-4', 2000 * animKoef,
@@ -94,7 +96,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 9500 * animKoef,
+          delay: (9500 + addKoef) * animKoef,
           rotation: 0,
         }),
 
@@ -103,13 +105,13 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 13500 * animKoef,
+        delay: (13500 + addKoef) * animKoef,
       }),
       TweenLite.to('.station-10-scene-photo-4', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 13500 * animKoef,
+        delay: (13500 + addKoef) * animKoef,
       }),
 
       // 5-6 card show
@@ -124,7 +126,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 12000 * animKoef,
+          delay: (12000 + addKoef) * animKoef,
           rotation: 0,
         }),
       TweenLite.fromTo('.station-10-scene-photo-6', 2000 * animKoef,
@@ -138,7 +140,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 12000 * animKoef,
+          delay: (12000 + addKoef) * animKoef,
           rotation: -4,
         }),
 
@@ -147,13 +149,13 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 16000 * animKoef,
+        delay: (16000 + addKoef) * animKoef,
       }),
       TweenLite.to('.station-10-scene-photo-6', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 16000 * animKoef,
+        delay: (16000 + addKoef) * animKoef,
       }),
 
       // 7-8 card show
@@ -166,7 +168,7 @@ const makeStation10Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: 14500 * animKoef,
+          delay: (14500 + addKoef) * animKoef,
           rotation: 2,
         }),
 
@@ -175,30 +177,13 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 18500 * animKoef,
-      }),
-    ])
-
-
-    // hide station and scene
-    .add([
-      TweenLite.to('#station-10-scene', 1000, {
-        x: '-300vw',
-        display: 'none',
-        ease: Linear.easeNone,
-      }),
-
-      // hide station
-      TweenLite.to('#station-10', 8000, {
-        x: '-750vw',
-        display: 'none',
-        ease: Linear.easeNone,
+        delay: (18500 + addKoef) * animKoef,
       }),
     ]);
 
   return new ScrollMagic.Scene({
     triggerElement: '#station-10-trigger',
-    duration: '800%',
+    duration: '310%',
     offset: 100,
   })
     .setTween(stationSceneTimeline);

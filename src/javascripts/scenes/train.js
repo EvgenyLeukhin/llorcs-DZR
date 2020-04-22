@@ -47,6 +47,24 @@ const makeTrainStationScene = (stationNumber) => {
     .setTween(trainStationTimeline);
 };
 
+const makeTrainStation10Scene = () => {
+  const trainStationTimeline = new TimelineLite()
+    // train stop on station
+    .add([
+      TweenLite.to('#train', 1000 * animKoef, {
+        x: '-50%',
+        delay: 5000 * animKoef,
+      }),
+    ]);
+
+  return new ScrollMagic.Scene({
+    triggerElement: '#station-10-trigger', // trigger-id
+    duration: '220%',
+  })
+    .setClassToggle('#menu-station-10', 'menu-item-active') // menu-id
+    .setTween(trainStationTimeline);
+};
+
 
 const makeTrainEndScene = () => {
   const trainEndTween = TweenLite.to('#train', 1, {
@@ -72,6 +90,6 @@ export default (container) => {
   makeTrainStationScene(7).addTo(container);
   makeTrainStationScene(8).addTo(container);
   makeTrainStationScene(9).addTo(container);
-  makeTrainStationScene(10).addTo(container);
+  makeTrainStation10Scene().addTo(container);
   makeTrainEndScene().addTo(container);
 };

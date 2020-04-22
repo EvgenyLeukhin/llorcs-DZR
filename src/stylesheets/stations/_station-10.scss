@@ -38,32 +38,6 @@
     background-image: url(../images/station-1/belorusskiy2.png);
     background-size: contain;
     background-position: 0 bottom;
-
-    // &::before,
-    // &::after {
-    //   position: absolute;
-    //   display: block;
-    //   content: "";
-    //   width: 50%;
-    //   height: 100%;
-    //   background-position-y: bottom;
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   top: 0;
-    // }
-
-    // &::before {
-    //   right: 0;
-    //   background-image: url(../images/station-1/belorusskiy.png);
-    //   background-position-x: right;
-    // }
-
-    // &::after {
-    //   left: 0;
-    //   background-image: url(../images/station-1/belorusskiy.png);
-    //   transform: scaleX(-1);
-    //   background-position-x: left;
-    // }
   }
 
   .left {
@@ -134,7 +108,7 @@
     width: em(230px);
     height: em(180px);
     margin-left: em(-142px);
-    margin-top: em(-110px);
+    margin-top: em(-150px);
     background-image: url(../images/bg/card1.png);
     padding-top: em(40px, 9px);
     padding-left: em(20px, 9px);
@@ -152,7 +126,7 @@
     width: em(340px);
     height: em(220px);
     margin-left: em(-185px);
-    margin-top: em(35px);
+    margin-top: em(-5px);
     background-image: url(../images/station-10/cards/02.png);
   }
 
@@ -213,10 +187,10 @@
 
   &-photo-7 {
     z-index: 10;
-    width: em(320px);
-    height: em(435px);
-    margin-left: em(-100px);
-    margin-top: em(-155px);
+    width: em(310px);
+    height: em(415px);
+    margin-left: em(-180px);
+    margin-top: em(-175px);
     background-image: url(../images/station-10/cards/04.png);
   }
 }
