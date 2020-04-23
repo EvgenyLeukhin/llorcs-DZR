@@ -9,6 +9,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = require('./site.config');
 
@@ -61,6 +62,14 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
   });
 });
 
+// Copy assets
+const copyAssets = new CopyPlugin([
+  {
+    from: path.join(config.root, config.paths.src, 'assets/**/*'),
+    to: path.join(config.root, config.paths.dist, '[path][name].[ext]'),
+  },
+]);
+
 // Webpack bar
 const webpackBar = new WebpackBar({
   color: '#ff6469',
@@ -72,6 +81,7 @@ module.exports = [
   cssExtract,
   ...generateHTMLPlugins(),
   config.env === 'production' && optimizeCss,
+  copyAssets,
   webpackBar,
   config.env === 'development' && hmr,
 ].filter(Boolean);

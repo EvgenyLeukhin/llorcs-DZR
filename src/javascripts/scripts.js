@@ -137,10 +137,26 @@ preload.onprogress = (e) => {
   $progressBar.style.transform = `translateX(${e.progress - 100}%)`;
 };
 
+const ignoreImagesList = [
+  /^images\/life-logo.(.*).svg$/,
+  /^images\/rzd-logo.(.*).svg$/,
+  /^images\/rzd-logo.(.*).svg$/,
+  /^images\/icon_fb.(.*).svg$/,
+  /^images\/icon_ok.(.*).svg$/,
+  /^images\/icon_vk.(.*).svg$/,
+  /^images\/tree2.(.*).svg$/,
+  /^images\/icon_te.(.*).svg$/,
+  /^images\/icon_wu.(.*).svg$/,
+];
+
 fetch('/assets.json')
   .then((response) => response.json())
   .then((assets) => {
-    preload.fetch(assets)
+    const filteredAssets = assets.filter((asset) => (
+      !ignoreImagesList.find((imageRegex) => asset.match(imageRegex))
+    ));
+
+    preload.fetch(filteredAssets)
       .then(() => {
         document.getElementById('stations').style.visibility = 'visible';
         document.getElementById('train').style.visibility = 'visible';

@@ -116,7 +116,7 @@ const imageLoader = {
 
 const images = {
   test: /\.(gif|png|jpe?g|svg)$/i,
-  exclude: /fonts/,
+  exclude: /fonts|assets/,
   use: [
     'file-loader?name=images/[name].[hash].[ext]',
     config.env === 'production' ? imageLoader : null,
@@ -126,7 +126,7 @@ const images = {
 // Font loaders
 const fonts = {
   test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-  exclude: /images/,
+  exclude: /images|assets/,
   use: [
     {
       loader: 'file-loader',
