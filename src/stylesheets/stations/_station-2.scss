@@ -242,6 +242,10 @@
     margin-top: em(-125px);
     transform: rotate(4deg);
     background-image: url(../images/station-2/cards/04.png);
+
+    p.card-bottom-text {
+      top: 56%;
+    }
   }
 
   &-photo-8.photo {
