@@ -5,21 +5,8 @@ const animKonf = 2;
 
 const makeStartScene = () => {
   const startSceneTimeline = new TimelineLite()
-
-    // анимация на появление при загрузке длительностью 500
-    .add([
-      TweenMax.to('#start-scene', 500 * animKonf, {
-        css: { display: 'block' },
-      }),
-    ])
-
     // анимация на исчезновение продолжительностью 500 + параллельные анимации картинок 500
     .add([
-      TweenMax.to('#start-scene', 500 * animKonf, {
-        css: { display: 'none' },
-        ease: Linear.easeNone,
-      }),
-
       // animate cards
       TweenMax.to('.start-scene-photo-1', 500 * animKonf, { y: 1000, ease: Linear.easeNone }),
       TweenMax.to('.start-scene-photo-2', 500 * animKonf, { y: -1000, ease: Linear.easeNone }),
