@@ -35,6 +35,20 @@ body {
       top: 0;
     }
   }
+
+  p.card-bottom-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgba(48, 42, 30, 1);
+    padding-top: em(5px);
+    padding-left: em(20px);
+    padding-right: em(20px);
+    padding-bottom: em(5px);
+    font-size: em(12px, 9px);
+    line-height: em(13px, 9px);
+  }
 }
 
 .triggers {

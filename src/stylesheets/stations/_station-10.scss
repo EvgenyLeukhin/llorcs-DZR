@@ -203,6 +203,10 @@
     margin-left: em(-180px);
     margin-top: em(-175px);
     background-image: url(../images/station-10/cards/04.png);
+
+    p.card-bottom-text {
+      top: 45%;
+    }
   }
 }
 
