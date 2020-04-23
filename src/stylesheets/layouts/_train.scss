@@ -9,6 +9,8 @@
   background: url(../images/bg/train/train.png) center bottom no-repeat;
   background-size: contain;
 
+  font-size: 50%;
+
   z-index: 15 !important;
 
   $train-left-offset: 640px;
@@ -45,6 +47,7 @@
       height: em(21px);
 
       background: url(../images/bg/train/wheels-link.svg) center center no-repeat;
+      background-size: contain;
 
       @for $i from 1 through 4 {
         &-#{$i} {
@@ -176,7 +179,7 @@
     background: url(../images/bg/train/rblev.svg) bottom center no-repeat;
     background-size: contain;
 
-    transform: rotate(25deg);
+    transform: rotate(19deg);
   }
 
   &-rslev {
@@ -204,7 +207,7 @@
     background: url(../images/bg/train/topbar.svg) center left no-repeat;
     background-size: contain;
 
-    transform: rotate(-90deg);
+    transform: rotate(-116deg);
   }
 
   &-toplev {

@@ -5,8 +5,12 @@ import {
   TimelineLite,
   Power1,
 } from 'gsap';
+import SizeCalculator from '../helpers/size-calculator';
 
 const makeWheelsRoadScene = (roadNumber) => {
+  const sizeCalculator = new SizeCalculator(document.getElementById('train'), 1.6);
+  const { em } = sizeCalculator;
+
   const wheelsTween = TweenMax.fromTo('.train-wheel', 1, {
     rotation: 0,
   }, {
@@ -31,31 +35,31 @@ const makeWheelsRoadScene = (roadNumber) => {
               y: 0,
             },
             {
-              x: '20em',
+              x: em(20),
               y: 0,
             },
             {
-              x: '20em',
-              y: '20em',
+              x: em(20),
+              y: em(20),
             },
             {
-              x: '20em',
-              y: '40em',
+              x: em(20),
+              y: em(40),
             },
             {
               x: 0,
-              y: '40em',
+              y: em(40),
             },
             {
-              x: '-20em',
-              y: '40em',
+              x: em(-20),
+              y: em(40),
             },
             {
-              x: '-20em',
-              y: '20em',
+              x: em(-20),
+              y: em(20),
             },
             {
-              x: '-20em',
+              x: em(-20),
               y: 0,
             },
             {
@@ -83,37 +87,37 @@ const makeWheelsRoadScene = (roadNumber) => {
               rotation: 6.5,
             },
             {
-              x: '20em',
+              x: em(20),
               y: 0,
               rotation: 6.5,
             },
             {
-              x: '20em',
-              y: '20em',
+              x: em(20),
+              y: em(20),
               rotation: 0,
             },
             {
-              x: '20em',
-              y: '40em',
-              rotation: -6.5,
+              x: em(20),
+              y: em(40),
+              rotation: -5,
             },
             {
               x: 0,
-              y: '40em',
-              rotation: -6.5,
+              y: em(40),
+              rotation: -5,
             },
             {
-              x: '-20em',
-              y: '40em',
-              rotation: -6.5,
+              x: em(-20),
+              y: em(40),
+              rotation: -5,
             },
             {
-              x: '-20em',
-              y: '20em',
+              x: em(-20),
+              y: em(20),
               rotation: 0,
             },
             {
-              x: '-20em',
+              x: em(-20),
               y: 0,
               rotation: 6.5,
             },
@@ -144,37 +148,37 @@ const makeWheelsRoadScene = (roadNumber) => {
               rotation: 0,
             },
             {
-              x: '10em',
+              x: em(10),
               y: 0,
               rotation: 0,
             },
             {
-              x: '10em',
-              y: '10em',
+              x: em(10),
+              y: em(10),
               rotation: -5,
             },
             {
-              x: '10em',
-              y: '20em',
-              rotation: -10,
+              x: em(10),
+              y: em(20),
+              rotation: -8,
             },
             {
               x: 0,
-              y: '20em',
-              rotation: -10,
+              y: em(20),
+              rotation: -8,
             },
             {
-              x: '-10em',
-              y: '20em',
-              rotation: -10,
+              x: em(-10),
+              y: em(20),
+              rotation: -8,
             },
             {
-              x: '-10em',
-              y: '10em',
+              x: em(-10),
+              y: em(10),
               rotation: -5,
             },
             {
-              x: '-10em',
+              x: em(-10),
               y: 0,
               rotation: 0,
             },
@@ -196,7 +200,7 @@ const makeWheelsRoadScene = (roadNumber) => {
       TweenMax.to('#train-hummer', 0.5, {
         delay: 0.25,
         repeat: 20,
-        x: '-40em',
+        x: em(-40),
         yoyo: true,
         ease: Power1.easeInOut,
       }),
@@ -222,7 +226,7 @@ const makeWheelsRoadScene = (roadNumber) => {
   })
     .add([
       TweenMax.fromTo('#train-rblev', 0.5, {
-        rotation: 25,
+        rotation: 19,
       }, {
         delay: 0.75,
         repeat: 20,
@@ -241,7 +245,7 @@ const makeWheelsRoadScene = (roadNumber) => {
       }, {
         delay: 0.25,
         repeat: 20,
-        x: '-37em',
+        x: em(-35),
         yoyo: true,
         ease: Power1.easeInOut,
       }),
@@ -250,7 +254,7 @@ const makeWheelsRoadScene = (roadNumber) => {
       }, {
         delay: 0.75,
         repeat: 20,
-        rotation: 17,
+        rotation: 19,
         yoyo: true,
         ease: Power1.easeInOut,
       }),
@@ -265,7 +269,7 @@ const makeWheelsRoadScene = (roadNumber) => {
       }, {
         delay: 0.75,
         repeat: 20,
-        rotation: -75,
+        rotation: -85,
         yoyo: true,
         ease: Power1.easeInOut,
       }),
@@ -276,12 +280,12 @@ const makeWheelsRoadScene = (roadNumber) => {
   })
     .add([
       TweenMax.fromTo('#train-toplev', 0.5, {
-        x: '5em',
+        x: em(5),
         rotation: -3,
       }, {
         delay: 0.75,
         repeat: 20,
-        x: '-5em',
+        x: em(-5),
         rotation: -4,
         yoyo: true,
         ease: Power1.easeInOut,
@@ -309,7 +313,7 @@ const makeWheelsRoadScene = (roadNumber) => {
     .setTween(wheelsTimeline);
 };
 
-//
+
 // const makeWheelsStationsScene = (stationNumber) => {
 //   const wheelsTween = TweenMax.to(obj, 0.5,
 //     {
