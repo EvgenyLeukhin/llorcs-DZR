@@ -19,16 +19,13 @@
     margin-top: em(-120px);
     background-size: cover;
     background-image: url(../images/bg/card4.jpg);
-    padding-top: em(50px);
-    padding-left: em(20px);
-    padding-right: em(20px);
-    padding-bottom: em(40px);
+    padding: em(40px) em(20px);
     color: #302a1e;
 
     h2 {
       font-weight: normal;
       font-size: em(22px);
-      margin-bottom: em(34px, 22px);
+      margin-bottom: em(15px, 22px);
       text-align: center;
       color: #da4216;
     }
@@ -41,25 +38,21 @@
     }
 
     .arrow-down {
-      cursor: pointer;
+      visibility: hidden;
       display: block;
-      animation-name: arrowDown;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-      position: absolute;
-      bottom: em(30px);
-      left: 50%;
-      width: em(70px);
-      margin-left: em(-40px);
-      height: em(25px);
-      background-image: url(../images/start-screen/scrollarrow.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
 
-      @keyframes arrowDown {
-        0% { bottom: em(40px); }
-        100% { bottom: em(30px); }
-      }
+      width: em(80px);
+
+      margin: em(10px) auto 0;
+      padding: em(4px) 0;
+
+      border: 2px solid #4e4838;
+
+      font-size: em(20px);
+      font-weight: 300;
+      color: #676151;
+      text-align: center;
+      text-decoration: none;
     }
   }
 

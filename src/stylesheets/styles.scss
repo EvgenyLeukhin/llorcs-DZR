@@ -27,9 +27,17 @@
   }
 }
 
-.action {
-  display: none;
+.triggers {
+  @include fade-in(2s);
+  visibility: hidden;
+}
 
+.stations {
+  @include fade-in(2s);
+  visibility: hidden;
+}
+
+.action {
   position: fixed;
   z-index: 10;
   top: 0;

@@ -27,24 +27,26 @@ import station10 from './scenes/stations/station-10';
 
 // scroll to top when refresh page
 window.onbeforeunload = () => window.scrollTo(0, 0);
+window.scrollTo(0, 0);
+
 const scrollPlugin = ScrollToPlugin;
 
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineLite);
-let controller;
+const controller = new ScrollMagic.Controller();
+
+controller.scrollTo((y) => {
+  TweenMax.to(window, 1, {
+    scrollTo: {
+      y,
+    },
+  });
+});
+
+startScene(controller);
 
 // Init
 function init() {
-  controller = new ScrollMagic.Controller();
-
-  controller.scrollTo((y) => {
-    TweenMax.to(window, 1, {
-      scrollTo: {
-        y,
-      },
-    });
-  });
-
   // adding scenes
   bgRoadScenes(controller);
   bgStationsScenes(controller);
@@ -56,7 +58,6 @@ function init() {
   bgRoadsClouds(controller);
 
   // stations
-  startScene(controller);
   const stationScenes = [
     station1(controller),
     station2(controller),
@@ -126,12 +127,15 @@ function init() {
 }
 
 // Preload
-const $progressbar = document.getElementById('progressbar');
+const $progress = document.getElementById('loading-progress');
+const $progressNumber = document.getElementById('loading-progress-number');
+const $progressBar = document.getElementById('loading-progress-bar');
 
 const preload = Preload();
 
 preload.onprogress = (e) => {
-  $progressbar.innerText = `${e.progress}%`;
+  $progressNumber.innerText = `${e.progress}%`;
+  $progressBar.style.transform = `translateX(${e.progress - 100}%)`;
 };
 
 fetch('/assets.json')
@@ -139,8 +143,12 @@ fetch('/assets.json')
   .then((assets) => {
     preload.fetch(assets)
       .then(() => {
-        document.getElementById('action').style.display = 'block';
-        document.getElementById('progressbar').style.display = 'none';
+        document.getElementById('stations').style.visibility = 'visible';
+        document.getElementById('train').style.visibility = 'visible';
+        document.getElementById('arrow-down-btn').style.visibility = 'visible';
+        document.getElementById('footer').style.visibility = 'visible';
+        document.getElementById('triggers').style.visibility = 'visible';
+        $progress.style.display = 'none';
 
         init();
       });
