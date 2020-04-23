@@ -7,8 +7,19 @@
       url(../images/bg/clouds/cloud3.png),
       url(../images/bg/clouds/cloud2.png);
     background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
-    background-size: em(240px) auto, em(200px) auto, em(180px) auto;
+    background-size: em(240px) auto, em(200px) auto, em(180px) auto, contain;
     transform: scaleX(-1);
+  }
+
+  .fireworks {
+    position: absolute;
+    height: em(260px);
+    top: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: url(../images/station-10/fireworks.gif);
   }
 
   .crowd {
