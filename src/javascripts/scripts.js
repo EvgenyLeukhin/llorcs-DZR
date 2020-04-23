@@ -111,7 +111,7 @@ function init() {
             getCurrentSceneNumber(),
           ]);
           const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
-          const scrollTo = triggerElement.offsetTop + (triggerElement.offsetHeight * 0.3);
+          const scrollTo = triggerElement.offsetTop + (triggerElement.offsetHeight * 0.4);
           TweenMax.to(window, 1, {
             scrollTo: {
               y: scrollTo,
