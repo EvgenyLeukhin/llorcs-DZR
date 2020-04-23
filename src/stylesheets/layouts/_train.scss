@@ -104,8 +104,6 @@
   &-static-detail {
     position: absolute;
 
-    background-size: contain;
-
     &-top {
       left: em($train-left-offset + 383px);
       bottom: em(68px);
@@ -114,6 +112,7 @@
       height: em(43px);
 
       background: url(../images/bg/train/statictop.svg) center center no-repeat;
+      background-size: contain;
     }
 
     &-bar {
@@ -124,6 +123,7 @@
       height: em(18px);
 
       background: url(../images/bg/train/staticbar.svg) center center no-repeat;
+      background-size: contain;
     }
 
     &-bottom {
