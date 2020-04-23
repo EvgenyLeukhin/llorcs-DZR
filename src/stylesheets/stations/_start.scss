@@ -1,5 +1,4 @@
-.start-scene,
-.end-scene {
+.start-scene {
   z-index: 15;
 
   .photo {
@@ -144,10 +143,6 @@
     transform: rotate(15deg);
     background-image: url(../images/start-screen/cards/10.png);
   }
-}
-
-.end-scene {
-  display: none;
 }
 
 @media (max-width: $mobile-breakpoint) {
