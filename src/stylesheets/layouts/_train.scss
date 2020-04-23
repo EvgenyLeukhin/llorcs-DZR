@@ -5,17 +5,32 @@
   right: 50%;
 
   width: em(1331px);
-  height: em(399px);
+  height: em(407px);
 
-  background: url(../images/bg/train/train.png) center bottom no-repeat;
-  background-size: contain;
+  background: url(../images/bg/train/train.png) right top no-repeat;
+  background-size: em(927px) em(377px);
 
   font-size: 50%;
 
   z-index: 15 !important;
 
-  $train-left-offset: 640px;
-  $train-wheel-offset: 104px;
+  $train-front-wheel-left-offset: 640px;
+  $train-front-wheel-between-offset: 104px;
+  $train-back-wheel-left-offset: 78px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: em(25px);
+    left: em(-2px);
+
+    width: em(518px);
+    height: em(238px);
+
+    background: url(../images/bg/train/coalcart.png) center center no-repeat;
+    background-size: em(518px) em(238px);
+  }
 
   &-wheel {
     position: absolute;
@@ -28,9 +43,31 @@
     background: url(../images/bg/train/wheel.svg) center center no-repeat;
     background-size: contain;
 
-    @for $i from 1 through 5 {
+    &-1,
+    &-2,
+    &-3 {
+      bottom: em(-6px);
+
+      background-size: 90%;
+
+      filter: brightness(80%);
+    }
+
+    &-1 {
+      left: em($train-back-wheel-left-offset);
+    }
+
+    &-2 {
+      left: em($train-back-wheel-left-offset + 131px);
+    }
+
+    &-3 {
+      left: em($train-back-wheel-left-offset + 275px);
+    }
+
+    @for $i from 4 through 8 {
       &-#{$i} {
-        left: em($train-left-offset + ($train-wheel-offset * ($i - 1)));
+        left: em($train-front-wheel-left-offset + ($train-front-wheel-between-offset * ($i - 4)));
       }
     }
   }
@@ -52,13 +89,13 @@
 
       @for $i from 1 through 4 {
         &-#{$i} {
-          left: em($train-left-offset + 39px + ($train-wheel-offset * ($i - 1)));
+          left: em($train-front-wheel-left-offset + 39px + ($train-front-wheel-between-offset * ($i - 1)));
         }
       }
     }
 
     &-main {
-      left: em($train-left-offset + 250px);
+      left: em($train-front-wheel-left-offset + 250px);
       bottom: em(45px);
 
       width: em(50px);
@@ -80,7 +117,7 @@
     }
 
     &-small {
-      left: em($train-left-offset + 252px);
+      left: em($train-front-wheel-left-offset + 252px);
       bottom: em(30px);
 
       width: em(50px);
@@ -106,7 +143,7 @@
     position: absolute;
 
     &-top {
-      left: em($train-left-offset + 383px);
+      left: em($train-front-wheel-left-offset + 383px);
       bottom: em(68px);
 
       width: em(42px);
@@ -117,7 +154,7 @@
     }
 
     &-bar {
-      left: em($train-left-offset + 408px);
+      left: em($train-front-wheel-left-offset + 408px);
       bottom: em(55px);
 
       width: em(117px);

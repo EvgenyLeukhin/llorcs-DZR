@@ -69,20 +69,6 @@ const makeTrainStation10Scene = () => {
     .setTween(trainStationTimeline);
 };
 
-
-const makeTrainEndScene = () => {
-  const trainEndTween = TweenMax.to('#train', 1, {
-    x: '180%',
-    ease: Linear.easeNone,
-  });
-
-  return new ScrollMagic.Scene({
-    triggerElement: '#train-end-trigger',
-    duration: '100%',
-  })
-    .setTween(trainEndTween);
-};
-
 export default (container) => ([
   makeTrainStartScene().addTo(container),
   makeTrainStationScene(1).addTo(container),
@@ -95,5 +81,4 @@ export default (container) => ([
   makeTrainStationScene(8).addTo(container),
   makeTrainStationScene(9).addTo(container),
   makeTrainStation10Scene().addTo(container),
-  makeTrainEndScene().addTo(container),
 ]);

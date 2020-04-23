@@ -3,6 +3,16 @@
 @import "backgrounds/index";
 @import "stations/index";
 
+body {
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in-out;
+
+  &.init {
+    opacity: 1;
+  }
+}
+
 .photo {
   p.card-info {
     text-align: right;
