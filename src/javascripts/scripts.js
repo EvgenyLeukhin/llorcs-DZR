@@ -1,6 +1,6 @@
 import Preload from 'preload-it';
 import ScrollMagic from 'scrollmagic';
-import { TimelineLite, TweenLite } from 'gsap';
+import { TimelineLite, TweenMax } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
@@ -30,14 +30,15 @@ window.onbeforeunload = () => window.scrollTo(0, 0);
 const scrollPlugin = ScrollToPlugin;
 
 // Base setup
-ScrollMagicPluginGsap(ScrollMagic, TweenLite, TimelineLite);
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineLite);
+let controller;
 
 // Init
 function init() {
-  const controller = new ScrollMagic.Controller();
+  controller = new ScrollMagic.Controller();
 
   controller.scrollTo((y) => {
-    TweenLite.to(window, 1, {
+    TweenMax.to(window, 1, {
       scrollTo: {
         y,
       },
@@ -56,16 +57,44 @@ function init() {
 
   // stations
   startScene(controller);
-  station1(controller);
-  station2(controller);
-  station3(controller);
-  station4(controller);
-  station5(controller);
-  station6(controller);
-  station7(controller);
-  station8(controller);
-  station9(controller);
-  station10(controller);
+  const stationScenes = [
+    station1(controller),
+    station2(controller),
+    station3(controller),
+    station4(controller),
+    station5(controller),
+    station6(controller),
+    station7(controller),
+    station8(controller),
+    station9(controller),
+    station10(controller),
+  ];
+
+  function toggleStateStationScenes(state, exceptStationNumbers = []) {
+    stationScenes.forEach((cStationScenes, index) => {
+      if (exceptStationNumbers.includes(index + 1)) {
+        return;
+      }
+
+      cStationScenes.forEach((stationScene) => {
+        stationScene.enabled(state);
+      });
+    });
+  }
+
+  function getCurrentSceneNumber() {
+    for (let i = 0; i < stationScenes.length; i += 1) {
+      if (
+        stationScenes[i].find((stationScene) => (
+          stationScene.state() === 'DURING'
+        ))
+      ) {
+        return i + 1;
+      }
+    }
+
+    return null;
+  }
 
   // Init anchors
   document.querySelector('#menu')
@@ -75,8 +104,21 @@ function init() {
         e.preventDefault();
 
         if (scrollPlugin) {
-          controller.scrollTo(e.target.getAttribute('href'), {
-            behavior: 'smooth',
+          const stationNumber = parseInt(e.target.getAttribute('href').replace(/\D/g, ''), 10);
+          toggleStateStationScenes(false, [
+            stationNumber,
+            getCurrentSceneNumber(),
+          ]);
+          const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
+          const scrollTo = triggerElement.offsetTop + (triggerElement.offsetHeight * 0.3);
+          TweenMax.to(window, 1, {
+            scrollTo: {
+              y: scrollTo,
+              behavior: 'smooth',
+            },
+            onComplete: () => {
+              toggleStateStationScenes(true);
+            },
           });
         }
       });
@@ -118,6 +160,10 @@ function windowResize() {
   const newFontSize = Math.max(percentage, 50).toFixed(2);
 
   document.body.style.fontSize = `${newFontSize}%`;
+
+  if (controller) {
+    controller.update(true);
+  }
 }
 
 windowResize();

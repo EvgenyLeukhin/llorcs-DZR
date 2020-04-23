@@ -1,12 +1,12 @@
 import ScrollMagic from 'scrollmagic';
-import { Linear, TweenLite, TimelineLite } from 'gsap';
+import { Linear, TweenMax, TimelineLite } from 'gsap';
 
 import animKoef from './stations/animKoef';
 
 const makeTrainStartScene = () => {
   const trainStartTween = new TimelineLite()
     .add([
-      TweenLite.fromTo('#train', 1000, {
+      TweenMax.fromTo('#train', 1000, {
         display: 'none',
         x: '-80%',
         delay: 750,
@@ -29,7 +29,7 @@ const makeTrainStationScene = (stationNumber) => {
   const trainStationTimeline = new TimelineLite()
     // train stop on station
     .add([
-      TweenLite.to('#train', 1000 * animKoef, {
+      TweenMax.to('#train', 1000 * animKoef, {
         x: '-50%',
         delay: 4000 * animKoef,
       }),
@@ -37,7 +37,7 @@ const makeTrainStationScene = (stationNumber) => {
 
     // train leave a station
     .add([
-      TweenLite.to('#train', 1000 * animKoef, {
+      TweenMax.to('#train', 1000 * animKoef, {
         x: '50%',
         delay: 5000 * animKoef,
       }),
@@ -55,7 +55,7 @@ const makeTrainStation10Scene = () => {
   const trainStationTimeline = new TimelineLite()
     // train stop on station
     .add([
-      TweenLite.to('#train', 1000 * animKoef, {
+      TweenMax.to('#train', 1000 * animKoef, {
         x: '-50%',
         delay: 5000 * animKoef,
       }),
@@ -71,7 +71,7 @@ const makeTrainStation10Scene = () => {
 
 
 const makeTrainEndScene = () => {
-  const trainEndTween = TweenLite.to('#train', 1, {
+  const trainEndTween = TweenMax.to('#train', 1, {
     x: '180%',
     ease: Linear.easeNone,
   });
@@ -83,17 +83,17 @@ const makeTrainEndScene = () => {
     .setTween(trainEndTween);
 };
 
-export default (container) => {
-  makeTrainStartScene().addTo(container);
-  makeTrainStationScene(1).addTo(container);
-  makeTrainStationScene(2).addTo(container);
-  makeTrainStationScene(3).addTo(container);
-  makeTrainStationScene(4).addTo(container);
-  makeTrainStationScene(5).addTo(container);
-  makeTrainStationScene(6).addTo(container);
-  makeTrainStationScene(7).addTo(container);
-  makeTrainStationScene(8).addTo(container);
-  makeTrainStationScene(9).addTo(container);
-  makeTrainStation10Scene().addTo(container);
-  makeTrainEndScene().addTo(container);
-};
+export default (container) => ([
+  makeTrainStartScene().addTo(container),
+  makeTrainStationScene(1).addTo(container),
+  makeTrainStationScene(2).addTo(container),
+  makeTrainStationScene(3).addTo(container),
+  makeTrainStationScene(4).addTo(container),
+  makeTrainStationScene(5).addTo(container),
+  makeTrainStationScene(6).addTo(container),
+  makeTrainStationScene(7).addTo(container),
+  makeTrainStationScene(8).addTo(container),
+  makeTrainStationScene(9).addTo(container),
+  makeTrainStation10Scene().addTo(container),
+  makeTrainEndScene().addTo(container),
+]);

@@ -374,37 +374,27 @@ const makeWheelsRoadScene = (roadNumber) => {
 //     .setTween(wheelsTween);
 // };
 
-export default (container) => {
-  // makeWheelsStartScene().addTo(container);
-  // makeWheelsEndScene().addTo(container);
-  // makeWheelsStationsScene(1).addTo(container);
-  makeWheelsRoadScene(1)
-    .addTo(container);
-  // makeWheelsStationsScene(2).addTo(container);
-  makeWheelsRoadScene(2)
-    .addTo(container);
-  // makeWheelsStationsScene(3).addTo(container);
-  makeWheelsRoadScene(3)
-    .addTo(container);
-  // makeWheelsStationsScene(4).addTo(container);
-  makeWheelsRoadScene(4)
-    .addTo(container);
-  // makeWheelsStationsScene(5).addTo(container);
-  makeWheelsRoadScene(5)
-    .addTo(container);
-  // makeWheelsStationsScene(6).addTo(container);
-  makeWheelsRoadScene(6)
-    .addTo(container);
-  // makeWheelsStationsScene(7).addTo(container);
-  makeWheelsRoadScene(7)
-    .addTo(container);
-  // makeWheelsStationsScene(8).addTo(container);
-  makeWheelsRoadScene(8)
-    .addTo(container);
-  // makeWheelsStationsScene(9).addTo(container);
-  makeWheelsRoadScene(9)
-    .addTo(container);
-  // makeWheelsStationsScene(10).addTo(container);
-  makeWheelsRoadScene(10)
-    .addTo(container);
-};
+export default (container) => ([
+  // makeWheelsStartScene().addTo(container),
+  // makeWheelsEndScene().addTo(container),
+  // makeWheelsStationsScene(1).addTo(container),
+  makeWheelsRoadScene(1).addTo(container),
+  // makeWheelsStationsScene(2).addTo(container),
+  makeWheelsRoadScene(2).addTo(container),
+  // makeWheelsStationsScene(3).addTo(container),
+  makeWheelsRoadScene(3).addTo(container),
+  // makeWheelsStationsScene(4).addTo(container),
+  makeWheelsRoadScene(4).addTo(container),
+  // makeWheelsStationsScene(5).addTo(container),
+  makeWheelsRoadScene(5).addTo(container),
+  // makeWheelsStationsScene(6).addTo(container),
+  makeWheelsRoadScene(6).addTo(container),
+  // makeWheelsStationsScene(7).addTo(container),
+  makeWheelsRoadScene(7).addTo(container),
+  // makeWheelsStationsScene(8).addTo(container),
+  makeWheelsRoadScene(8).addTo(container),
+  // makeWheelsStationsScene(9).addTo(container),
+  makeWheelsRoadScene(9).addTo(container),
+  // makeWheelsStationsScene(10).addTo(container),
+  makeWheelsRoadScene(10).addTo(container),
+]);
