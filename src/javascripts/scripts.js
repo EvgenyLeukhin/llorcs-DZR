@@ -75,9 +75,12 @@ function init() {
         e.preventDefault();
 
         if (scrollPlugin) {
+          // station-scene disabled
+          // add height to cards
           controller.scrollTo(e.target.getAttribute('href'), {
             behavior: 'smooth',
           });
+          // station-scene enabled
         }
       });
     });
