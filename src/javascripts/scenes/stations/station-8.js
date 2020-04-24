@@ -26,7 +26,7 @@ const makeStation8Scene = () => {
       }),
 
       // 1-2 card show
-      TweenMax.fromTo('.station-8-scene-photo-1', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-1', 4000 * animKoef,
         {
           x: '-50vw',
           y: '-120vh',
@@ -40,7 +40,7 @@ const makeStation8Scene = () => {
           delay: 7000 * animKoef,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-8-scene-photo-2', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-2', 4000 * animKoef,
         {
           x: '50vw',
           y: '120vh',
@@ -59,17 +59,17 @@ const makeStation8Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 11000 * animKoef,
+        delay: 13000 * animKoef,
       }),
       TweenMax.to('.station-8-scene-photo-2', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 11000 * animKoef,
+        delay: 13000 * animKoef,
       }),
 
       // 3-4 card show
-      TweenMax.fromTo('.station-8-scene-photo-3', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-3', 4000 * animKoef,
         {
           x: '100vw',
           y: '-120vh',
@@ -83,7 +83,7 @@ const makeStation8Scene = () => {
           delay: 9500 * animKoef,
           rotation: -6,
         }),
-      TweenMax.fromTo('.station-8-scene-photo-4', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-4', 4000 * animKoef,
         {
           x: '100vw',
           y: '120vh',
@@ -103,17 +103,17 @@ const makeStation8Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 13500 * animKoef,
+        delay: 15500 * animKoef,
       }),
       TweenMax.to('.station-8-scene-photo-4', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 13500 * animKoef,
+        delay: 15500 * animKoef,
       }),
 
       // 5-6 card show
-      TweenMax.fromTo('.station-8-scene-photo-5', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-5', 4000 * animKoef,
         {
           x: '200vw',
           y: '-120vh',
@@ -127,7 +127,7 @@ const makeStation8Scene = () => {
           delay: 12000 * animKoef,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-8-scene-photo-6', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-6', 4000 * animKoef,
         {
           x: '-100vw',
           y: '200vh',
@@ -147,17 +147,17 @@ const makeStation8Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 16000 * animKoef,
+        delay: 18000 * animKoef,
       }),
       TweenMax.to('.station-8-scene-photo-6', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 16000 * animKoef,
+        delay: 18000 * animKoef,
       }),
 
       // 7-8 card show
-      TweenMax.fromTo('.station-8-scene-photo-7', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-7', 4000 * animKoef,
         {
           y: '-200vh',
           ease: Linear.easeNone,
@@ -169,7 +169,7 @@ const makeStation8Scene = () => {
           delay: 14500 * animKoef,
           rotation: 11,
         }),
-      TweenMax.fromTo('.station-8-scene-photo-8', 2000 * animKoef,
+      TweenMax.fromTo('.station-8-scene-photo-8', 4000 * animKoef,
         {
           y: '200vh',
           ease: Linear.easeNone,
@@ -185,13 +185,13 @@ const makeStation8Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 18500 * animKoef,
+        delay: 20500 * animKoef,
       }),
       TweenMax.to('.station-8-scene-photo-8', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 18500 * animKoef,
+        delay: 20500 * animKoef,
       }),
     ])
 

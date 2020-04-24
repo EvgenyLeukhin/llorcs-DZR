@@ -3,7 +3,7 @@ import { Linear, TimelineLite, TweenMax } from 'gsap';
 
 import animKoef from './animKoef';
 
-const addKoef = 12000;
+const addKoef = 8000;
 
 const makeStation10Scene = () => {
   const stationSceneTimeline = new TimelineLite()
@@ -28,7 +28,7 @@ const makeStation10Scene = () => {
       }),
 
       // 1-2 card show
-      TweenMax.fromTo('.station-10-scene-photo-1', 2000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-1', 5000 * animKoef,
         {
           x: '-50vw',
           y: '-120vh',
@@ -42,7 +42,7 @@ const makeStation10Scene = () => {
           delay: (7000 + addKoef) * animKoef,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-10-scene-photo-2', 2000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-2', 5000 * animKoef,
         {
           x: '50vw',
           y: '120vh',
@@ -61,17 +61,17 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (11000 + addKoef) * animKoef,
+        delay: (16500 + addKoef) * animKoef,
       }),
       TweenMax.to('.station-10-scene-photo-2', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (11000 + addKoef) * animKoef,
+        delay: (16500 + addKoef) * animKoef,
       }),
 
       // 3-4 card show
-      TweenMax.fromTo('.station-10-scene-photo-3', 2000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-3', 5000 * animKoef,
         {
           x: '100vw',
           y: '-120vh',
@@ -82,10 +82,10 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (9500 + addKoef) * animKoef,
+          delay: (13000 + addKoef) * animKoef,
           rotation: 10,
         }),
-      TweenMax.fromTo('.station-10-scene-photo-4', 2000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-4', 5000 * animKoef,
         {
           x: '100vw',
           y: '120vh',
@@ -96,7 +96,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (9500 + addKoef) * animKoef,
+          delay: (13000 + addKoef) * animKoef,
           rotation: 0,
         }),
 
@@ -105,17 +105,17 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (13500 + addKoef) * animKoef,
+        delay: (22500 + addKoef) * animKoef,
       }),
       TweenMax.to('.station-10-scene-photo-4', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (13500 + addKoef) * animKoef,
+        delay: (22500 + addKoef) * animKoef,
       }),
 
       // 5-6 card show
-      TweenMax.fromTo('.station-10-scene-photo-5', 2000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-5', 4000 * animKoef,
         {
           x: '200vw',
           y: '-120vh',
@@ -126,10 +126,10 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (12000 + addKoef) * animKoef,
+          delay: (19000 + addKoef) * animKoef,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-10-scene-photo-6', 2000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-6', 4000 * animKoef,
         {
           x: '-100vw',
           y: '200vh',
@@ -140,7 +140,7 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (12000 + addKoef) * animKoef,
+          delay: (19000 + addKoef) * animKoef,
           rotation: -4,
         }),
 
@@ -149,17 +149,17 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (16000 + addKoef) * animKoef,
+        delay: (27500 + addKoef) * animKoef,
       }),
       TweenMax.to('.station-10-scene-photo-6', 2000 * animKoef, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (16000 + addKoef) * animKoef,
+        delay: (27500 + addKoef) * animKoef,
       }),
 
-      // 7-8 card show
-      TweenMax.fromTo('.station-10-scene-photo-7', 2000 * animKoef,
+      // 7 card show
+      TweenMax.fromTo('.station-10-scene-photo-7', 4000 * animKoef,
         {
           y: '-200vh',
           ease: Linear.easeNone,
@@ -168,7 +168,7 @@ const makeStation10Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: (14500 + addKoef) * animKoef,
+          delay: (24000 + addKoef) * animKoef,
           rotation: 2,
         }),
 
@@ -177,7 +177,7 @@ const makeStation10Scene = () => {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (18500 + addKoef) * animKoef,
+        delay: (33500 + addKoef) * animKoef,
       }),
     ]);
 

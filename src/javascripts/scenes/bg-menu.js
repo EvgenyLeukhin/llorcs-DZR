@@ -2,7 +2,11 @@ import ScrollMagic from 'scrollmagic';
 import { TweenMax } from 'gsap';
 
 const makeMenuStartScene = () => {
-  const roadOneTween = TweenMax.to('#menu', 1, { marginLeft: '40vw' });
+  const roadOneTween = TweenMax.fromTo('#menu', 0.1, {
+    marginLeft: '40vw',
+  }, {
+    marginLeft: '40vw',
+  });
   return new ScrollMagic.Scene({ triggerElement: '#start-scene-trigger', duration: '100%' })
     .setTween(roadOneTween);
 };
