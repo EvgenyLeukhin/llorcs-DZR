@@ -6,7 +6,7 @@
   @return round(($target / $context * 1em) * 100) / 100;
 }
 
-@mixin fade-in($time: 3s) {
+@mixin fade-in($time: 2s) {
   @keyframes fade-in {
     0% {
       opacity: 0;

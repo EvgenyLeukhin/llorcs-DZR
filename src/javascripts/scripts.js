@@ -26,6 +26,7 @@ import station9 from './scenes/stations/station-9';
 import station10 from './scenes/stations/station-10';
 
 const scrollPlugin = ScrollToPlugin;
+window.scrollTo(0, 0);
 
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineLite);
@@ -33,6 +34,10 @@ let controller;
 
 // Init
 function init() {
+  document.getElementById('stations').style.display = 'block';
+  document.getElementById('train').style.displan = 'block';
+  document.getElementById('triggers').style.display = 'block';
+
   controller = new ScrollMagic.Controller();
 
   startScene(controller);
@@ -42,7 +47,7 @@ function init() {
   bgStationsScenes(controller);
   bgWheelsScenes(controller);
   bgMenuScene(controller);
-  trainScenes(controller);
+  const trainStationScenes = trainScenes(controller);
 
   // roads
   bgRoadsClouds(controller);
@@ -62,6 +67,14 @@ function init() {
   ];
 
   function toggleStateStationScenes(state, exceptStationNumbers = []) {
+    trainStationScenes.slice(1).forEach((cStationScene, index) => {
+      if (exceptStationNumbers.includes(index + 1)) {
+        return;
+      }
+
+      cStationScene.enabled(state);
+    });
+
     stationScenes.forEach((cStationScenes, index) => {
       if (exceptStationNumbers.includes(index + 1)) {
         return;
@@ -140,7 +153,6 @@ preload.onprogress = (e) => {
 const ignoreImagesList = [
   /^images\/life-logo.(.*).svg$/,
   /^images\/rzd-logo.(.*).svg$/,
-  /^images\/rzd-logo.(.*).svg$/,
   /^images\/icon_fb.(.*).svg$/,
   /^images\/icon_ok.(.*).svg$/,
   /^images\/icon_vk.(.*).svg$/,
@@ -158,45 +170,27 @@ fetch('/assets.json')
 
     preload.fetch(filteredAssets)
       .then(() => {
-        document.getElementById('stations').style.visibility = 'visible';
-        document.getElementById('train').style.visibility = 'visible';
         document.getElementById('arrow-down-btn').style.visibility = 'visible';
-        document.getElementById('footer').style.visibility = 'visible';
-        document.getElementById('triggers').style.visibility = 'visible';
         $progress.style.display = 'none';
-
-        init();
+        document.body.classList.add('touch');
       });
+
+    document.body.classList.add('init');
   });
 
-// Window resize
-function windowResize() {
-  const preferredWidth = 1920; // px
-  const preferredHeight = 1080; // px
+document.querySelectorAll('[data-preload-image]')
+  .forEach((imageEl) => {
+    imageEl.classList.add('preload-image');
 
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
-
-  const widthPercentage = (windowWidth * 100) / preferredWidth;
-  const heightPercentage = (windowHeight * 100) / preferredHeight;
-  const percentage = Math.min(heightPercentage, widthPercentage);
-  const newFontSize = Math.max(percentage, 50).toFixed(2);
-
-  document.body.style.fontSize = `${newFontSize}%`;
-
-  if (controller) {
-    controller.update(true);
-  }
-}
-
-windowResize();
-
-setTimeout(() => {
-  windowResize();
-}, 100);
-
-window.addEventListener('resize', () => {
-  windowResize();
-});
-
-document.body.classList.add('init');
+    fetch(imageEl.dataset.preloadImage)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          // eslint-disable-next-line no-param-reassign
+          imageEl.style.backgroundImage = `url("${reader.result}")`;
+          imageEl.classList.add('preload-image--loaded');
+        };
+        reader.readAsDataURL(blob);
+      });
+  });
