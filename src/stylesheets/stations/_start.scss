@@ -147,11 +147,12 @@
 
 @media (max-width: $mobile-breakpoint) {
   .start-scene {
-    &-photo-1 {
+    &-photo-1.photo {
       width: em(400px);
-      height: em(435px);
+      height: em(500px);
       margin-left: em(-200px);
       margin-top: em(-120px);
+      background-size: 100% 100%;
 
       h2 {
         margin-bottom: em(20px, 22px);
