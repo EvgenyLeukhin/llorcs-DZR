@@ -103,40 +103,89 @@ function init() {
   window.scrollTo(0, 0);
 
   // Init anchors
-  const anchors = [
-    document.getElementById('arrow-down-btn'),
-  ];
-  document.querySelector('#menu').querySelectorAll('a')
-    .forEach((anchor) => {
-      anchors.push(anchor);
-    });
+  document.querySelector('#menu')
+    .querySelectorAll('a')
+    .forEach((linkEl) => {
+      linkEl.addEventListener('click', (e) => {
+        e.preventDefault();
 
-  anchors.forEach((linkEl) => {
-    linkEl.addEventListener('click', (e) => {
-      e.preventDefault();
+        if (scrollPlugin) {
+          const nextStationNumber = parseInt(e.target.getAttribute('href')
+            .replace(/\D/g, ''), 10);
+          toggleStateStationScenes(false, [
+            nextStationNumber,
+            getCurrentSceneNumber(),
+          ]);
+          const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
+          const { offsetTop, offsetHeight } = triggerElement;
+          const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.22);
 
-      if (scrollPlugin) {
-        const stationNumber = parseInt(e.target.getAttribute('href').replace(/\D/g, ''), 10);
-        toggleStateStationScenes(false, [
-          stationNumber,
-          getCurrentSceneNumber(),
-        ]);
-        const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
-        const { offsetTop, offsetHeight } = triggerElement;
-        const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.22);
-        TweenMax.to(window, 1, {
-          scrollTo: {
-            y: scrollTo,
-            behavior: 'smooth',
-          },
-          onComplete: () => {
-            toggleStateStationScenes(true);
-          },
-        });
-      }
+          TweenMax.to(window, 3, {
+            scrollTo: {
+              y: scrollTo,
+              behavior: 'smooth',
+            },
+            onComplete: () => {
+              toggleStateStationScenes(true);
+            },
+          });
+        }
+      });
     });
-  });
 }
+
+document.getElementById('arrow-down-btn')
+  .addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (!controller) {
+      init();
+    }
+
+    if (scrollPlugin) {
+      const triggerElement = document.getElementById('road-trigger-1');
+      const { offsetTop, offsetHeight } = triggerElement;
+      const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.36);
+
+      TweenMax.to(window, 4, {
+        scrollTo: {
+          y: scrollTo,
+          behavior: 'smooth',
+        },
+      });
+    }
+  });
+
+// Window resize
+function windowResize() {
+  const preferredWidth = 1920; // px
+  const preferredHeight = 1080; // px
+
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+
+  const widthPercentage = (windowWidth * 100) / preferredWidth;
+  const heightPercentage = (windowHeight * 100) / preferredHeight;
+  const percentage = Math.min(heightPercentage, widthPercentage);
+  const newFontSize = Math.max(percentage, 50)
+    .toFixed(2);
+
+  document.body.style.fontSize = `${newFontSize}%`;
+
+  if (controller) {
+    controller.update(true);
+  }
+}
+
+windowResize();
+
+setTimeout(() => {
+  windowResize();
+}, 100);
+
+window.addEventListener('resize', () => {
+  windowResize();
+});
 
 // Preload
 const $progress = document.getElementById('loading-progress');
