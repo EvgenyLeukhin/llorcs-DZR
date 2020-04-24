@@ -5,9 +5,12 @@
   <title>РЖД | Дорога жизни</title>
 
   <!-- meta -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent" />
   <meta name="description" content="Железная дорога - артерия жизненной силы. Во время Великой Отечественной войны это знал каждый. По железной дороге шли на фронт эшелоны с солдатами, техникой, снарядами, провизией. По ней же в тыл везли раненных, эвакуированных, перемещали с оккупированных территорий сотни тысяч людей. Железная дорога в пору Войны - символ надежды и веры каждого в скорую победу." />
   <meta name="keywords" content="Железная дорога, РЖД, Live, День Победы" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
   <meta name="image"    content="/assets/cover.png" />
   <meta name="language" content="RU" />
   <meta name="url" content="https://evgenyleukhin.github.io/llorcs-DZR" />
@@ -43,7 +46,7 @@
 </head>
 <body>
 
-  <ul class="social-icons">
+  <ul class="social-icons pre-init" style="visibility: hidden;">
     <!-- <li><a class="vk" href="#" target="_blank"> -->
     <li class="vk">
       <script type="text/javascript">
@@ -98,13 +101,13 @@
       <a href="https://t.me/share/url?url=https://evgenyleukhin.github.io/llorcs-DZR&text=Железная дорога - артерия жизненной силы. Во время Великой Отечественной войны это знал каждый. По железной дороге шли на фронт эшелоны с солдатами, техникой, снарядами, провизией. По ней же в тыл везли раненных, эвакуированных, перемещали с оккупированных территорий сотни тысяч людей. Железная дорога в пору Войны - символ надежды и веры каждого в скорую победу." target="_blank"></a></li>
   </ul>
 
-  <div class="action" id="action">
+  <div class="action pre-init" style="visibility: hidden;" id="action">
     <!-- backgrounds -->
     <div class="background-sky"    id="background-sky"></div>
     <div class="background-rail"   id="background-rail"></div>
 
     <!-- train -->
-    <div id="train" class="train">
+    <div id="train" class="train" style="display: none;">
       <div id="train-wheel-1" class="train-wheel train-wheel-1"></div>
       <div id="train-wheel-2" class="train-wheel train-wheel-2"></div>
       <div id="train-wheel-3" class="train-wheel train-wheel-3"></div>
@@ -132,7 +135,10 @@
 
     <!-- start -->
     <div id="start-scene" class="scene start-scene">
-      <div class="photo start-scene-photo-1">
+      <div
+        class="photo start-scene-photo-1 preload-image--fast"
+        data-preload-image="/assets/start-screen/01.jpg"
+      >
         <h2>Дорога жизни</h2>
         <p>Железная дорога - артерия жизненной силы. Во время Великой Отечественной войны это знал каждый. По железной дороге шли на фронт эшелоны с солдатами, техникой, снарядами, провизией. По ней же в тыл везли раненных, эвакуированных, перемещали с оккупированных территорий сотни тысяч людей. Железная дорога в пору Войны - символ надежды и веры каждого в скорую победу.</p>
         <br>
@@ -147,18 +153,45 @@
           Начать
         </a>
       </div>
-      <div class="photo start-scene-photo-2"></div>
-      <div class="photo start-scene-photo-3"></div>
-      <div class="photo start-scene-photo-4"></div>
-      <div class="photo start-scene-photo-5"></div>
-      <div class="photo start-scene-photo-6"></div>
-      <div class="photo start-scene-photo-7"></div>
-      <div class="photo start-scene-photo-8"></div>
-      <div class="photo start-scene-photo-9"></div>
-      <div class="photo start-scene-photo-10"></div>
+      <div
+        class="photo start-scene-photo-2"
+        data-preload-image="/assets/start-screen/02.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-3"
+        data-preload-image="/assets/start-screen/03.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-4"
+        data-preload-image="/assets/start-screen/04.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-5"
+        data-preload-image="/assets/start-screen/05.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-6"
+        data-preload-image="/assets/start-screen/06.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-7"
+        data-preload-image="/assets/start-screen/07.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-8"
+        data-preload-image="/assets/start-screen/08.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-9"
+        data-preload-image="/assets/start-screen/09.png"
+      ></div>
+      <div
+        class="photo start-scene-photo-10"
+        data-preload-image="/assets/start-screen/10.png"
+      ></div>
     </div>
 
-    <div class="stations" id="stations">
+    <div class="stations" id="stations" style="display: none;">
       <!-- station-1 -->
       <div id="road-1" class="road-1  road"><div class="bg-trees"></div></div>
       <div id="station-1" class="scene  station  station-1">
@@ -231,7 +264,7 @@
         <div class="photo station-2-scene-photo-5"></div>
         <div class="photo station-2-scene-photo-6">
           <p>На любой станции чистому и опрятному 312-му — первый путь и самое быстрое обслуживание. Поезд спасения, поезд-образец. Десятки рейсов. 200 тысяч пройденных километров. 25 тысяч перевезенных раненых. </p>
-          <p class="card-info black"">Фото: <span>smolbattle.ru</span></p>
+          <p class="card-info black">Фото: <span>smolbattle.ru</span></p>
         </div>
         <div class="photo station-2-scene-photo-7">
           <p class="card-bottom-text">
@@ -524,7 +557,7 @@
     </div>
   </div>
 
-  <nav class="map">
+  <nav class="map pre-init" style="visibility: hidden;">
     <ul id="menu" class="menu">
       <li class="menu-item" id="menu-station-1">
         <a href="#station-1-trigger">26&nbsp;июня <br>1941г</a>
@@ -578,17 +611,17 @@
     </ul>
   </nav>
 
-  <footer class="footer" id="footer" style="visibility: hidden;">
+  <footer class="footer pre-init" id="footer" style="visibility: hidden;">
     <a href="https://life.ru/" class="life-logo" target="_blank">
-      <img src="images/bg/basic/life-logo.svg" alt="life-logo.svg">
+      <img src="images/bg/basic/life-logo.svg" alt="life-logo.svg" />
     </a>
     <a href="https://www.rzd.ru/" class="rzd-logo" target="_blank">
-      <img src="images/bg/basic/rzd-logo.svg" alt="rzd-logo.svg">
+      <img src="images/bg/basic/rzd-logo.svg" alt="rzd-logo.svg" />
     </a>
   </footer>
 
   <!-- triggers -->
-  <div class="triggers" id="triggers" style="visibility: hidden;">
+  <div class="triggers" id="triggers" style="display: none;">
     <!-- start -->
     <div id="start-scene-trigger" style="height: 1000px; margin-top: 50%;"></div>
     <div id="train-start-trigger" style="height: 500px;"></div>

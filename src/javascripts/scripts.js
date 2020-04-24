@@ -26,6 +26,7 @@ import station9 from './scenes/stations/station-9';
 import station10 from './scenes/stations/station-10';
 
 const scrollPlugin = ScrollToPlugin;
+window.scrollTo(0, 0);
 
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineLite);
@@ -33,6 +34,10 @@ let controller;
 
 // Init
 function init() {
+  document.getElementById('stations').style.display = 'block';
+  document.getElementById('train').style.displan = 'block';
+  document.getElementById('triggers').style.display = 'block';
+
   controller = new ScrollMagic.Controller();
 
   startScene(controller);
@@ -42,7 +47,7 @@ function init() {
   bgStationsScenes(controller);
   bgWheelsScenes(controller);
   bgMenuScene(controller);
-  trainScenes(controller);
+  const trainStationScenes = trainScenes(controller);
 
   // roads
   bgRoadsClouds(controller);
@@ -62,6 +67,14 @@ function init() {
   ];
 
   function toggleStateStationScenes(state, exceptStationNumbers = []) {
+    trainStationScenes.slice(1).forEach((cStationScene, index) => {
+      if (exceptStationNumbers.includes(index + 1)) {
+        return;
+      }
+
+      cStationScene.enabled(state);
+    });
+
     stationScenes.forEach((cStationScenes, index) => {
       if (exceptStationNumbers.includes(index + 1)) {
         return;
@@ -90,83 +103,57 @@ function init() {
   window.scrollTo(0, 0);
 
   // Init anchors
-  const anchors = [
-    document.getElementById('arrow-down-btn'),
-  ];
-  document.querySelector('#menu').querySelectorAll('a')
-    .forEach((anchor) => {
-      anchors.push(anchor);
-    });
+  document.querySelector('#menu')
+    .querySelectorAll('a')
+    .forEach((linkEl) => {
+      linkEl.addEventListener('click', (e) => {
+        e.preventDefault();
 
-  anchors.forEach((linkEl) => {
-    linkEl.addEventListener('click', (e) => {
-      e.preventDefault();
+        if (scrollPlugin) {
+          const nextStationNumber = parseInt(e.target.getAttribute('href')
+            .replace(/\D/g, ''), 10);
+          toggleStateStationScenes(false, [
+            nextStationNumber,
+            getCurrentSceneNumber(),
+          ]);
+          const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
+          const { offsetTop, offsetHeight } = triggerElement;
+          const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.22);
 
-      if (scrollPlugin) {
-        const stationNumber = parseInt(e.target.getAttribute('href').replace(/\D/g, ''), 10);
-        toggleStateStationScenes(false, [
-          stationNumber,
-          getCurrentSceneNumber(),
-        ]);
-        const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
-        const { offsetTop, offsetHeight } = triggerElement;
-        const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.22);
-        TweenMax.to(window, 1, {
-          scrollTo: {
-            y: scrollTo,
-            behavior: 'smooth',
-          },
-          onComplete: () => {
-            toggleStateStationScenes(true);
-          },
-        });
-      }
+          TweenMax.to(window, 3, {
+            scrollTo: {
+              y: scrollTo,
+              behavior: 'smooth',
+            },
+            onComplete: () => {
+              toggleStateStationScenes(true);
+            },
+          });
+        }
+      });
     });
-  });
 }
 
-// Preload
-const $progress = document.getElementById('loading-progress');
-const $progressNumber = document.getElementById('loading-progress-number');
-const $progressBar = document.getElementById('loading-progress-bar');
+document.getElementById('arrow-down-btn')
+  .addEventListener('click', (e) => {
+    e.preventDefault();
 
-const preload = Preload();
+    if (!controller) {
+      init();
+    }
 
-preload.onprogress = (e) => {
-  $progressNumber.innerText = `${e.progress}%`;
-  $progressBar.style.transform = `translateX(${e.progress - 100}%)`;
-};
+    if (scrollPlugin) {
+      const triggerElement = document.getElementById('road-trigger-1');
+      const { offsetTop, offsetHeight } = triggerElement;
+      const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.36);
 
-const ignoreImagesList = [
-  /^images\/life-logo.(.*).svg$/,
-  /^images\/rzd-logo.(.*).svg$/,
-  /^images\/rzd-logo.(.*).svg$/,
-  /^images\/icon_fb.(.*).svg$/,
-  /^images\/icon_ok.(.*).svg$/,
-  /^images\/icon_vk.(.*).svg$/,
-  /^images\/tree2.(.*).svg$/,
-  /^images\/icon_te.(.*).svg$/,
-  /^images\/icon_wu.(.*).svg$/,
-];
-
-fetch('/assets.json')
-  .then((response) => response.json())
-  .then((assets) => {
-    const filteredAssets = assets.filter((asset) => (
-      !ignoreImagesList.find((imageRegex) => asset.match(imageRegex))
-    ));
-
-    preload.fetch(filteredAssets)
-      .then(() => {
-        document.getElementById('stations').style.visibility = 'visible';
-        document.getElementById('train').style.visibility = 'visible';
-        document.getElementById('arrow-down-btn').style.visibility = 'visible';
-        document.getElementById('footer').style.visibility = 'visible';
-        document.getElementById('triggers').style.visibility = 'visible';
-        $progress.style.display = 'none';
-
-        init();
+      TweenMax.to(window, 4, {
+        scrollTo: {
+          y: scrollTo,
+          behavior: 'smooth',
+        },
       });
+    }
   });
 
 // Window resize
@@ -180,7 +167,8 @@ function windowResize() {
   const widthPercentage = (windowWidth * 100) / preferredWidth;
   const heightPercentage = (windowHeight * 100) / preferredHeight;
   const percentage = Math.min(heightPercentage, widthPercentage);
-  const newFontSize = Math.max(percentage, 50).toFixed(2);
+  const newFontSize = Math.max(percentage, 50)
+    .toFixed(2);
 
   document.body.style.fontSize = `${newFontSize}%`;
 
@@ -199,4 +187,59 @@ window.addEventListener('resize', () => {
   windowResize();
 });
 
-document.body.classList.add('init');
+// Preload
+const $progress = document.getElementById('loading-progress');
+const $progressNumber = document.getElementById('loading-progress-number');
+const $progressBar = document.getElementById('loading-progress-bar');
+
+const preload = Preload();
+
+preload.onprogress = (e) => {
+  $progressNumber.innerText = `${e.progress}%`;
+  $progressBar.style.transform = `translateX(${e.progress - 100}%)`;
+};
+
+const ignoreImagesList = [
+  /^images\/life-logo.(.*).svg$/,
+  /^images\/rzd-logo.(.*).svg$/,
+  /^images\/icon_fb.(.*).svg$/,
+  /^images\/icon_ok.(.*).svg$/,
+  /^images\/icon_vk.(.*).svg$/,
+  /^images\/tree2.(.*).svg$/,
+  /^images\/icon_te.(.*).svg$/,
+  /^images\/icon_wu.(.*).svg$/,
+];
+
+fetch('/assets.json')
+  .then((response) => response.json())
+  .then((assets) => {
+    const filteredAssets = assets.filter((asset) => (
+      !ignoreImagesList.find((imageRegex) => asset.match(imageRegex))
+    ));
+
+    preload.fetch(filteredAssets)
+      .then(() => {
+        document.getElementById('arrow-down-btn').style.visibility = 'visible';
+        $progress.style.display = 'none';
+        document.body.classList.add('touch');
+      });
+
+    document.body.classList.add('init');
+  });
+
+document.querySelectorAll('[data-preload-image]')
+  .forEach((imageEl) => {
+    imageEl.classList.add('preload-image');
+
+    fetch(imageEl.dataset.preloadImage)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          // eslint-disable-next-line no-param-reassign
+          imageEl.style.backgroundImage = `url("${reader.result}")`;
+          imageEl.classList.add('preload-image--loaded');
+        };
+        reader.readAsDataURL(blob);
+      });
+  });

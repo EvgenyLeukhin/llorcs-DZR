@@ -7,8 +7,14 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 
+  pointer-events: none;
+
   &.init {
     opacity: 1;
+  }
+
+  &.touch {
+    pointer-events: auto;
   }
 }
 
@@ -52,12 +58,12 @@ body {
 
 .triggers {
   @include fade-in(2s);
-  visibility: hidden;
+  display: none;
 }
 
 .stations {
   @include fade-in(2s);
-  visibility: hidden;
+  display: none;
 }
 
 .action {
@@ -110,6 +116,15 @@ div.clouds {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.pre-init {
+  @include fade-in(2s);
+  visibility: hidden;
+
+  body.init & {
+    visibility: visible !important;
+  }
 }
 
 // fix jump layout on mobile
