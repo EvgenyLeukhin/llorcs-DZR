@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: em(18px);
+  height: em(16px);
   position: absolute;
   left: 0;
   bottom: 30%;
@@ -57,7 +57,7 @@
 
     a:last-child {
       left: 50%;
-      top: em(-9px);
+      top: em(-10px);
       margin-left: em(-15px);
       z-index: 2;
       display: block;
@@ -137,7 +137,7 @@
       position: absolute;
       box-sizing: border-box;
       width: 100vw;
-      height: em(18px);
+      height: em(16px);
       border-top: 3px solid #302a1e;
       border-bottom: 3px solid #302a1e;
       top: -3px;
