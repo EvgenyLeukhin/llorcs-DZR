@@ -1,4 +1,5 @@
 .train {
+  @include fade-in(2s);
   display: none;
   position: fixed;
   bottom: $rail-line;
