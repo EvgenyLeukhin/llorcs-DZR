@@ -85,7 +85,7 @@ function onMenuItemClick(e) {
     TweenMax.to(window, 3, {
       scrollTo: {
         y: scrollTo,
-        behavior: 'smooth',
+        autoKill: false,
       },
       onComplete: () => {
         toggleStateStationScenes(true);
@@ -184,12 +184,7 @@ document.getElementById('arrow-down-btn')
       const { offsetTop, offsetHeight } = triggerElement;
       const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.36);
 
-      TweenMax.to(window, 0, {
-        scrollTo: {
-          y: scrollTo,
-          behavior: 'smooth',
-        },
-      });
+      window.scrollTo(0, scrollTo);
     }
   });
 
