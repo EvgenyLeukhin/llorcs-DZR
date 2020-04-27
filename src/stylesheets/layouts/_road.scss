@@ -25,6 +25,32 @@
     background-position: em(20px) bottom, em(750px) bottom;
     background-size: em(150px) auto, em(200px) auto;
   }
+
+  .scroll-alert {
+    position: absolute;
+    text-align: center;
+    top: em(75px);
+    left: 0;
+    width: em(250px);
+    height: em(100px);
+    background-repeat: no-repeat;
+    background-image: url(../images/bg/scrollarrow.svg);
+    background-size: em(60px) auto;
+    padding: em(20px) em(10px);
+    animation-name: arrowDown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+
+    @keyframes arrowDown {
+      0% { background-position: center 80%; }
+      100% { background-position: center 90%; }
+    }
+
+    b {
+      font-weight: normal;
+      font-size: em(18px);
+    }
+  }
 }
 
 .road-2 {
@@ -165,5 +191,32 @@
     background-position: em(20px) bottom, em(750px) bottom;
     background-size: em(150px) auto, em(200px) auto;
     transform: scaleX(-1);
+  }
+}
+
+// iPhone 6, 7, 8 +
+@media (max-width: 414px) {
+  .road-1 {
+    .scroll-alert {
+      left: -33%;
+    }
+  }
+}
+
+// iPhone 6, 7, 8
+@media (max-width: 375px) {
+  .road-1 {
+    .scroll-alert {
+      left: -27%;
+    }
+  }
+}
+
+// iPhone 5
+@media (max-width: 320px) {
+  .road-1 {
+    .scroll-alert {
+      left: -17%;
+    }
   }
 }
