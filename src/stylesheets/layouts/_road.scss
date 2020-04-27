@@ -30,8 +30,9 @@
     position: absolute;
     text-align: center;
     top: em(75px);
-    left: 0;
+    left: 50%;
     width: em(250px);
+    margin-left: em(-125px);
     height: em(100px);
     background-repeat: no-repeat;
     background-image: url(../images/bg/scrollarrow.svg);
@@ -194,29 +195,18 @@
   }
 }
 
-// iPhone 6, 7, 8 +
-@media (max-width: 414px) {
-  .road-1 {
-    .scroll-alert {
-      left: -33%;
-    }
+.scroll-alert-spacer {
+  height: 100vw;
+}
+
+@media (max-width: 900px) {
+  .scroll-alert-spacer {
+    height: 275vw;
   }
 }
 
-// iPhone 6, 7, 8
-@media (max-width: 375px) {
-  .road-1 {
-    .scroll-alert {
-      left: -27%;
-    }
-  }
-}
-
-// iPhone 5
-@media (max-width: 320px) {
-  .road-1 {
-    .scroll-alert {
-      left: -17%;
-    }
+@media (max-width: $mobile-breakpoint) {
+  .scroll-alert-spacer {
+    height: 500vw;
   }
 }
