@@ -86,13 +86,11 @@ function init() {
     });
   }
 
+  const menuElement = document.getElementById('menu');
+
   function getCurrentSceneNumber() {
-    for (let i = 0; i < stationScenes.length; i += 1) {
-      if (
-        stationScenes[i].find((stationScene) => (
-          stationScene.state() === 'DURING'
-        ))
-      ) {
+    for (let i = 0; i < menuElement.children.length; i += 1) {
+      if (menuElement.children[i].classList.contains('menu-item-active')) {
         return i + 1;
       }
     }
@@ -103,18 +101,18 @@ function init() {
   window.scrollTo(0, 0);
 
   // Init anchors
-  document.querySelector('#menu')
-    .querySelectorAll('a')
+  menuElement.querySelectorAll('a')
     .forEach((linkEl) => {
       linkEl.addEventListener('click', (e) => {
         e.preventDefault();
 
         if (scrollPlugin) {
+          const currentStationNumber = getCurrentSceneNumber();
           const nextStationNumber = parseInt(e.target.getAttribute('href')
             .replace(/\D/g, ''), 10);
           toggleStateStationScenes(false, [
+            currentStationNumber,
             nextStationNumber,
-            getCurrentSceneNumber(),
           ]);
           const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
           const { offsetTop, offsetHeight } = triggerElement;
