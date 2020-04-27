@@ -56,7 +56,7 @@ const makeTrainStation10Scene = () => {
     // train stop on station
     .add([
       TweenMax.to('#train', 1000 * animKoef, {
-        x: '-50%',
+        x: '50%',
         delay: 5000 * animKoef,
       }),
     ]);
