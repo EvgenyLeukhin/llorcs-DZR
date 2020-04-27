@@ -184,12 +184,7 @@ document.getElementById('arrow-down-btn')
       const { offsetTop, offsetHeight } = triggerElement;
       const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.36);
 
-      TweenMax.to(window, 0, {
-        scrollTo: {
-          y: scrollTo,
-          behavior: 'smooth',
-        },
-      });
+      window.scrollTo(0, scrollTo);
     }
   });
 
