@@ -85,7 +85,7 @@ function onMenuItemClick(e) {
     TweenMax.to(window, 3, {
       scrollTo: {
         y: scrollTo,
-        behavior: 'smooth',
+        autoKill: false,
       },
       onComplete: () => {
         toggleStateStationScenes(true);
