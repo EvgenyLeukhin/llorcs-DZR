@@ -18,6 +18,15 @@
   $train-front-wheel-between-offset: 104px;
   $train-back-wheel-left-offset: 78px;
 
+  .train-smoke {
+    position: absolute;
+    z-index: 1;
+    width: em(1100px);
+    height: em(700px);
+    top: em(-660px);
+    right: em(105px);
+  }
+
   &::after {
     content: '';
 
