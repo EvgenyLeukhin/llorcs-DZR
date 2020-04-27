@@ -126,7 +126,9 @@ function init() {
   controller = new ScrollMagic.Controller();
   controller.scrollPos(() => {
     if (window.scrollY < 5) {
-      reset();
+      setTimeout(() => {
+        reset();
+      });
 
       return 0;
     }
