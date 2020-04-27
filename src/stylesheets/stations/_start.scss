@@ -9,13 +9,13 @@
     background-repeat: no-repeat;
   }
 
-  &-photo-1 {
+  &-photo-1.photo {
     z-index: 10;
     width: em(430px);
-    height: em(470px);
+    height: em(500px);
     margin-left: em(-225px);
-    margin-top: em(-120px);
-    background-size: cover;
+    margin-top: em(-135px);
+    background-size: 100% 100%;
     padding: em(40px) em(20px);
     color: #302a1e;
 
@@ -45,11 +45,35 @@
 
       border: 2px solid #4e4838;
 
+      position: relative;
       font-size: em(20px);
       font-weight: 300;
       color: #676151;
       text-align: center;
       text-decoration: none;
+
+      &-text {
+        bottom: em(-45px);
+        left: 50%;
+        margin-left: em(-100px);
+        position: absolute;
+        width: em(200px);
+        height: em(35px);
+        font-size: em(5px);
+        line-height: em(7px);
+        background-repeat: no-repeat;
+        background-size: 18% auto;
+        background-image: url(../images/bg/scrollarrow.svg);
+
+        animation-name: arrowDown;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+
+        @keyframes arrowDown {
+          0% { background-position: center em(10px); }
+          100% { background-position: center em(15px); }
+        }
+      }
     }
   }
 
@@ -139,22 +163,13 @@
   .start-scene {
     &-photo-1.photo {
       width: em(400px);
-      height: em(500px);
+      height: em(530px);
       margin-left: em(-200px);
       margin-top: em(-120px);
       background-size: 100% 100%;
 
       h2 {
         margin-bottom: em(20px, 22px);
-      }
-
-      .arrow-down {
-        animation-name: arrowDown2;
-
-        @keyframes arrowDown2 {
-          0% { bottom: em(-180px); }
-          100% { bottom: em(-195px); }
-        }
       }
     }
   }
