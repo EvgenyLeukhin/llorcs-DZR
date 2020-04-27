@@ -31,6 +31,91 @@ window.scrollTo(0, 0);
 // Base setup
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineLite);
 let controller;
+let stationScenes = [];
+let trainStationScenes = [];
+const menuElement = document.getElementById('menu');
+
+function toggleStateStationScenes(state, exceptStationNumbers = []) {
+  trainStationScenes.slice(1)
+    .forEach((cStationScene, index) => {
+      if (exceptStationNumbers.includes(index + 1)) {
+        return;
+      }
+
+      cStationScene.enabled(state);
+    });
+
+  stationScenes.forEach((cStationScenes, index) => {
+    if (exceptStationNumbers.includes(index + 1)) {
+      return;
+    }
+
+    cStationScenes.forEach((stationScene) => {
+      stationScene.enabled(state);
+    });
+  });
+}
+
+function getCurrentSceneNumber() {
+  for (let i = 0; i < menuElement.children.length; i += 1) {
+    if (menuElement.children[i].classList.contains('menu-item-active')) {
+      return i + 1;
+    }
+  }
+
+  return null;
+}
+
+function onMenuItemClick(e) {
+  e.preventDefault();
+
+  if (scrollPlugin) {
+    const currentStationNumber = getCurrentSceneNumber();
+    const nextStationNumber = parseInt(e.target.getAttribute('href')
+      .replace(/\D/g, ''), 10);
+    toggleStateStationScenes(false, [
+      currentStationNumber,
+      nextStationNumber,
+    ]);
+    const triggerElement = document.getElementById(e.target.getAttribute('href')
+      .slice(1));
+    const { offsetTop, offsetHeight } = triggerElement;
+    const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.22);
+
+    TweenMax.to(window, 3, {
+      scrollTo: {
+        y: scrollTo,
+        behavior: 'smooth',
+      },
+      onComplete: () => {
+        toggleStateStationScenes(true);
+      },
+    });
+  }
+}
+
+// Reset
+function reset() {
+  document.getElementById('stations').style.display = 'none';
+  document.getElementById('train').style.displan = 'none';
+  document.getElementById('triggers').style.display = 'none';
+
+  if (controller) {
+    controller.destroy();
+    controller = null;
+  }
+
+  window.scrollTo(0, 0);
+
+  stationScenes = [];
+  trainStationScenes = [];
+
+  // Destroy anchors
+  menuElement.querySelectorAll('a')
+    .forEach((linkEl) => {
+      linkEl.removeEventListener('click', onMenuItemClick);
+    });
+}
 
 // Init
 function init() {
@@ -39,6 +124,15 @@ function init() {
   document.getElementById('triggers').style.display = 'block';
 
   controller = new ScrollMagic.Controller();
+  controller.scrollPos(() => {
+    if (window.scrollY < 5) {
+      reset();
+
+      return 0;
+    }
+
+    return window.scrollY;
+  });
 
   startScene(controller);
 
@@ -47,13 +141,13 @@ function init() {
   bgStationsScenes(controller);
   bgWheelsScenes(controller);
   bgMenuScene(controller);
-  const trainStationScenes = trainScenes(controller);
+  trainStationScenes = trainScenes(controller);
 
   // roads
   bgRoadsClouds(controller);
 
   // stations
-  const stationScenes = [
+  stationScenes = [
     station1(controller),
     station2(controller),
     station3(controller),
@@ -66,69 +160,12 @@ function init() {
     station10(controller),
   ];
 
-  function toggleStateStationScenes(state, exceptStationNumbers = []) {
-    trainStationScenes.slice(1).forEach((cStationScene, index) => {
-      if (exceptStationNumbers.includes(index + 1)) {
-        return;
-      }
-
-      cStationScene.enabled(state);
-    });
-
-    stationScenes.forEach((cStationScenes, index) => {
-      if (exceptStationNumbers.includes(index + 1)) {
-        return;
-      }
-
-      cStationScenes.forEach((stationScene) => {
-        stationScene.enabled(state);
-      });
-    });
-  }
-
-  const menuElement = document.getElementById('menu');
-
-  function getCurrentSceneNumber() {
-    for (let i = 0; i < menuElement.children.length; i += 1) {
-      if (menuElement.children[i].classList.contains('menu-item-active')) {
-        return i + 1;
-      }
-    }
-
-    return null;
-  }
-
   window.scrollTo(0, 0);
 
   // Init anchors
   menuElement.querySelectorAll('a')
     .forEach((linkEl) => {
-      linkEl.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        if (scrollPlugin) {
-          const currentStationNumber = getCurrentSceneNumber();
-          const nextStationNumber = parseInt(e.target.getAttribute('href')
-            .replace(/\D/g, ''), 10);
-          toggleStateStationScenes(false, [
-            currentStationNumber,
-            nextStationNumber,
-          ]);
-          const triggerElement = document.getElementById(e.target.getAttribute('href').slice(1));
-          const { offsetTop, offsetHeight } = triggerElement;
-          const scrollTo = offsetTop + (window.innerHeight * 0.5) + (offsetHeight * 0.22);
-
-          TweenMax.to(window, 3, {
-            scrollTo: {
-              y: scrollTo,
-              behavior: 'smooth',
-            },
-            onComplete: () => {
-              toggleStateStationScenes(true);
-            },
-          });
-        }
-      });
+      linkEl.addEventListener('click', onMenuItemClick);
     });
 }
 
