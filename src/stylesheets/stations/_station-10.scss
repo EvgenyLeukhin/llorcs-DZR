@@ -202,8 +202,14 @@
     margin-top: em(-175px);
     background-image: url(../images/station-10/cards/04.png);
 
-    p.card-bottom-text {
+    p[class].card-bottom-text {
+      text-align: left;
       top: 45%;
+      padding-top: em(5px);
+      padding-left: em(10px);
+      padding-right: em(10px);
+      font-size: em(20px, 9px);
+      line-height: em(10px, 9px);
     }
   }
 }

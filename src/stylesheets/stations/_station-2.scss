@@ -243,8 +243,9 @@
     transform: rotate(4deg);
     background-image: url(../images/station-2/cards/04.png);
 
-    p.card-bottom-text {
+    p[class].card-bottom-text {
       top: 56%;
+      padding-top: em(5px);
     }
   }
 

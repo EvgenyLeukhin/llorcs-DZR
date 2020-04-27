@@ -19,3 +19,13 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'English157BT';
+  src:
+    local('English157BT'),
+    url('../fonts/English157BT/English157BT-Regular.woff') format('woff'),
+    url('../fonts/English157BT/English157BT-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
