@@ -108,8 +108,7 @@
 
     <!-- train -->
     <div id="train" class="train" style="display: none;">
-      <script src="./assets/lottie-player.js"></script>
-      <lottie-player id="train-smoke" class="train-smoke" src="./assets/smoke-anim.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
+      <div id="train-smoke" class="train-smoke"></div>
       <div id="train-wheel-1" class="train-wheel train-wheel-1"></div>
       <div id="train-wheel-2" class="train-wheel train-wheel-2"></div>
       <div id="train-wheel-3" class="train-wheel train-wheel-3"></div>
@@ -661,5 +660,15 @@
 
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v6.0"></script>
+  <script src="./assets/lottie.js"></script>
+  <script>
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('train-smoke'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: './assets/smoke-anim.json'
+    })
+  </script>
 </body>
 </html>
