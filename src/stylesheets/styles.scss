@@ -133,16 +133,11 @@ div.clouds {
 // fix jump layout on mobile
 @media (max-width: 900px) {
   .road {
-    padding-left: 100vw;
-    padding-right: 100vw;
-
     &.road-1 {
       z-index: 20;
       left: 50%;
       margin-left: -125vw;
       width: 250vw;
-      padding-left: 0;
-      padding-right: 0;
     }
   }
 }
@@ -164,23 +159,9 @@ div.clouds {
     padding-right: 300vw;
   }
 
-  .road {
-    padding-left: 200vw;
-    padding-right: 200vw;
-  }
-
   .train {
     right: 120vw;
   }
-
-  // fix jump layout on mobile
-  // .road-trigger {
-  //   height: 3000px !important;
-  // }
-
-  // .station-trigger {
-  // height: 3500px !important;
-  // }
 }
 
 @media (max-height: 500px) {
