@@ -235,3 +235,19 @@
     }
   }
 }
+
+@media (max-height: 450px) {
+  .road-1 {
+    .scroll-alert {
+      top: 10vh;
+    }
+  }
+}
+
+@media (max-height: 370px) {
+  .road-1 {
+    .scroll-alert {
+      top: 5vh;
+    }
+  }
+}

@@ -15,19 +15,16 @@
   overflow: visible;
 
   &-item {
-    flex-shrink: 0;
+    height: em(16px);
     position: relative;
+    top: em(-3px);
     width: em(100px);
-    // height: em(12.35px);
+    border-top: em(3px) solid #302a1e;
+    border-bottom: em(3px) solid #302a1e;
 
-    &:nth-child(odd) {
-      background-color: #ece3d4;
-    }
+    &:nth-child(odd) { background-color: #ece3d4; }
 
-    &:nth-child(even) {
-      outline: em(1px) solid #302a1e;
-      background-color: #302a1e;
-    }
+    &:nth-child(even) { background-color: #302a1e; }
 
     a {
       position: absolute;
@@ -184,7 +181,7 @@
         a:first-child {
           br { display: none; }
           display: block;
-          top: em(25px);
+          top: 8vh;
           width: em(100px);
           height: auto;
           margin-left: em(-50px);
