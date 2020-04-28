@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
 
   .bg-trees {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-repeat: no-repeat;
   }
 }
@@ -191,6 +196,18 @@
     background-position: em(20px) bottom, em(750px) bottom;
     background-size: em(150px) auto, em(200px) auto;
     transform: scaleX(-1);
+  }
+}
+
+// fix mobile layout road-1
+@media (max-width: 900px) {
+  .road {
+    &.road-1 {
+      z-index: 20;
+      left: 50%;
+      margin-left: -125vw;
+      width: 250vw;
+    }
   }
 }
 

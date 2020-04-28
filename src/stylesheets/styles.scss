@@ -91,16 +91,6 @@ body {
   }
 }
 
-.road {
-  .bg-trees {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-
 .cards-scene {
   display: none;
   position: absolute;
@@ -127,18 +117,6 @@ div.clouds {
 
   body.init & {
     visibility: visible !important;
-  }
-}
-
-// fix jump layout on mobile
-@media (max-width: 900px) {
-  .road {
-    &.road-1 {
-      z-index: 20;
-      left: 50%;
-      margin-left: -125vw;
-      width: 250vw;
-    }
   }
 }
 
