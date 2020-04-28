@@ -53,6 +53,14 @@ const makeTrainStationScene = (stationNumber) => {
 
 const makeTrainStation10Scene = () => {
   const trainStationTimeline = new TimelineLite()
+    // fix menu-item-active
+    .add([
+      TweenMax.set('#menu-station-10', {
+        className: '+=menu-item-active',
+        delay: 5000 * animKoef,
+      }),
+    ])
+
     // train stop on station
     .add([
       TweenMax.to('#train', 1000 * animKoef, {
@@ -65,7 +73,7 @@ const makeTrainStation10Scene = () => {
     triggerElement: '#station-10-trigger', // trigger-id
     duration: '220%',
   })
-    .setClassToggle('#menu-station-10', 'menu-item-active') // menu-id
+    // .setClassToggle('#menu-station-10', 'menu-item-active') // menu-id
     .setTween(trainStationTimeline);
 };
 
