@@ -13,7 +13,6 @@
 }
 
 .road-1 {
-  z-index: 20;
   background-image:
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud3.png),
@@ -30,7 +29,6 @@
   .scroll-alert {
     position: absolute;
     text-align: center;
-    top: em(100px);
     left: 50%;
     width: em(250px);
     margin-left: em(-125px);
@@ -196,18 +194,27 @@
   }
 }
 
-.scroll-alert-spacer {
-  height: 100vw;
-}
-
-@media (max-width: 900px) {
-  .scroll-alert-spacer {
-    height: 275vw;
+// fix smoke position for iPad
+@media (max-height: 2000px) {
+  .road-1 {
+    .scroll-alert {
+      top: 40vh;
+    }
   }
 }
 
-@media (max-width: $mobile-breakpoint) {
-  .scroll-alert-spacer {
-    height: 500vw;
+@media (max-height: 1200px) {
+  .road-1 {
+    .scroll-alert {
+      top: 30vh;
+    }
+  }
+}
+
+@media (max-height: 800px) {
+  .road-1 {
+    .scroll-alert {
+      top: 20vh;
+    }
   }
 }

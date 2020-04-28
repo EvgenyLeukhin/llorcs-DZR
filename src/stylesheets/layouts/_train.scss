@@ -272,11 +272,12 @@
   }
 }
 
-@media (max-width: 1300px) and (max-height: 1370px) {
+// fix smoke position for iPad
+@media (max-height: 2000px) {
   .train {
     &-smoke {
-      height: 52vh;
-      top: -52vh;
+      height: 55vh;
+      top: -55vh;
     }
   }
 }
