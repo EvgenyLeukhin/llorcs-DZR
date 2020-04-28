@@ -40,13 +40,15 @@
         opacity: 0;
         width: em(30px) !important;
         height: em(30px) !important;
+        margin-top: em(7px);
+        overflow: hidden !important;
       }
 
       & > div > span > iframe {
         opacity: 0;
         width: em(30px) !important;
-        height: em(30px) !important;
         overflow: hidden !important;
+        height: em(30px) !important;
       }
     }
 
@@ -61,6 +63,8 @@
 
       a {
         opacity: 0;
+        position: relative;
+        top: em(7px);
       }
     }
 
