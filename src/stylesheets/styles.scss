@@ -131,13 +131,6 @@ div.clouds {
 }
 
 // fix jump layout on mobile
-@media (max-width: 900px) {
-  .road {
-    padding-left: 100vw;
-    padding-right: 100vw;
-  }
-}
-
 @media (max-width: $mobile-breakpoint) {
   .station {
     padding-left: 150vw;
@@ -153,12 +146,6 @@ div.clouds {
   .station.station-8 {
     padding-left: 300vw;
     padding-right: 300vw;
-  }
-
-  .road {
-    padding-left: 200vw;
-    padding-right: 200vw;
-    // background-color: rgba(0, 255, 0, 0.25);
   }
 
   .train {

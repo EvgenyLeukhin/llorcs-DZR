@@ -22,7 +22,7 @@
 
   .bg-trees {
     background-image: url(../images/bg/trees/tree1.svg), url(../images/bg/trees/tree2.svg);
-    background-position: 25% bottom, 75% bottom;
+    background-position: 15% bottom, 85% bottom;
     background-size: em(150px) auto, em(200px) auto;
   }
 
@@ -192,21 +192,5 @@
     background-position: em(20px) bottom, em(750px) bottom;
     background-size: em(150px) auto, em(200px) auto;
     transform: scaleX(-1);
-  }
-}
-
-.scroll-alert-spacer {
-  height: 100vw;
-}
-
-@media (max-width: 900px) {
-  .scroll-alert-spacer {
-    height: 275vw;
-  }
-}
-
-@media (max-width: $mobile-breakpoint) {
-  .scroll-alert-spacer {
-    height: 500vw;
   }
 }

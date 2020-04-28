@@ -183,6 +183,7 @@ document.getElementById('arrow-down-btn')
       const triggerElement = document.getElementById('road-trigger-1');
       const { offsetTop, offsetHeight } = triggerElement;
       const scrollTo = offsetTop - (window.innerHeight * 0.5) + (offsetHeight * 0.5);
+
       window.scrollTo(0, scrollTo);
     }
   });
