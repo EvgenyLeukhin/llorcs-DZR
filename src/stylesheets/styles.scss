@@ -135,6 +135,14 @@ div.clouds {
   .road {
     padding-left: 100vw;
     padding-right: 100vw;
+
+    &.road-1 {
+      left: 50%;
+      margin-left: -125vw;
+      width: 250vw;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -158,7 +166,6 @@ div.clouds {
   .road {
     padding-left: 200vw;
     padding-right: 200vw;
-    // background-color: rgba(0, 255, 0, 0.25);
   }
 
   .train {
