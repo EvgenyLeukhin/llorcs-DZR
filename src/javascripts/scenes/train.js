@@ -59,13 +59,20 @@ const makeTrainStation10Scene = () => {
         x: '50%',
         delay: 5000 * animKoef,
       }),
+    ])
+
+    // fix menu-item-active
+    .add([
+      TweenMax.set('#menu-station-10', {
+        className: '+=menu-item-active',
+      }),
     ]);
 
   return new ScrollMagic.Scene({
     triggerElement: '#station-10-trigger', // trigger-id
     duration: '220%',
   })
-    .setClassToggle('#menu-station-10', 'menu-item-active') // menu-id
+    // .setClassToggle('#menu-station-10', 'menu-item-active') // menu-id
     .setTween(trainStationTimeline);
 };
 
