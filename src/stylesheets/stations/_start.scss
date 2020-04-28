@@ -187,3 +187,15 @@
     }
   }
 }
+
+// fix iPhone 5 landscape mode
+@media (max-height: 360px) {
+  .start-scene {
+    &-photo-1.photo {
+      width: em(650px);
+      margin-left: em(-325px);
+      margin-top: em(-135px);
+      padding: em(20px) em(30px);
+    }
+  }
+}
