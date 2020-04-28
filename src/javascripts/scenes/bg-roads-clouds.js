@@ -15,7 +15,7 @@ const makeRoadCloudsScene = (roadNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#road-trigger-${roadNumber}`,
-    duration: '600%',
+    duration: 2500,
   })
     .setTween(roadOneTween);
 };
