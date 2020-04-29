@@ -32,9 +32,11 @@
   }
 
   .scroll-alert {
+    background-color: rgba(255, 0, 0, 0.5);
     position: absolute;
     text-align: center;
     left: 50%;
+    bottom: em(200px);
     width: em(250px);
     margin-left: em(-125px);
     height: em(100px);
@@ -211,43 +213,10 @@
   }
 }
 
-// fix smoke position for iPad
-@media (max-height: 2000px) {
+@media (max-width: $mobile-breakpoint) {
   .road-1 {
     .scroll-alert {
-      top: 40vh;
-    }
-  }
-}
-
-@media (max-height: 1200px) {
-  .road-1 {
-    .scroll-alert {
-      top: 30vh;
-    }
-  }
-}
-
-@media (max-height: 800px) {
-  .road-1 {
-    .scroll-alert {
-      top: 20vh;
-    }
-  }
-}
-
-@media (max-height: 450px) {
-  .road-1 {
-    .scroll-alert {
-      top: 10vh;
-    }
-  }
-}
-
-@media (max-height: 370px) {
-  .road-1 {
-    .scroll-alert {
-      top: 5vh;
+      bottom: em(300px);
     }
   }
 }
