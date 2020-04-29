@@ -35,22 +35,15 @@
     position: absolute;
     text-align: center;
     left: 50%;
-    bottom: em(200px);
-    width: em(250px);
-    margin-left: em(-125px);
+    bottom: em(180px);
+    width: em(400px);
+    margin-left: em(-200px);
     height: em(100px);
     background-repeat: no-repeat;
-    background-image: url(../images/bg/scrollarrow.svg);
-    background-size: em(60px) auto;
-    padding: em(20px) em(10px);
-    animation-name: arrowDown;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-
-    @keyframes arrowDown {
-      0% { background-position: center 80%; }
-      100% { background-position: center 90%; }
-    }
+    background-image: url(../images/bg/scrollarrow2.svg);
+    background-position: center bottom;
+    background-size: em(20px) auto;
+    padding: em(10px);
 
     b {
       font-weight: normal;
