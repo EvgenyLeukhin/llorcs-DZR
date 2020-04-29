@@ -23,3 +23,18 @@
     height: auto;
   }
 }
+
+@media (max-height: 500px) {
+  .footer {
+    height: 0;
+    padding-left: em(5px);
+    padding-bottom: em(10px);
+    padding-right: em(5px);
+
+    .life-logo,
+    .rzd-logo {
+      width: em(55px);
+      margin-top: em(-30px);
+    }
+  }
+}

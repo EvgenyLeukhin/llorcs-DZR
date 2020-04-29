@@ -38,6 +38,7 @@
       top: em(-55px);
       color: #302a1e;
       font-weight: 700;
+      font-size: em(13px);
       line-height: em(14px);
       border: em(1px) solid #302a1e;
       width: em(62px);
@@ -47,7 +48,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: em(13px);
 
       &:hover { color: #da4216; }
     }
@@ -175,19 +175,29 @@
     margin-left: 0 !important;
 
     &-item {
-      a:first-child { display: none; }
-
-      &-active {
-        a:first-child {
-          br { display: none; }
-          display: block;
-          top: 8vh;
-          width: em(100px);
-          height: auto;
-          margin-left: em(-50px);
-          transform: rotate(0deg);
-        }
+      a:first-child {
+        // display: none;
+        width: em(54px);
+        height: em(30px);
+        margin-left: em(-27px);
+        top: em(23px);
+        transform: none;
+        letter-spacing: -0.5px;
+        font-size: em(9px);
+        line-height: em(10px);
       }
+
+      // &-active {
+      //   a:first-child {
+      //     br { display: none; }
+      //     display: block;
+      //     top: 8vh;
+      //     width: em(100px);
+      //     height: auto;
+      //     margin-left: em(-50px);
+      //     transform: rotate(0deg);
+      //   }
+      // }
     }
   }
 }

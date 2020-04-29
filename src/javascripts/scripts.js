@@ -84,7 +84,7 @@ function onMenuItemClick(e) {
 
     TweenMax.to(window, 3, {
       scrollTo: {
-        y: triggerElement.id === 'station-10-trigger' ? scrollTo - 750 : scrollTo,
+        y: triggerElement.id === 'station-10-trigger' ? scrollTo - 880 : scrollTo,
         autoKill: false,
       },
       onComplete: () => {
