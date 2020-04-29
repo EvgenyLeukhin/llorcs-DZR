@@ -196,12 +196,10 @@
 // fix mobile layout road-1
 @media (max-width: 900px) {
   .road {
-    padding-left: 100vw;
-    padding-right: 100vw;
+    min-width: 200%;
 
     &.road-1 {
-      padding-left: 0;
-      padding-right: 0;
+      min-width: auto;
       z-index: 20;
       left: 50%;
       margin-left: -125vw;
@@ -211,10 +209,7 @@
 }
 
 @media (max-width: $mobile-breakpoint) {
-  .road {
-    padding-left: 200vw;
-    padding-right: 200vw;
-  }
+  .road { min-width: 300%; }
 
   .road-1 {
     .scroll-alert {
