@@ -196,6 +196,9 @@
 // fix mobile layout road-1
 @media (max-width: 900px) {
   .road {
+    padding-left: 100vw;
+    padding-right: 100vw;
+
     &.road-1 {
       z-index: 20;
       left: 50%;
@@ -206,6 +209,11 @@
 }
 
 @media (max-width: $mobile-breakpoint) {
+  .road {
+    padding-left: 200vw;
+    padding-right: 200vw;
+  }
+
   .road-1 {
     .scroll-alert {
       bottom: em(300px);
