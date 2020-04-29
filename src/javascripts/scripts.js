@@ -84,7 +84,7 @@ function onMenuItemClick(e) {
 
     TweenMax.to(window, 3, {
       scrollTo: {
-        y: scrollTo,
+        y: triggerElement.id === 'station-10-trigger' ? scrollTo - 750 : scrollTo,
         autoKill: false,
       },
       onComplete: () => {
@@ -242,7 +242,7 @@ const ignoreImagesList = [
   /^images\/icon_wu.(.*).svg$/,
 ];
 
-fetch('/assets.json')
+fetch('./assets.json')
   .then((response) => response.json())
   .then((assets) => {
     const filteredAssets = assets.filter((asset) => (
