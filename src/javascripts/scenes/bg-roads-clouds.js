@@ -1,6 +1,25 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TweenMax } from 'gsap';
 
+const makeRoad1CloudsScene = () => {
+  const roadOneTween = TweenMax.fromTo('#road-1', 1, {
+    display: 'block',
+    x: '150%',
+    opacity: 1,
+  }, {
+    display: 'none',
+    x: '-150%',
+    opacity: 0,
+    ease: Linear.easeNone,
+  });
+
+  return new ScrollMagic.Scene({
+    triggerElement: '#road-trigger-1',
+    duration: 2500,
+  })
+    .setTween(roadOneTween);
+};
+
 const makeRoadCloudsScene = (roadNumber) => {
   const roadOneTween = TweenMax.fromTo(`#road-${roadNumber}`, 1, {
     display: 'block',
@@ -15,13 +34,13 @@ const makeRoadCloudsScene = (roadNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#road-trigger-${roadNumber}`,
-    duration: 2500,
+    duration: '600%',
   })
     .setTween(roadOneTween);
 };
 
 export default (container) => ([
-  makeRoadCloudsScene(1).addTo(container),
+  makeRoad1CloudsScene().addTo(container),
   makeRoadCloudsScene(2).addTo(container),
   makeRoadCloudsScene(3).addTo(container),
   makeRoadCloudsScene(4).addTo(container),
