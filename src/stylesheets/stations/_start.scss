@@ -193,9 +193,15 @@
   .start-scene {
     &-photo-1.photo {
       width: em(650px);
+      height: em(290px);
       margin-left: em(-325px);
-      margin-top: em(-135px);
+      margin-top: em(-110px);
       padding: em(20px) em(30px);
+
+      p {
+        font-size: em(13px);
+        line-height: em(16px, 14px);
+      }
     }
   }
 }
