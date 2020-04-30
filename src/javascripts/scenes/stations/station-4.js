@@ -157,7 +157,7 @@ const makeStation4Scene = () => {
       // 5-3 card show
       TweenMax.fromTo('.station-4-scene-photo-7', params.cardshowSpeed,
         {
-          y: '200vh',
+          y: '-200vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -169,7 +169,7 @@ const makeStation4Scene = () => {
         }),
       TweenMax.fromTo('.station-4-scene-photo-8', params.cardshowSpeed,
         {
-          y: '-200vh',
+          y: '200vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -196,7 +196,7 @@ const makeStation4Scene = () => {
       // 5-3 card show
       TweenMax.fromTo('.station-4-scene-photo-9', params.cardshowSpeed,
         {
-          y: '200vh',
+          y: '-200vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
@@ -208,7 +208,7 @@ const makeStation4Scene = () => {
         }),
       TweenMax.fromTo('.station-4-scene-photo-10', params.cardshowSpeed,
         {
-          y: '-200vh',
+          y: '200vh',
           ease: Linear.easeNone,
           rotation: -320,
         },
