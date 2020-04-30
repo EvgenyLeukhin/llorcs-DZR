@@ -4,9 +4,9 @@ import addIndicators from '../../../../node_modules/scrollmagic/scrollmagic/unco
 
 import animKoef from './animKoef';
 const duration = 3000;
-const start = 1000;
-const interval = 250;
-const show = 550;
+const start = duration / 3 ;
+const interval = duration / 12;
+const show = duration / 5.5;
 const cardshowSpeed = duration / 8;
 const cardhideSpeed = duration / 15;
 

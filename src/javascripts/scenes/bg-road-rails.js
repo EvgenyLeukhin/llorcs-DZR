@@ -25,9 +25,9 @@ const makeBackgroundsRailScene = (triggerNumber) => {
 
 export default (container) => ([
   makeBackgroundsRailScene(1).addIndicators().addTo(container), // #road-trigger-1
-  makeBackgroundsRailScene(2).addTo(container), // #road-trigger-2
-  makeBackgroundsRailScene(3).addTo(container), // #road-trigger-3
-  makeBackgroundsRailScene(4).addTo(container), // #road-trigger-4
+  makeBackgroundsRailScene(2).addIndicators().addTo(container), // #road-trigger-2
+  makeBackgroundsRailScene(3).addIndicators().addTo(container), // #road-trigger-3
+  makeBackgroundsRailScene(4).addIndicators().addTo(container), // #road-trigger-4
   makeBackgroundsRailScene(5).addTo(container), // #road-trigger-5
   makeBackgroundsRailScene(6).addTo(container), // #road-trigger-6
   makeBackgroundsRailScene(7).addTo(container), // #road-trigger-7
