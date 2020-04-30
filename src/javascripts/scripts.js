@@ -99,6 +99,7 @@ function reset() {
   document.getElementById('stations').style.display = 'none';
   document.getElementById('train').style.displan = 'none';
   document.getElementById('triggers').style.display = 'none';
+  document.getElementById('scroll-alert').style.display = 'none';
 
   if (controller) {
     controller.destroy();
@@ -118,11 +119,7 @@ function reset() {
 }
 
 // Init
-function init() {
-  document.getElementById('stations').style.display = 'block';
-  document.getElementById('train').style.displan = 'block';
-  document.getElementById('triggers').style.display = 'block';
-
+function initController() {
   controller = new ScrollMagic.Controller();
   controller.scrollPos(() => {
     if (window.scrollY < 5) {
@@ -161,6 +158,15 @@ function init() {
     station9(controller),
     station10(controller),
   ];
+}
+
+function init() {
+  document.getElementById('stations').style.display = 'block';
+  document.getElementById('train').style.display = 'block';
+  document.getElementById('triggers').style.display = 'block';
+  document.getElementById('scroll-alert').style.display = 'block';
+
+  initController();
 
   window.scrollTo(0, 0);
 
@@ -220,7 +226,8 @@ function windowResize() {
   resizeSmoke();
 
   if (controller) {
-    controller.update(true);
+    controller.destroy();
+    initController();
   }
 }
 
