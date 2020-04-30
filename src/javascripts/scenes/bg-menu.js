@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 import { TweenMax } from 'gsap';
-import * as params from './stations/params.js'
+import * as params from './stations/params';
 
 const makeMenuStartScene = () => {
   const roadOneTween = TweenMax.fromTo('#menu', 0.1, {

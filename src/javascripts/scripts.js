@@ -171,6 +171,15 @@ function init() {
     });
 }
 
+// recalculate smoke position
+function resizeSmoke() {
+  const trainSmoke = document.getElementById('train-smoke');
+  const train = document.getElementById('train');
+  if (trainSmoke.getBoundingClientRect().top > 0) {
+    trainSmoke.style.height = `${train.getBoundingClientRect().top}px`;
+  }
+}
+
 document.getElementById('arrow-down-btn')
   .addEventListener('click', (e) => {
     e.preventDefault();
@@ -182,24 +191,14 @@ document.getElementById('arrow-down-btn')
     if (scrollPlugin) {
       const triggerElement = document.getElementById('road-trigger-1');
       const { offsetTop, offsetHeight } = triggerElement;
-      const scrollTo = offsetTop + (offsetHeight * 0.5) - (window.innerHeight * 0.5)
-       //- (window.innerHeight * 0.5) + (offsetHeight * 0.5);
+      const scrollTo = offsetTop + (offsetHeight * 0.5) - (window.innerHeight * 0.5);
+      // - (window.innerHeight * 0.5) + (offsetHeight * 0.5);
       setTimeout(() => {
         resizeSmoke();
       }, 100);
       window.scrollTo(0, scrollTo);
     }
   });
-
-//recalculate smoke position
-function resizeSmoke() {
-  const trainSmoke = document.getElementById('train-smoke');
-  const train = document.getElementById('train');
-  if (trainSmoke.getBoundingClientRect().top > 0) {
-     trainSmoke.style.height = train.getBoundingClientRect().top + 'px';
-     console.log(train.getBoundingClientRect().top);
-  } 
-}  
 
 // Window resize
 function windowResize() {

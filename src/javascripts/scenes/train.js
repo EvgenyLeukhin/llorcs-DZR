@@ -1,7 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TweenMax, TimelineLite } from 'gsap';
-import * as params from './stations/params.js'
-import animKoef from './stations/animKoef';
+import * as params from './stations/params';
 
 const makeTrainStartScene = () => {
   const trainStartTween = new TimelineLite()

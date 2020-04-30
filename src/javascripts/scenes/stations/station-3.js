@@ -1,9 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TimelineLite, TweenMax } from 'gsap';
-import addIndicators from '../../../../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
-import * as params from './params.js'
-
-import animKoef from './animKoef';
+import * as params from './params';
 
 const makeStation3Scene = () => {
   const stationSceneTimeline = new TimelineLite()
@@ -11,11 +8,11 @@ const makeStation3Scene = () => {
       // show station
       TweenMax.fromTo('#station-3', params.duration, { // show station duration
         // styles before
-        x: window.innerWidth,
+        x: document.getElementById('station-3').offsetWidth,
         display: 'block',
       }, {
         // styles afrer
-        x: - document.getElementById('station-3').offsetWidth,
+        x: -document.getElementById('station-3').offsetWidth,
         display: 'block',
         ease: Linear.easeNone,
       }),
@@ -106,7 +103,7 @@ const makeStation3Scene = () => {
         ease: Linear.easeNone,
         delay: 1 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-3-scene-photo-5', params.vcardhideSpeed, {
+      TweenMax.to('.station-3-scene-photo-5', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
@@ -197,9 +194,9 @@ const makeStation3Scene = () => {
         delay: 3 * params.interval + params.start + params.show,
       }),
     ])
-        // hide station and scene
+    // hide station and scene
     .add([
-      TweenMax.to('#station-3-scene',  1, {
+      TweenMax.to('#station-3-scene', 1, {
         x: '-150%',
         display: 'none',
         ease: Linear.easeNone,
@@ -214,5 +211,5 @@ const makeStation3Scene = () => {
 };
 
 export default (container) => ([
-  makeStation3Scene().addIndicators().addTo(container),
+  makeStation3Scene().addTo(container),
 ]);
