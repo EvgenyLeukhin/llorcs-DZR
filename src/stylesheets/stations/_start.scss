@@ -182,7 +182,8 @@
   .start-scene {
     &-photo-1.photo {
       width: em(600px);
-      height: em(350px);
+      height: auto;
+      min-height: em(350px);
       margin-left: em(-300px);
       margin-top: em(-130px);
       background-size: 100% 100%;
@@ -200,7 +201,7 @@
   .start-scene {
     &-photo-1.photo {
       width: em(550px);
-      height: em(250px);
+      min-height: em(250px);
       margin-left: em(-275px);
       margin-top: em(-90px);
       padding: em(20px) em(30px);
