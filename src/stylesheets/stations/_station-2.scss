@@ -20,9 +20,9 @@
 
   .sanitary-train {
     left: 50%;
+    transform: translate(-50%);
     bottom: em(-10px);
     width: em(2000px);
-    margin-left: em(-1000px);
     height: em(250px);
     background-image:
       url(../images/station-2/Sani_cart.svg),

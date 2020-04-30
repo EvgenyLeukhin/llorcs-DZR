@@ -1,28 +1,21 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TimelineLite, TweenMax } from 'gsap';
 import addIndicators from '../../../../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+import * as params from './params.js'
 
 import animKoef from './animKoef';
-const duration = 3000;
-const start = duration / 3 ;
-const interval = duration / 12;
-const show = duration / 5.5;
-const cardshowSpeed = duration / 8;
-const cardhideSpeed = duration / 15;
-
-
 
 const makeStation1Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenMax.fromTo('#station-1', duration, { // show station duration
+      TweenMax.fromTo('#station-1', params.duration, { // show station duration
         // styles before
-        x: '100%',
+        x: window.innerWidth,
         display: 'block',
       }, {
         // styles afrer
-        x: '-100%',
+        x: - document.getElementById('station-1').offsetWidth,
         display: 'block',
         ease: Linear.easeNone,
       }),
@@ -34,7 +27,7 @@ const makeStation1Scene = () => {
       }),
 
       // 9-8 card show
-      TweenMax.fromTo('.station-1-scene-photo-9', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-9', params.cardshowSpeed,
         {
           x: '-50vw',
           y: '-120vh',
@@ -45,10 +38,10 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 0 * interval + start,
+          delay: 0 * params.interval + params.start,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-1-scene-photo-8', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-8', params.cardshowSpeed,
         {
           x: '50vw',
           y: '120vh',
@@ -60,24 +53,24 @@ const makeStation1Scene = () => {
           y: 0,
           rotation: -3,
           ease: Linear.easeNone,
-          delay: 0 * interval + start,
+          delay: 0 * params.interval + params.start,
         }),
       // 9-8 card hide
-      TweenMax.to('.station-1-scene-photo-9', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-9', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 0 * interval + start + show,
+        delay: 0 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-1-scene-photo-8', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-8', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 0 * interval + start + show,
+        delay: 0 * params.interval + params.start + params.show,
       }),
 
       // 4-6 card show
-      TweenMax.fromTo('.station-1-scene-photo-4', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-4', params.cardshowSpeed,
         {
           x: '100vw',
           y: '-120vh',
@@ -88,10 +81,10 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 1 * interval + start,
+          delay: 1 * params.interval + params.start,
           rotation: -5,
         }),
-      TweenMax.fromTo('.station-1-scene-photo-6', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-6', params.cardshowSpeed,
         {
           x: '100vw',
           y: '120vh',
@@ -102,26 +95,26 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 1 * interval + start,
+          delay: 1 * params.interval + params.start,
           rotation: 0,
         }),
 
       // 4-6 card hide
-      TweenMax.to('.station-1-scene-photo-4', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-4', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 1 * interval + start + show,
+        delay: 1 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-1-scene-photo-6', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-6', params.vcardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 1 * interval + start + show,
+        delay: 1 * params.interval + params.start + params.show,
       }),
 
       // 1-2 card show
-      TweenMax.fromTo('.station-1-scene-photo-1', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-1', params.cardshowSpeed,
         {
           x: '200vw',
           y: '-120vh',
@@ -132,10 +125,10 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 2 * interval + start,
+          delay: 2 * params.interval + params.start,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-1-scene-photo-2', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-2', params.cardshowSpeed,
         {
           x: '-100vw',
           y: '200vh',
@@ -146,26 +139,26 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 2 * interval + start,
+          delay: 2 * params.interval + params.start,
           rotation: 5,
         }),
 
       // 1-2 card hide
-      TweenMax.to('.station-1-scene-photo-1', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-1', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 2 * interval + start + show,
+        delay: 2 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-1-scene-photo-2', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-2', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 2 * interval + start + show,
+        delay: 2 * params.interval + params.start + params.show,
       }),
 
       // 5-3 card show
-      TweenMax.fromTo('.station-1-scene-photo-5', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-5', params.cardshowSpeed,
         {
           y: '200vh',
           ease: Linear.easeNone,
@@ -174,10 +167,10 @@ const makeStation1Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: 3 * interval + start,
+          delay: 3 * params.interval + params.start,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-1-scene-photo-3', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-3', params.cardshowSpeed,
         {
           y: '-200vh',
           ease: Linear.easeNone,
@@ -186,26 +179,26 @@ const makeStation1Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: 3 * interval + start,
+          delay: 3 * params.interval + params.start,
           rotation: 8,
         }),
 
       // 5-3 card hide
-      TweenMax.to('.station-1-scene-photo-5', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-5', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 3 * interval + start + show,
+        delay: 3 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-1-scene-photo-3', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-3', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 3 * interval + start + show,
+        delay: 3 * params.interval + params.start + params.show,
       }),
 
       // 7 card show
-      TweenMax.fromTo('.station-1-scene-photo-7', cardshowSpeed,
+      TweenMax.fromTo('.station-1-scene-photo-7', params.cardshowSpeed,
         {
           x: '-100vw',
           y: '200vh',
@@ -216,16 +209,16 @@ const makeStation1Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: 4 * interval + start,
+          delay: 4 * params.interval + params.start,
           rotation: -7,
         }),
 
       // 7 card hide
-      TweenMax.to('.station-1-scene-photo-7', cardhideSpeed, {
+      TweenMax.to('.station-1-scene-photo-7', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: 4 * interval + start + show,
+        delay: 4 * params.interval + params.start + params.show,
       }),
     ])
         // hide station and scene
@@ -239,7 +232,7 @@ const makeStation1Scene = () => {
 
   return new ScrollMagic.Scene({
     triggerElement: '#station-1-trigger',
-    duration: duration,
+    duration: params.duration,
   })
     .setTween(stationSceneTimeline);
 };

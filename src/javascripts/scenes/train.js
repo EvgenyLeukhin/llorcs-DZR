@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TweenMax, TimelineLite } from 'gsap';
-
+import * as params from './stations/params.js'
 import animKoef from './stations/animKoef';
 
 const makeTrainStartScene = () => {
@@ -45,7 +45,7 @@ const makeTrainStationScene = (stationNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#station-${stationNumber}-trigger`, // trigger-id
-    duration: 3000,
+    duration: params.duration,
   })
     .setClassToggle(`#menu-station-${stationNumber}`, 'menu-item-active') // menu-id
     .setTween(trainStationTimeline);
@@ -57,21 +57,21 @@ const makeTrainStation10Scene = () => {
     .add([
       TweenMax.set('#menu-station-10', {
         className: '+=menu-item-active',
-        delay: 5000 * animKoef,
+        delay: 500,
       }),
     ])
 
     // train stop on station
     .add([
-      TweenMax.to('#train', 1000 * animKoef, {
+      TweenMax.to('#train', 100, {
         x: '50%',
-        delay: 5000 * animKoef,
+        delay: 500,
       }),
     ]);
 
   return new ScrollMagic.Scene({
     triggerElement: '#station-10-trigger', // trigger-id
-    duration: '220%',
+    duration: params.lastStation,
   })
     // .setClassToggle('#menu-station-10', 'menu-item-active') // menu-id
     .setTween(trainStationTimeline);

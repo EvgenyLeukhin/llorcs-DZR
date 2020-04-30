@@ -308,7 +308,7 @@ const makeWheelsRoadScene = (roadNumber) => {
 
   return new ScrollMagic.Scene({
     triggerElement: `#road-trigger-${roadNumber}`,
-    duration: 5000,
+    duration: 7000,
   })
     .setTween(wheelsTimeline);
 };
