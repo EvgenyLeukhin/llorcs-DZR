@@ -6,13 +6,13 @@ const makeStation10Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenMax.fromTo('#station-10', params.duration, { // show station duration
+      TweenMax.fromTo('#station-10', params.duration * 0.5, { // show station duration
         // styles before
         x: document.getElementById('station-10').offsetWidth,
         display: 'block',
       }, {
         // styles afrer
-        x: -document.getElementById('station-10').offsetWidth,
+        x: -((document.getElementById('station-10').offsetWidth * 0.5) - (window.innerWidth * 0.5)),
         display: 'block',
         ease: Linear.easeNone,
       }),
