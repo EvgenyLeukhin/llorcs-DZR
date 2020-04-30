@@ -290,3 +290,22 @@
     }
   }
 }
+
+@media (max-height: 400px) {
+  .station-4-scene {
+    &-photo-1.photo,
+    &-photo-5.photo,
+    &-photo-9.photo {
+      margin-top: em(-125px);
+      z-index: 12;
+    }
+
+    &-photo-7 {
+      margin-top: em(-125px);
+    }
+
+    &-photo-10 {
+      margin-left: 0;
+    }
+  }
+}
