@@ -6,11 +6,9 @@ const makeTrainStartScene = () => {
   const trainStartTween = new TimelineLite()
     .add([
       TweenMax.fromTo('#train', 1000, {
-        display: 'none',
         x: '-80%',
         delay: 750,
       }, {
-        display: 'block',
         x: '50%',
         delay: 750,
         ease: Linear.easeNone,
