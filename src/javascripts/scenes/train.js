@@ -29,23 +29,23 @@ const makeTrainStationScene = (stationNumber) => {
   const trainStationTimeline = new TimelineLite()
     // train stop on station
     .add([
-      TweenMax.to('#train', 1000 * animKoef, {
+      TweenMax.to('#train', 100, {
         x: '-50%',
-        delay: 4000 * animKoef,
+        delay: 400,
       }),
     ])
 
     // train leave a station
     .add([
-      TweenMax.to('#train', 1000 * animKoef, {
+      TweenMax.to('#train', 100, {
         x: '50%',
-        delay: 5000 * animKoef,
+        delay: 500,
       }),
     ]);
 
   return new ScrollMagic.Scene({
     triggerElement: `#station-${stationNumber}-trigger`, // trigger-id
-    duration: '500%',
+    duration: 3000,
   })
     .setClassToggle(`#menu-station-${stationNumber}`, 'menu-item-active') // menu-id
     .setTween(trainStationTimeline);

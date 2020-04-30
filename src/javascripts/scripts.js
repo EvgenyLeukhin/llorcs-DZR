@@ -182,7 +182,8 @@ document.getElementById('arrow-down-btn')
     if (scrollPlugin) {
       const triggerElement = document.getElementById('road-trigger-1');
       const { offsetTop, offsetHeight } = triggerElement;
-      const scrollTo = offsetTop - (window.innerHeight * 0.5) + (offsetHeight * 0.5);
+      const scrollTo = offsetTop + (offsetHeight * 0.5) - (window.innerHeight * 0.5)
+       //- (window.innerHeight * 0.5) + (offsetHeight * 0.5);
       setTimeout(() => {
         resizeSmoke();
       }, 100);

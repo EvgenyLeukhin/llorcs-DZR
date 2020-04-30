@@ -1,12 +1,14 @@
 .station-1 {
   z-index: 10;
+  width: em(3000px);
 
   .clouds {
     background-image:
       url(../images/bg/clouds/cloud1.png),
       url(../images/bg/clouds/cloud3.png),
       url(../images/bg/clouds/cloud2.png);
-    background-position: em(100px) em(120px), em(750px) em(-15px), em(370px) em(-50px);
+    background-position: em(673px) em(208px), em(1872px) em(-25px), em(370px) em(-50px);
+    //42.11em 13.33em, 117.33em -1.67em, 225.11em -5.56em
     background-size: em(240px) auto, em(200px) auto, em(180px) auto;
     transform: scaleX(-1);
   }
@@ -14,9 +16,9 @@
   .crowd {
     position: absolute;
     left: 50%;
+    transform: translate(-53%);
     bottom: em(-10px);
     z-index: 3;
-    margin-left: em(-567px);
     width: em(1105px);
     height: em(80px);
     background-repeat: no-repeat;
@@ -29,11 +31,12 @@
     position: absolute;
     z-index: 3;
     left: 50%;
+    transform: translate(-50%);
     right: 0;
     bottom: 0;
     width: em(1190px);
     height: em(440px);
-    margin-left: em(-595px);
+    // margin-left: em(-595px);
     background-repeat: no-repeat;
     background-image: url(../images/station-1/belorusskiy2.png);
     background-size: contain;
@@ -43,11 +46,12 @@
   .left {
     position: absolute;
     z-index: 2;
-    left: em(-403px);
+    left: 50%;
+    transform: translate(-50%);
     bottom: 0;
     width: em(2620px);
     height: em(330px);
-    background-position: em(10px) bottom, left bottom;
+    background-position: left bottom, left bottom;
     background-repeat: no-repeat;
     background-size: em(130px) auto, contain;
     background-image:
@@ -58,7 +62,7 @@
   .right {
     position: absolute;
     z-index: 2;
-    right: em(-740px);
+    right: em(207px);
     bottom: 0;
     width: em(1430px);
     height: em(330px);

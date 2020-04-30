@@ -36,4 +36,10 @@ module.exports = {
     ...plugins,
     new SaveAssetsToJsonPlugin('assets.json', /^images\//)
   ],
+  resolve: {
+    modules: ['node_modules'],
+    alias: {
+      'debug.addIndicators': 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
+    }
+  }
 };
