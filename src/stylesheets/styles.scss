@@ -107,9 +107,11 @@ div.clouds {
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
+  left: 50%;
   right: 0;
   bottom: 0;
+  width: em(1200px);
+  margin-left: em(-600px);
 }
 
 .pre-init {

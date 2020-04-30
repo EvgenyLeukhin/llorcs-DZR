@@ -214,14 +214,11 @@
 // }
 
 @media (max-width: $mobile-breakpoint) {
-  .road {
-    padding-left: 200vw;
-    padding-right: 200vw;
-  }
+  .road { min-width: 300%; }
 
   .road-1 {
     .scroll-alert {
-      bottom: em(300px);
+      bottom: em(280px);
     }
   }
 }
