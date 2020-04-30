@@ -65,6 +65,7 @@
         opacity: 0;
         position: relative;
         top: em(7px);
+        left: em(5px);
       }
     }
 
@@ -110,6 +111,20 @@
       a {
         width: em(40px) !important;
         height: em(40px) !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .social-icons {
+    li {
+      width: em(25px) !important;
+      height: em(25px) !important;
+
+      a {
+        width: em(25px) !important;
+        height: em(25px) !important;
       }
     }
   }
