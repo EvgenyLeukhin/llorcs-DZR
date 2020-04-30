@@ -74,10 +74,10 @@ body {
 .action {
   position: fixed;
   z-index: 10;
-  top: 0;
   left: 0;
   right: 0;
   bottom: $rail-line;
+  height: calc(100% - #{$rail-line});
 }
 
 .scene {
