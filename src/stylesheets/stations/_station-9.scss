@@ -200,3 +200,21 @@
     }
   }
 }
+
+@media (max-height: 400px) {
+  .station-9-scene {
+    &-photo-1.photo,
+    &-photo-5.photo {
+      margin-top: em(-150px);
+    }
+
+    &-photo-7.photo {
+      margin-top: em(-130px);
+    }
+
+    &-photo-4.photo,
+    &-photo-8.photo {
+      margin-top: em(20px);
+    }
+  }
+}
