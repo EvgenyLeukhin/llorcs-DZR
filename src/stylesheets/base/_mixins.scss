@@ -18,3 +18,9 @@
   }
   animation: $time ease-in fade-in;
 }
+
+@mixin landscape-orientation {
+  @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 600px) {
+    @content;
+  }
+}
