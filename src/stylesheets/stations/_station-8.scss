@@ -200,5 +200,26 @@
     &-photo-7 {
       margin-left: em(-180px);
     }
+
+    &-photo-5.photo {
+      margin-top: em(-130px);
+    }
+  }
+}
+
+@media (max-height: 400px) {
+  .station-8-scene {
+    &-photo-1.photo,
+    &-photo-5.photo {
+      margin-top: em(-150px);
+    }
+
+    &-photo-4.photo {
+      margin-top: em(30px);
+    }
+
+    &-photo-8.photo {
+      margin-top: 0;
+    }
   }
 }

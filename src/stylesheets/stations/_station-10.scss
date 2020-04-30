@@ -224,6 +224,7 @@
   .station-10-scene {
     &-photo-1.photo {
       margin-left: em(-125px);
+      margin-top: em(-110px);
     }
 
     &-photo-2 {
@@ -249,6 +250,26 @@
 
     &-photo-7 {
       margin-left: em(-152px);
+    }
+  }
+}
+
+@media (max-height: 400px) {
+  .station-10-scene {
+    &-photo-4.photo {
+      margin-top: 0;
+    }
+
+    &-photo-7.photo {
+      margin-top: em(-130px);
+      width: em(220px);
+      margin-left: em(-110px);
+      height: em(300px);
+
+      p[class].card-bottom-text {
+        font-size: em(15px, 9px);
+        line-height: em(9px, 9px);
+      }
     }
   }
 }

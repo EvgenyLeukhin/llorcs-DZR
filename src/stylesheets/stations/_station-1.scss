@@ -108,10 +108,11 @@
   &-photo-1.photo {
     z-index: 15;
     width: em(250px);
-    height: em(160px);
+    height: em(170px);
     margin-left: em(-142px);
     margin-top: em(-165px);
     background-image: url(../images/bg/card2.png);
+    background-size: 100% 100%;
     padding-top: em(15px, 9px);
     padding-left: em(25px, 9px);
     padding-right: em(20px, 9px);
@@ -174,10 +175,11 @@
   &-photo-6.photo {
     z-index: 13;
     width: em(270px);
-    height: em(185px);
+    height: em(195px);
     margin-left: em(-110px);
     margin-top: 0;
     background-image: url(../images/bg/card2-2.png);
+    background-size: 100% 100%;
     padding-top: em(20px, 9px);
     padding-left: em(25px, 9px);
     padding-right: em(25px, 9px);
