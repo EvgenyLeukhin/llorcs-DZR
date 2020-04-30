@@ -38,7 +38,7 @@
       top: em(-55px);
       color: #302a1e;
       font-weight: 700;
-      font-size: em(13px);
+      font-size: em(10px);
       line-height: em(14px);
       border: em(1px) solid #302a1e;
       width: em(62px);
@@ -156,7 +156,9 @@
     &-item {
       width: em(100px);
 
-      a:first-child { transform: rotate(0deg); }
+      a:first-child {
+        transform: rotate(0deg);
+      }
 
       &-active {
         a:first-child {
@@ -192,13 +194,13 @@
 
       a:first-child {
         // display: none;
-        width: em(54px);
+        width: em(54px, 8px);
         height: em(30px);
         margin-left: em(-27px);
         top: em(18px);
         transform: none;
         letter-spacing: -0.5px;
-        font-size: em(9px);
+        font-size: em(8px);
         line-height: em(10px);
       }
 
