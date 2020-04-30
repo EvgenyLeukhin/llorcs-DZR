@@ -6,13 +6,13 @@ const makeStation10Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenMax.fromTo('#station-10', params.duration, { // show station duration
+      TweenMax.fromTo('#station-10', params.duration * 0.5, { // show station duration
         // styles before
         x: document.getElementById('station-10').offsetWidth,
         display: 'block',
       }, {
         // styles afrer
-        x: -document.getElementById('station-10').offsetWidth,
+        x: -((document.getElementById('station-10').offsetWidth * 0.5) - (window.innerWidth * 0.5)),
         display: 'block',
         ease: Linear.easeNone,
       }),
@@ -182,15 +182,10 @@ const makeStation10Scene = () => {
 
       // 5-3 card hide
       TweenMax.to('.station-10-scene-photo-7', params.cardhideSpeed, {
-        x: '-150vw',
+        x: 0,
         display: 'none',
         ease: Linear.easeNone,
-        delay: 3 * params.interval + params.start + params.show,
-      }),
-      TweenMax.to('.station-10-scene-photo-8', params.cardhideSpeed, {
-        x: '-150vw',
-        display: 'none',
-        ease: Linear.easeNone,
+        duration: params.duration * 0.5,
         delay: 3 * params.interval + params.start + params.show,
       }),
     ])
