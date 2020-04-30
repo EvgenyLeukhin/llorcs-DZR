@@ -12,6 +12,7 @@ import bgStationsScenes from './scenes/bg-station-rails';
 import bgMenuScene from './scenes/bg-menu';
 import trainScenes from './scenes/train';
 import startScene from './scenes/start-scene';
+import scrollAlert from './scenes/scroll-alert';
 
 // stations
 import station1 from './scenes/stations/station-1';
@@ -118,6 +119,8 @@ function reset() {
     });
 }
 
+let scrollAlertScenes;
+
 // Init
 function initController() {
   controller = new ScrollMagic.Controller();
@@ -141,6 +144,8 @@ function initController() {
   bgWheelsScenes(controller);
   bgMenuScene(controller);
   trainStationScenes = trainScenes(controller);
+
+  scrollAlertScenes = scrollAlert(controller);
 
   // roads
   bgRoadsClouds(controller);
@@ -226,8 +231,11 @@ function windowResize() {
   resizeSmoke();
 
   if (controller) {
-    controller.destroy();
-    initController();
+    scrollAlertScenes.forEach((scene) => {
+      scene.destroy();
+    });
+    scrollAlertScenes = scrollAlert(controller);
+    controller.update(true);
   }
 }
 

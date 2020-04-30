@@ -1,32 +1,23 @@
 import ScrollMagic from 'scrollmagic';
-import { Linear, TimelineLite, TweenMax } from 'gsap';
+import { Linear, TweenMax } from 'gsap';
 
 const makeRoad1CloudsScene = () => {
-  const roadOneTimeline = new TimelineLite()
-    .add([
-      TweenMax.fromTo('#road-1', 1, {
-        display: 'block',
-        x: '100%',
-        opacity: 1,
-      }, {
-        display: 'none',
-        x: '-100%',
-        opacity: 0,
-        ease: Linear.easeNone,
-      }),
-      TweenMax.fromTo('#scroll-alert', 1, {
-        x: window.innerWidth,
-      }, {
-        x: -window.innerWidth,
-        ease: Linear.easeNone,
-      }),
-    ]);
+  const roadOneTween = TweenMax.fromTo('#road-1', 1, {
+    display: 'block',
+    x: '100%',
+    opacity: 1,
+  }, {
+    display: 'none',
+    x: '-100%',
+    opacity: 0,
+    ease: Linear.easeNone,
+  });
 
   return new ScrollMagic.Scene({
     triggerElement: '#road-trigger-1',
     duration: 1000,
   })
-    .setTween(roadOneTimeline);
+    .setTween(roadOneTween);
 };
 
 const makeRoadCloudsScene = (roadNumber) => {
