@@ -74,7 +74,7 @@ const makeStartScene = () => {
 
   return new ScrollMagic.Scene({
     triggerElement: '#start-scene-trigger',
-    duration: '200%',
+    duration: 1000,
   })
     .setTween(startSceneTimeline);
 };

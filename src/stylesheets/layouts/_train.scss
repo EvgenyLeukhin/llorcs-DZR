@@ -270,13 +270,3 @@
     background-size: contain;
   }
 }
-
-// fix smoke position for iPad
-@media (max-height: 2000px) {
-  .train {
-    &-smoke {
-      height: 55vh;
-      top: -55vh;
-    }
-  }
-}

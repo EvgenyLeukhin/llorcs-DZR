@@ -19,7 +19,7 @@ const makeTrainStartScene = () => {
 
   return new ScrollMagic.Scene({
     triggerElement: '#train-start-trigger',
-    duration: '100%',
+    duration: 1000,
   })
     .setTween(trainStartTween);
 };

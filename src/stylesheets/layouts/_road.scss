@@ -2,8 +2,7 @@
   position: fixed;
   text-align: center;
   left: 50%;
-  bottom: 100%;
-  margin-bottom: em(-120px);
+  bottom: calc(#{$rail-line} + #{em(200px)});
   width: em(400px);
   margin-left: em(-200px);
   height: em(100px);
@@ -18,6 +17,10 @@
   b {
     font-weight: normal;
     font-size: em(18px);
+  }
+
+  @media (max-height: $mobile-breakpoint) {
+    bottom: calc(#{$rail-line-mobile-landscape} + #{em(200px)});
   }
 
   @include landscape-orientation {
@@ -49,7 +52,7 @@
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud2.png);
-  background-position: em(100px) em(20px), em(750px) em(-15px), em(370px) em(-50px);
+  background-position: em(100px) em(20px), em(750px) top, em(370px) top;
   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
 
   .bg-trees {
@@ -79,7 +82,7 @@
     url(../images/bg/clouds/cloud2.png),
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud3.png);
-  background-position: em(80px) em(10px), em(700px) top, em(400px) em(20px);
+  background-position: em(80px) em(10px), right top, em(400px) em(20px);
   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
 
   .bg-trees {
@@ -94,7 +97,7 @@
     url(../images/bg/clouds/cloud2.png),
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud1.png);
-  background-position: em(80px) top, em(700px) top, em(400px) top;
+  background-position: em(80px) top, right top, em(400px) top;
   background-size: em(200px) auto, em(180px) auto, em(150px) auto;
 
   .bg-trees {
@@ -109,7 +112,7 @@
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud2.png),
     url(../images/bg/clouds/cloud3.png);
-  background-position: em(70px) top, em(680px) top, em(420px) top;
+  background-position: em(70px) top, right top, em(420px) top;
   background-size: em(180px) auto, em(220px) auto, em(130px) auto;
 
   .bg-trees {
@@ -124,7 +127,7 @@
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud2.png);
-  background-position: em(90px) top, em(720px) top, em(450px) top;
+  background-position: em(90px) top, right top, em(450px) top;
   background-size: em(220px) auto, em(200px) auto, em(170px) auto;
 
   .bg-trees {
@@ -139,7 +142,7 @@
     url(../images/bg/clouds/cloud2.png),
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud1.png);
-  background-position: em(80px) top, em(700px) top, em(400px) top;
+  background-position: em(80px) top, right top, em(400px) top;
   background-size: em(200px) auto, em(180px) auto, em(150px) auto;
   transform: scaleX(-1);
 
@@ -155,13 +158,13 @@
     url(../images/bg/clouds/cloud2.png),
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud3.png);
-  background-position: em(80px) em(10px), em(700px) top, em(400px) em(20px);
+  background-position: em(80px) em(10px), right top, em(400px) em(20px);
   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
   transform: scaleX(-1);
 
   .bg-trees {
     background-image: url(../images/bg/trees/tree1.svg), url(../images/bg/trees/tree2.svg);
-    background-position: em(20px) bottom, em(750px) bottom;
+    background-position: em(20px) bottom, right bottom;
     background-size: em(150px) auto, em(200px) auto;
   }
 }
@@ -171,7 +174,7 @@
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud2.png);
-  background-position: em(80px) top, em(740px) em(25px), em(380px) em(50px);
+  background-position: em(80px) top, right em(25px), em(380px) em(50px);
   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
   transform: scaleX(-1);
 
@@ -188,7 +191,7 @@
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud2.png);
-  background-position: em(100px) em(120px), left em(-15px), em(370px) em(-50px);
+  background-position: em(100px) em(120px), left top, em(370px) top;
   background-size: em(240px) auto, em(200px) auto, em(180px) auto;
   transform: scaleX(-1);
 

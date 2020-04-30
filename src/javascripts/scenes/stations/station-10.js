@@ -11,7 +11,7 @@ const makeStation10Scene = () => {
         x: document.getElementById('station-10').offsetWidth,
         display: 'block',
       }, {
-        // styles afrer
+        // styles after
         x: -((document.getElementById('station-10').offsetWidth * 0.5) - (window.innerWidth * 0.5)),
         display: 'block',
         ease: Linear.easeNone,
@@ -139,6 +139,20 @@ const makeStation10Scene = () => {
           delay: 2 * params.interval + params.start,
           rotation: 5,
         }),
+      TweenMax.fromTo('.station-10-scene-photo-7', params.cardshowSpeed,
+        {
+          x: '-100vw',
+          y: '200vh',
+          ease: Linear.easeNone,
+          rotation: -320,
+        },
+        {
+          x: 0,
+          y: 0,
+          ease: Linear.easeNone,
+          delay: 3 * params.interval + params.start,
+          rotation: 5,
+        }),
 
       // 1-2 card hide
       TweenMax.to('.station-10-scene-photo-5', params.cardhideSpeed, {
@@ -154,38 +168,10 @@ const makeStation10Scene = () => {
         delay: 2 * params.interval + params.start + params.show,
       }),
 
-      // 5-3 card show
-      TweenMax.fromTo('.station-10-scene-photo-7', params.cardshowSpeed,
-        {
-          y: '200vh',
-          ease: Linear.easeNone,
-          rotation: -320,
-        },
-        {
-          y: 0,
-          ease: Linear.easeNone,
-          delay: 3 * params.interval + params.start,
-          rotation: 0,
-        }),
-      TweenMax.fromTo('.station-10-scene-photo-8', params.cardshowSpeed,
-        {
-          y: '-200vh',
-          ease: Linear.easeNone,
-          rotation: -320,
-        },
-        {
-          y: 0,
-          ease: Linear.easeNone,
-          delay: 3 * params.interval + params.start,
-          rotation: 8,
-        }),
-
-      // 5-3 card hide
       TweenMax.to('.station-10-scene-photo-7', params.cardhideSpeed, {
-        x: 0,
+        x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        duration: params.duration * 0.5,
         delay: 3 * params.interval + params.start + params.show,
       }),
     ])

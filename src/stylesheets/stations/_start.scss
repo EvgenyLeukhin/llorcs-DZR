@@ -213,3 +213,15 @@
     }
   }
 }
+
+@media (max-width: 320px) {
+  .start-scene {
+    font-size: 80%;
+  }
+}
+
+@media (max-height: 320px) {
+  .start-scene {
+    font-size: 80%;
+  }
+}
