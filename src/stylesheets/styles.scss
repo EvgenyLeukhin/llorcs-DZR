@@ -146,7 +146,7 @@ div.clouds {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: $mobile-breakpoint) {
   .train,
   .action {
     bottom: $rail-line-mobile-landscape;
