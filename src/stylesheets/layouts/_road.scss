@@ -19,7 +19,7 @@
     font-size: em(18px);
   }
 
-  @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 600px) {
+  @include landscape-orientation {
     top: em(80px);
 
     font-size: 80%;

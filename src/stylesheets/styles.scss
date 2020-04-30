@@ -9,6 +9,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 
+  -webkit-text-size-adjust: 100%;
   pointer-events: none;
 
   &.init {

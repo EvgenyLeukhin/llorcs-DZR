@@ -170,7 +170,7 @@
   }
 }
 
-@media (max-width: 330px) and (max-height: 510px) {
+@media screen and (orientation: portrait) and (max-width: 330px) and (max-height: 510px) {
   .start-scene {
     &-photo-1.photo {
       margin-top: em(-175px);
@@ -178,7 +178,7 @@
   }
 }
 
-@media (max-height: 460px) {
+@include landscape-orientation {
   .start-scene {
     &-photo-1.photo {
       width: em(600px);
