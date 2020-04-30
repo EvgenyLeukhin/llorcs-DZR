@@ -29,9 +29,7 @@
     right: em(66px);
   }
 
-  &::after {
-    content: '';
-
+  &-coalcart {
     position: absolute;
     bottom: em(25px);
     left: em(-2px);

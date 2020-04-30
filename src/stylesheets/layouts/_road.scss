@@ -2,7 +2,8 @@
   position: fixed;
   text-align: center;
   left: 50%;
-  top: em(20px);
+  bottom: 100%;
+  margin-bottom: em(-120px);
   width: em(400px);
   margin-left: em(-200px);
   height: em(100px);
@@ -20,8 +21,6 @@
   }
 
   @include landscape-orientation {
-    top: em(80px);
-
     font-size: 80%;
   }
 }
