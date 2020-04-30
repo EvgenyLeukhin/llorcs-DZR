@@ -3,6 +3,7 @@
 @import "layouts/index";
 @import "backgrounds/index";
 @import "stations/index";
+@import "triggers/index";
 
 body {
   opacity: 0;
@@ -124,19 +125,19 @@ div.clouds {
 
 @media (max-width: $mobile-breakpoint) {
   .station {
-    padding-left: 150vw;
-    padding-right: 150vw;
+    // padding-left: 150vw;
+    // padding-right: 150vw;
 
     &.station-10 {
-      padding-left: 50vw;
-      padding-right: 50vw;
+      // padding-left: 50vw;
+      // padding-right: 50vw;
     }
   }
 
   .station.station-3,
   .station.station-8 {
-    padding-left: 300vw;
-    padding-right: 300vw;
+    // padding-left: 300vw;
+    // padding-right: 300vw;
   }
 
   .train {

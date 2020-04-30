@@ -1,21 +1,21 @@
 import ScrollMagic from 'scrollmagic';
 import { Linear, TimelineLite, TweenMax } from 'gsap';
+import addIndicators from '../../../../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+import * as params from './params.js'
 
 import animKoef from './animKoef';
-
-const addKoef = 8000;
 
 const makeStation10Scene = () => {
   const stationSceneTimeline = new TimelineLite()
     .add([
       // show station
-      TweenMax.fromTo('#station-10', 30000 * animKoef, { // show station duration
+      TweenMax.fromTo('#station-10', params.duration, { // show station duration
         // styles before
-        x: '200vw',
-        display: 'none',
+        x: window.innerWidth,
+        display: 'block',
       }, {
         // styles afrer
-        x: 0,
+        x: - document.getElementById('station-10').offsetWidth,
         display: 'block',
         ease: Linear.easeNone,
       }),
@@ -24,11 +24,10 @@ const makeStation10Scene = () => {
       TweenMax.to('#station-10-scene', 1, {
         css: { display: 'block' },
         ease: Linear.easeNone,
-        delay: (7000 + addKoef) * animKoef,
       }),
 
-      // 1-2 card show
-      TweenMax.fromTo('.station-10-scene-photo-1', 5000 * animKoef,
+      // 9-8 card show
+      TweenMax.fromTo('.station-10-scene-photo-1', params.cardshowSpeed,
         {
           x: '-50vw',
           y: '-120vh',
@@ -39,10 +38,10 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (7000 + addKoef) * animKoef,
+          delay: 0 * params.interval + params.start,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-10-scene-photo-2', 5000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-2', params.cardshowSpeed,
         {
           x: '50vw',
           y: '120vh',
@@ -52,26 +51,26 @@ const makeStation10Scene = () => {
         {
           x: 0,
           y: 0,
-          rotation: -13,
+          rotation: -3,
           ease: Linear.easeNone,
-          delay: (7000 + addKoef) * animKoef,
+          delay: 0 * params.interval + params.start,
         }),
-      // 1-2 card hide
-      TweenMax.to('.station-10-scene-photo-1', 2000 * animKoef, {
+      // 9-8 card hide
+      TweenMax.to('.station-10-scene-photo-1', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (16500 + addKoef) * animKoef,
+        delay: 0 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-10-scene-photo-2', 2000 * animKoef, {
+      TweenMax.to('.station-10-scene-photo-2', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (16500 + addKoef) * animKoef,
+        delay: 0 * params.interval + params.start + params.show,
       }),
 
-      // 3-4 card show
-      TweenMax.fromTo('.station-10-scene-photo-3', 5000 * animKoef,
+      // 4-6 card show
+      TweenMax.fromTo('.station-10-scene-photo-3', params.cardshowSpeed,
         {
           x: '100vw',
           y: '-120vh',
@@ -82,10 +81,10 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (13000 + addKoef) * animKoef,
-          rotation: 10,
+          delay: 1 * params.interval + params.start,
+          rotation: -5,
         }),
-      TweenMax.fromTo('.station-10-scene-photo-4', 5000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-4', params.cardshowSpeed,
         {
           x: '100vw',
           y: '120vh',
@@ -96,26 +95,26 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (13000 + addKoef) * animKoef,
+          delay: 1 * params.interval + params.start,
           rotation: 0,
         }),
 
-      // 3-4 card hide
-      TweenMax.to('.station-10-scene-photo-3', 2000 * animKoef, {
+      // 4-6 card hide
+      TweenMax.to('.station-10-scene-photo-3', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (22500 + addKoef) * animKoef,
+        delay: 1 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-10-scene-photo-4', 2000 * animKoef, {
+      TweenMax.to('.station-10-scene-photo-4', params.vcardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (22500 + addKoef) * animKoef,
+        delay: 1 * params.interval + params.start + params.show,
       }),
 
-      // 5-6 card show
-      TweenMax.fromTo('.station-10-scene-photo-5', 4000 * animKoef,
+      // 1-2 card show
+      TweenMax.fromTo('.station-10-scene-photo-5', params.cardshowSpeed,
         {
           x: '200vw',
           y: '-120vh',
@@ -126,10 +125,10 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (19000 + addKoef) * animKoef,
+          delay: 2 * params.interval + params.start,
           rotation: 0,
         }),
-      TweenMax.fromTo('.station-10-scene-photo-6', 4000 * animKoef,
+      TweenMax.fromTo('.station-10-scene-photo-6', params.cardshowSpeed,
         {
           x: '-100vw',
           y: '200vh',
@@ -140,26 +139,38 @@ const makeStation10Scene = () => {
           x: 0,
           y: 0,
           ease: Linear.easeNone,
-          delay: (19000 + addKoef) * animKoef,
-          rotation: -4,
+          delay: 2 * params.interval + params.start,
+          rotation: 5,
         }),
 
-      // 5-6 card hide
-      TweenMax.to('.station-10-scene-photo-5', 2000 * animKoef, {
+      // 1-2 card hide
+      TweenMax.to('.station-10-scene-photo-5', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (27500 + addKoef) * animKoef,
+        delay: 2 * params.interval + params.start + params.show,
       }),
-      TweenMax.to('.station-10-scene-photo-6', 2000 * animKoef, {
+      TweenMax.to('.station-10-scene-photo-6', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (27500 + addKoef) * animKoef,
+        delay: 2 * params.interval + params.start + params.show,
       }),
 
-      // 7 card show
-      TweenMax.fromTo('.station-10-scene-photo-7', 4000 * animKoef,
+      // 5-3 card show
+      TweenMax.fromTo('.station-10-scene-photo-7', params.cardshowSpeed,
+        {
+          y: '200vh',
+          ease: Linear.easeNone,
+          rotation: -320,
+        },
+        {
+          y: 0,
+          ease: Linear.easeNone,
+          delay: 3 * params.interval + params.start,
+          rotation: 0,
+        }),
+      TweenMax.fromTo('.station-10-scene-photo-8', params.cardshowSpeed,
         {
           y: '-200vh',
           ease: Linear.easeNone,
@@ -168,27 +179,40 @@ const makeStation10Scene = () => {
         {
           y: 0,
           ease: Linear.easeNone,
-          delay: (24000 + addKoef) * animKoef,
-          rotation: 2,
+          delay: 3 * params.interval + params.start,
+          rotation: 8,
         }),
 
-      // 7 card hide
-      TweenMax.to('.station-10-scene-photo-7', 2000 * animKoef, {
+      // 5-3 card hide
+      TweenMax.to('.station-10-scene-photo-7', params.cardhideSpeed, {
         x: '-150vw',
         display: 'none',
         ease: Linear.easeNone,
-        delay: (33500 + addKoef) * animKoef,
+        delay: 3 * params.interval + params.start + params.show,
+      }),
+      TweenMax.to('.station-10-scene-photo-8', params.cardhideSpeed, {
+        x: '-150vw',
+        display: 'none',
+        ease: Linear.easeNone,
+        delay: 3 * params.interval + params.start + params.show,
+      }),
+    ])
+        // hide station and scene
+    .add([
+      TweenMax.to('#station-10-scene',  1, {
+        x: '-150%',
+        display: 'none',
+        ease: Linear.easeNone,
       }),
     ]);
 
   return new ScrollMagic.Scene({
     triggerElement: '#station-10-trigger',
-    duration: '310%',
-    offset: 100,
+    duration: params.duration * 0.5,
   })
     .setTween(stationSceneTimeline);
 };
 
 export default (container) => ([
-  makeStation10Scene().addTo(container),
+  makeStation10Scene().addIndicators().addTo(container),
 ]);

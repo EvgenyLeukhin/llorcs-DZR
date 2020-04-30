@@ -1,5 +1,12 @@
 .station-10 {
   z-index: 10;
+  width: em(3000px);
+
+  & > div {
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
 
   .clouds {
     background-image:

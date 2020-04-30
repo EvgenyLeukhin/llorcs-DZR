@@ -23,9 +23,10 @@
     position: absolute;
     z-index: 1;
     width: em(1800px);
-    height: em(1100px);
-    top: em(-1100px);
-    right: em(65px);
+    bottom: em(406px);
+    // height: em(1100px);
+    // top: em(-1100px);
+    right: em(66px);
   }
 
   &::after {
@@ -276,8 +277,8 @@
 @media (max-height: 2000px) {
   .train {
     &-smoke {
-      height: 55vh;
-      top: -55vh;
+      // height: 55vh;
+      // top: -55vh;
     }
   }
 }
