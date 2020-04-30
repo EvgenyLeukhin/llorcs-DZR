@@ -1,3 +1,31 @@
+.scroll-alert {
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  top: em(20px);
+  width: em(400px);
+  margin-left: em(-200px);
+  height: em(100px);
+  background-repeat: no-repeat;
+  background-image: url(../images/bg/scrollarrow2.svg);
+  background-position: center bottom;
+  background-size: em(20px) auto;
+  padding: em(10px);
+  z-index: 1000;
+  transform: translateX(100vw);
+
+  b {
+    font-weight: normal;
+    font-size: em(18px);
+  }
+
+  @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 600px) {
+    top: em(80px);
+
+    font-size: 80%;
+  }
+}
+
 .road {
   position: absolute;
   top: 0;
@@ -18,7 +46,6 @@
 }
 
 .road-1 {
-  width: em(1000px);
   background-image:
     url(../images/bg/clouds/cloud1.png),
     url(../images/bg/clouds/cloud3.png),
@@ -31,30 +58,9 @@
     background-position: 15% bottom, 85% bottom;
     background-size: em(150px) auto, em(200px) auto;
   }
-
-  .scroll-alert {
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: em(180px);
-    width: em(400px);
-    margin-left: em(-200px);
-    height: em(100px);
-    background-repeat: no-repeat;
-    background-image: url(../images/bg/scrollarrow2.svg);
-    background-position: center bottom;
-    background-size: em(20px) auto;
-    padding: em(10px);
-
-    b {
-      font-weight: normal;
-      font-size: em(18px);
-    }
-  }
 }
 
 .road-2 {
-  width: em(1000px);
   background-image:
     url(../images/bg/clouds/cloud3.png),
     url(../images/bg/clouds/cloud1.png),
@@ -70,7 +76,6 @@
 }
 
 .road-3 {
-  width: em(1000px);
   background-image:
     url(../images/bg/clouds/cloud2.png),
     url(../images/bg/clouds/cloud1.png),
@@ -215,10 +220,4 @@
 
 @media (max-width: $mobile-breakpoint) {
   .road { min-width: 300%; }
-
-  .road-1 {
-    .scroll-alert {
-      bottom: em(280px);
-    }
-  }
 }
