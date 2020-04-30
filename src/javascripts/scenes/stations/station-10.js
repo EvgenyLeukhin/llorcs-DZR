@@ -182,15 +182,10 @@ const makeStation10Scene = () => {
 
       // 5-3 card hide
       TweenMax.to('.station-10-scene-photo-7', params.cardhideSpeed, {
-        x: '-150vw',
+        x: 0,
         display: 'none',
         ease: Linear.easeNone,
-        delay: 3 * params.interval + params.start + params.show,
-      }),
-      TweenMax.to('.station-10-scene-photo-8', params.cardhideSpeed, {
-        x: '-150vw',
-        display: 'none',
-        ease: Linear.easeNone,
+        duration: params.duration * 0.5,
         delay: 3 * params.interval + params.start + params.show,
       }),
     ])

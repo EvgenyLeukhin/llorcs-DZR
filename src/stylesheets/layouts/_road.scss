@@ -190,7 +190,7 @@
 
   .bg-trees {
     background-image: url(../images/bg/trees/tree1.svg), url(../images/bg/trees/tree2.svg);
-    background-position: em(20px) bottom, em(750px) bottom;
+    background-position: em(20px) bottom, right bottom;
     background-size: em(150px) auto, em(200px) auto;
     transform: scaleX(-1);
   }
