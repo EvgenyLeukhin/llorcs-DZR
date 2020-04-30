@@ -99,6 +99,7 @@ function reset() {
   document.getElementById('stations').style.display = 'none';
   document.getElementById('train').style.displan = 'none';
   document.getElementById('triggers').style.display = 'none';
+  document.getElementById('scroll-alert').style.display = 'none';
 
   if (controller) {
     controller.destroy();
@@ -163,6 +164,7 @@ function init() {
   document.getElementById('stations').style.display = 'block';
   document.getElementById('train').style.display = 'block';
   document.getElementById('triggers').style.display = 'block';
+  document.getElementById('scroll-alert').style.display = 'block';
 
   initController();
 
