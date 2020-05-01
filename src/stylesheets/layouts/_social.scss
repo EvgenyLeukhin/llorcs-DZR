@@ -27,6 +27,7 @@
     }
 
     &.fb {
+      z-index: 10;
       overflow: hidden !important;
       display: inline-flex;
       width: em(30px);
@@ -36,8 +37,12 @@
       background-position: center;
       background-repeat: no-repeat;
 
+      & > * {
+        color: transparent !important;
+        opacity: 0 !important;
+      }
+
       & > div > span {
-        opacity: 0;
         width: em(30px) !important;
         height: em(30px) !important;
         margin-top: em(7px);
@@ -45,7 +50,6 @@
       }
 
       & > div > span > iframe {
-        opacity: 0;
         width: em(30px) !important;
         overflow: hidden !important;
         height: em(30px) !important;
